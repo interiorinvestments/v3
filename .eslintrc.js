@@ -15,11 +15,21 @@ module.exports = {
     ecmaVersion: 12,
     sourceType: 'module',
   },
+  settings: {
+    'import/resolver': {
+      node: {
+        paths: 'src',
+      },
+    },
+  },
   plugins: [
     'react',
+    'react-hooks',
+    // 'import',
     'simple-import-sort',
   ],
   rules: {
+    'import/prefer-default-export': 1,
     'no-trailing-spaces': 2,
     'prefer-const': [
       2,
@@ -27,9 +37,11 @@ module.exports = {
         destructuring: 'all',
       },
     ],
+    'react/forbid-prop-types': 1,
     'react/jsx-filename-extension': [1, { extensions: ['.js', '.jsx'] }],
     'react/jsx-props-no-spreading': 1,
     'react/react-in-jsx-scope': 0,
+    'react/require-default-props': 1,
     'simple-import-sort/sort': [
       2, {
         groups: [
