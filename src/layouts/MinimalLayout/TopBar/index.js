@@ -4,7 +4,6 @@ import {
   Hidden,
   IconButton,
   makeStyles,
-  SvgIcon,
   Toolbar,
 } from '@material-ui/core';
 import clsx from 'clsx';
@@ -13,7 +12,6 @@ import PropTypes from 'prop-types';
 const useStyles = makeStyles((theme) => ({
   root: {
     zIndex: theme.zIndex.drawer + 100,
-    // boxShadow: 'none',
     backgroundColor: theme.palette.background.default,
   },
   toolbar: {
@@ -33,15 +31,15 @@ const TopBar = ({ ...rest }) => {
   return (
     <AppBar className={clsx(classes.root)} {...rest}>
       <Toolbar className={classes.toolbar}>
-        {/* <Hidden mdDown> */}
-        <IconButton href="/" size="small">
-          <img
-            src="/img/logos/IIBars.png"
-            alt="Cook County Logo"
-            className={classes.logo}
-          />
-        </IconButton>
-        {/* </Hidden> */}
+        <Hidden mdDown>
+          <IconButton href="/" size="small">
+            <img
+              src="/img/logos/IIBars.png"
+              alt="II"
+              className={classes.logo}
+            />
+          </IconButton>
+        </Hidden>
         <Box ml={2} flexGrow={1} />
         <Box ml={2}>
           <img

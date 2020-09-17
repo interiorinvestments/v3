@@ -1,3 +1,4 @@
+import { IconButton } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import Image from 'components/atoms/Image';
 import SectionHeader from 'components/molecules/SectionHeader';
@@ -30,6 +31,13 @@ const useStyles = makeStyles((theme) => ({
   image: {
     objectFit: 'cover',
   },
+  logo: {
+    height: 75,
+    [theme.breakpoints.down('sm')]: {
+      height: 50,
+    },
+    marginBottom: theme.spacing(2),
+  },
 }));
 
 const Login = () => {
@@ -40,6 +48,13 @@ const Login = () => {
       <HeroShaped
         leftSide={(
           <div className={classes.formContainer}>
+            <IconButton href="/" size="small">
+              <img
+                src="/img/logos/IIBars.png"
+                alt="Cook County Logo"
+                className={classes.logo}
+              />
+            </IconButton>
             <SectionHeader
               title="Sign in"
               titleProps={{

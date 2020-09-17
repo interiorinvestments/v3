@@ -11,9 +11,8 @@ import {
   Toolbar,
 } from '@material-ui/core';
 import clsx from 'clsx';
+import { useUser } from 'lib/hooks';
 import PropTypes from 'prop-types';
-
-// import { useUser } from '../../../lib/hooks';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -35,7 +34,8 @@ const useStyles = makeStyles((theme) => ({
 
 const TopBar = ({ onMobileNavOpen, ...rest }) => {
   const classes = useStyles();
-  // const user = useUser();
+  const user = useUser();
+
   return (
     <AppBar className={clsx(classes.root)} {...rest}>
       <Toolbar className={classes.toolbar}>
@@ -56,7 +56,7 @@ const TopBar = ({ onMobileNavOpen, ...rest }) => {
           </IconButton>
         </Hidden>
         <Box ml={2} flexGrow={1} />
-        {/* {user && (
+        {user && (
           <Button
             color="secondary"
             startIcon={<LogOutIcon />}
@@ -66,7 +66,7 @@ const TopBar = ({ onMobileNavOpen, ...rest }) => {
           >
             Log out
           </Button>
-        )} */}
+        )}
         <Box ml={2}>
           <img
             src="/img/logos/IILogo.png"

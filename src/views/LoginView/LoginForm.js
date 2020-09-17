@@ -62,13 +62,24 @@ const LoginForm = () => {
     }));
   };
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
 
-    if (formState.isValid) {
-      router.push('/');
-    }
+    try {
+      const res = await fetch('/api/auth/login', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formState.values),
+      });
+      if (res.status === 200) {
+        router.push('/');
+      } else {
+        // TODO:set errors
+      }
+    } catch (error) {
 
+      // TODO: show error
+    }
     setFormState((formState) => ({
       ...formState,
       touched: {
