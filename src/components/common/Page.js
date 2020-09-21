@@ -10,7 +10,7 @@ const Page = (({
     {...rest}
   >
     <Helmet>
-      <title>{`${title} | Interior Investments`}</title>
+      <title>{title ? `${title} | Interior Investments` : 'Interior Investments'}</title>
     </Helmet>
     {children}
   </div>

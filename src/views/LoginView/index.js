@@ -36,7 +36,6 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down('sm')]: {
       height: 50,
     },
-    marginBottom: theme.spacing(2),
   },
 }));
 
@@ -48,7 +47,7 @@ const Login = () => {
       <HeroShaped
         leftSide={(
           <div className={classes.formContainer}>
-            <IconButton href="/" size="small">
+            <IconButton href="/" size="medium">
               <img
                 src="/img/logos/IIBars.png"
                 alt="Cook County Logo"
@@ -56,7 +55,7 @@ const Login = () => {
               />
             </IconButton>
             <SectionHeader
-              title="Sign in"
+              title="Log in"
               titleProps={{
                 variant: 'h1',
               }}
