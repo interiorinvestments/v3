@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { makeStyles } from '@material-ui/core';
 import PropTypes from 'prop-types';
 
-// import NavBar from './NavBar';
+import NavBar from './NavBar';
 import TopBar from './TopBar';
 
 const useStyles = makeStyles((theme) => ({
@@ -41,10 +41,10 @@ const DashboardLayout = ({ children }) => {
   return (
     <div className={classes.root}>
       <TopBar onMobileNavOpen={() => setMobileNavOpen(true)} />
-      {/* <NavBar
+      <NavBar
         onMobileClose={() => setMobileNavOpen(false)}
         openMobile={isMobileNavOpen}
-      /> */}
+      />
       <div className={classes.wrapper}>
         <div className={classes.contentContainer}>
           <div className={classes.content}>

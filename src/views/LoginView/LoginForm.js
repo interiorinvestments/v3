@@ -1,9 +1,11 @@
 /* eslint-disable no-shadow */
 import { useEffect, useState } from 'react';
 import {
+  Box,
   Button, Grid, TextField,
 } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
+import { Alert } from '@material-ui/lab';
 import { useRouter } from 'next/router';
 import validate from 'validate.js';
 
@@ -25,7 +27,7 @@ const schema = {
 const LoginForm = () => {
   const router = useRouter();
   const classes = useStyles();
-
+  const [statusText, setStatusText] = useState('');
   const [formState, setFormState] = useState({
     isValid: false,
     values: {},
@@ -74,11 +76,10 @@ const LoginForm = () => {
       if (res.status === 200) {
         router.push('/');
       } else {
-        // TODO:set errors
+        setStatusText(res.statusText);
       }
     } catch (error) {
-
-      // TODO: show error
+      setStatusText(error);
     }
     setFormState((formState) => ({
       ...formState,
@@ -137,8 +138,18 @@ const LoginForm = () => {
             >
               Submit
             </Button>
+            <Box mt={2}>
+              {
+                statusText && (
+                <Alert
+                  severity="error"
+                >
+                  {statusText}
+                </Alert>
+                )
+              }
+            </Box>
           </Grid>
-
         </Grid>
       </form>
     </div>

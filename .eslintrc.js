@@ -25,7 +25,6 @@ module.exports = {
   plugins: [
     'react',
     'react-hooks',
-    // 'import',
     'simple-import-sort',
   ],
   rules: {
@@ -41,7 +40,7 @@ module.exports = {
     'react/jsx-filename-extension': [1, { extensions: ['.js', '.jsx'] }],
     'react/jsx-props-no-spreading': 1,
     'react/react-in-jsx-scope': 0,
-    'react/require-default-props': 1,
+    'react/require-default-props': 0,
     'simple-import-sort/sort': [
       2, {
         groups: [
