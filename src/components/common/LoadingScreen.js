@@ -14,7 +14,7 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: 'column',
     height: '100%',
     justifyContent: 'center',
-    minHeight: '100%',
+    minHeight: 'calc(100vh - 64px)',
     padding: theme.spacing(3),
   },
 }));

@@ -17,7 +17,6 @@ import PropTypes from 'prop-types';
 const useStyles = makeStyles((theme) => ({
   root: {
     zIndex: theme.zIndex.drawer + 100,
-    // boxShadow: 'none',
     backgroundColor: theme.palette.background.default,
   },
   toolbar: {

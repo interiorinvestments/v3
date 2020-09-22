@@ -1,8 +1,7 @@
 import { makeStyles } from '@material-ui/core/styles';
+import AuthGuard from 'components/common/AuthGuard';
 import Page from 'components/common/Page';
-import LoadingScreen from 'components/LoadingScreen';
 import DashboardLayout from 'layouts/DashboardLayout';
-import { useUser } from 'lib/hooks';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -15,13 +14,13 @@ const useStyles = makeStyles((theme) => ({
 
 const HomePage = () => {
   const classes = useStyles();
-  const user = useUser({ redirectTo: '/login' });
 
   return (
-
     <DashboardLayout>
       <Page className={classes.root} title="Home">
-        {user ? <h1>hello</h1> : <LoadingScreen />}
+        <AuthGuard>
+          <h1>Hello world</h1>
+        </AuthGuard>
       </Page>
     </DashboardLayout>
   );
