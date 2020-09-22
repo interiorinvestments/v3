@@ -29,6 +29,9 @@ const useStyles = makeStyles((theme) => ({
     height: 50,
     borderRadius: 3,
   },
+  logout: {
+    color: theme.palette.text.secondary,
+  },
 }));
 
 const TopBar = ({ onMobileNavOpen, ...rest }) => {
@@ -56,15 +59,27 @@ const TopBar = ({ onMobileNavOpen, ...rest }) => {
         </Hidden>
         <Box ml={2} flexGrow={1} />
         {user && (
-          <Button
-            color="secondary"
-            startIcon={<LogOutIcon />}
-            variant="contained"
-            component="a"
-            href="/api/auth/logout"
-          >
-            Log out
-          </Button>
+          <>
+            <Hidden smDown>
+              <Button
+                startIcon={<LogOutIcon />}
+                component="a"
+                href="/api/auth/logout"
+                className={classes.logout}
+              >
+                Log out
+              </Button>
+            </Hidden>
+            <Hidden mdUp>
+              <Button
+                component="a"
+                href="/api/auth/logout"
+                className={classes.logout}
+              >
+                Log out
+              </Button>
+            </Hidden>
+          </>
         )}
         <Box ml={2}>
           <img
