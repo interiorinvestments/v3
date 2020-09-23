@@ -1,4 +1,5 @@
 import 'react-perfect-scrollbar/dist/css/styles.css';
+import 'swiper/swiper-bundle.min.css';
 
 import React from 'react';
 import CssBaseline from '@material-ui/core/CssBaseline';

@@ -1,6 +1,8 @@
 import { makeStyles } from '@material-ui/core/styles';
 import AuthGuard from 'components/common/AuthGuard';
 import Page from 'components/common/Page';
+// import SwiperImage from 'components/molecules/SwiperAutoPlay';
+// import SwiperImage from 'components/molecules/SwiperImage';
 import DashboardLayout from 'layouts/DashboardLayout';
 
 const useStyles = makeStyles((theme) => ({
@@ -19,7 +21,8 @@ const HomePage = () => {
     <DashboardLayout>
       <Page className={classes.root} title="Home">
         <AuthGuard>
-          <h1>Hello world</h1>
+          <h1>Hello</h1>
+
         </AuthGuard>
       </Page>
     </DashboardLayout>

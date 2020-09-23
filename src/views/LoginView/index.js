@@ -1,8 +1,8 @@
-import { IconButton } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
-import Image from 'components/atoms/Image';
 import SectionHeader from 'components/molecules/SectionHeader';
+import SwiperAutoPlay from 'components/molecules/SwiperAutoPlay';
 import HeroShaped from 'components/organisms/HeroShaped';
+import shuffleArray from 'lib/shuffleArray';
 
 import LoginForm from './LoginForm';
 
@@ -32,12 +32,39 @@ const useStyles = makeStyles((theme) => ({
     objectFit: 'cover',
   },
   logo: {
-    height: 75,
+    width: 175,
+    height: 'auto',
     [theme.breakpoints.down('sm')]: {
-      height: 50,
+      width: 112,
+      height: 'auto,',
     },
   },
 }));
+
+const items = [
+  {
+    src: '/img/hq/hq1.jpg',
+    srcSet: '/img/hq/hq1.jpg',
+  },
+  {
+    src: '/img/hq/hq2.jpg',
+    srcSet: '/img/hq/hq2.jpg',
+  },
+  {
+    src: '/img/hq/hq3.jpg',
+    srcSet: '/img/hq/hq3.jpg',
+  },
+  {
+    src: '/img/hq/hq4.jpg',
+    srcSet: '/img/hq/hq4.jpg',
+  },
+  {
+    src: '/img/hq/hq5.jpg',
+    srcSet: '/img/hq/hq5.jpg',
+  },
+];
+
+const shuffledItems = shuffleArray(items);
 
 const Login = () => {
   const classes = useStyles();
@@ -47,28 +74,22 @@ const Login = () => {
       <HeroShaped
         leftSide={(
           <div className={classes.formContainer}>
-            <IconButton href="/" size="medium">
-              <img
-                src="/img/logos/IIBars.png"
-                alt="Cook County Logo"
-                className={classes.logo}
-              />
-            </IconButton>
+            <img
+              src="/img/logos/IIXLogo.png"
+              alt="Interior Investments Experience"
+              className={classes.logo}
+            />
             <SectionHeader
               title="Log in"
               titleProps={{
-                variant: 'h1',
+                variant: 'h3',
               }}
             />
             <LoginForm />
           </div>
         )}
         rightSide={(
-          <Image
-            src="/img/hq/hq1.jpg"
-            className={classes.image}
-            lazy={false}
-          />
+          <SwiperAutoPlay items={shuffledItems} />
         )}
       />
     </div>
