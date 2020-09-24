@@ -14,7 +14,7 @@ import {
   Mail as MailIcon,
   Map as MapIcon,
   MapPin as MapPinIcon,
-  PenTool as PenToolIcon,
+  Package as PackageIcon,
   Twitter as TwitterIcon,
   Youtube as YouTubeIcon,
 } from 'react-feather';
@@ -107,7 +107,7 @@ const navConfig = [
     items: [
       {
         title: 'Customization',
-        icon: PenToolIcon,
+        icon: PackageIcon,
         href: '/inspire/customization',
         items: [
           {
@@ -138,47 +138,37 @@ const navConfig = [
         icon: DollarSignIcon,
         href: '/integrate/budgeting',
       },
-    ],
-  },
-  {
-    subheader: 'Ideas',
-    items: [
       {
         title: 'Locations',
         icon: MapPinIcon,
-        href: '/ideas/locations',
+        href: '/integrate/locations',
         items: [
           {
             title: 'Atlanta, GA',
-            href: '/ideas/locations/atlanta',
+            href: '/integrate/locations/atlanta',
           },
           {
             title: 'Boston, MA',
-            href: '/ideas/locations/boston',
+            href: '/integrate/locations/boston',
           },
           {
             title: 'Chicago, IL',
-            href: '/ideas/locations/chicago',
+            href: '/integrate/locations/chicago',
           },
           {
             title: 'Columbus, OH',
-            href: '/ideas/locations/columbus',
+            href: '/integrate/locations/columbus',
           },
           {
             title: 'Dallas, TX',
-            href: '/ideas/locations/dallas',
+            href: '/integrate/locations/dallas',
           },
         ],
       },
-    ],
-  },
-  {
-    subheader: 'Inventory',
-    items: [
       {
         title: 'Inventory Control',
         icon: DatabaseIcon,
-        href: '/inventory/control',
+        href: '/integrate/inventory-control',
       },
     ],
   },

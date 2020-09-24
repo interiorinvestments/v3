@@ -32,7 +32,7 @@ const useStyles = makeStyles((theme) => ({
     objectFit: 'cover',
   },
   logo: {
-    width: 175,
+    width: 150,
     height: 'auto',
     [theme.breakpoints.down('sm')]: {
       width: 112,
@@ -45,22 +45,27 @@ const items = [
   {
     src: '/img/hq/hq1.jpg',
     srcSet: '/img/hq/hq1.jpg',
+    alt: 'Interior Investments',
   },
   {
     src: '/img/hq/hq2.jpg',
     srcSet: '/img/hq/hq2.jpg',
+    alt: 'Interior Investments',
   },
   {
     src: '/img/hq/hq3.jpg',
     srcSet: '/img/hq/hq3.jpg',
+    alt: 'Interior Investments',
   },
   {
     src: '/img/hq/hq4.jpg',
     srcSet: '/img/hq/hq4.jpg',
+    alt: 'Interior Investments',
   },
   {
     src: '/img/hq/hq5.jpg',
     srcSet: '/img/hq/hq5.jpg',
+    alt: 'Interior Investments',
   },
 ];
 

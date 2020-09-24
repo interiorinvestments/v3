@@ -1,15 +1,13 @@
 import { makeStyles } from '@material-ui/core/styles';
 import AuthGuard from 'components/common/AuthGuard';
 import Page from 'components/common/Page';
-// import SwiperImage from 'components/molecules/SwiperAutoPlay';
-// import SwiperImage from 'components/molecules/SwiperImage';
 import DashboardLayout from 'layouts/DashboardLayout';
+import HomeView from 'views/HomeView';
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    backgroundColor: theme.palette.background.dark,
+    backgroundColor: theme.palette.background.default,
     minHeight: 'calc(100vh - 64px)',
-    paddingTop: theme.spacing(3),
     paddingBottom: theme.spacing(3),
   },
 }));
@@ -21,8 +19,7 @@ const HomePage = () => {
     <DashboardLayout>
       <Page className={classes.root} title="Home">
         <AuthGuard>
-          <h1>Hello</h1>
-
+          <HomeView />
         </AuthGuard>
       </Page>
     </DashboardLayout>
