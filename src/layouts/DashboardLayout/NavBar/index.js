@@ -1,22 +1,25 @@
 import { useEffect } from 'react';
 import {
-  Archive as ArchiveIcon,
+  Book as BookIcon,
+  Clipboard as ClipBoardIcon,
+  Database as DatabaseIcon,
+  DollarSign as DollarSignIcon,
   Edit as EditIcon,
   Facebook as FacebookIcon,
   Heart as HeartIcon,
-  Home as HomeIcon,
+  HelpCircle as HelpCircleIcon,
   Instagram as InstagramIcon,
   Key as KeyIcon,
   Linkedin as LinkedInIcon,
-  Lock as LockIcon,
+  Mail as MailIcon,
   Map as MapIcon,
+  MapPin as MapPinIcon,
+  PenTool as PenToolIcon,
   Twitter as TwitterIcon,
-  Users as UsersIcon,
   Youtube as YouTubeIcon,
 } from 'react-feather';
 import PerfectScrollbar from 'react-perfect-scrollbar';
 import {
-  Avatar,
   Box,
   Divider,
   Drawer,
@@ -35,134 +38,175 @@ import NavItem from './NavItem';
 
 const navConfig = [
   {
-    subheader: 'Overview',
-    items: [
-      {
-        title: 'Program Overview',
-        icon: MapIcon,
-        href: '/overview/program-overview',
-      },
-      {
-        title: 'Key Partnerships',
-        icon: KeyIcon,
-        href: '/overview/partnerships/',
-        items: [
-          {
-            title: 'Interior Investments',
-            href: '/overview/partnerships/interior-investments',
-          },
-          {
-            title: 'Herman Miller',
-            href: '/overview/partnerships/herman-miller',
-          },
-          {
-            title: 'MBE / WBE',
-            href: '/overview/partnerships/mbe-wbe',
-          },
-          {
-            title: 'National',
-            href: '/overview/partnerships/national',
-          },
-          {
-            title: 'SitOnIt',
-            href: '/overview/partnerships/sitonit',
-          },
-          {
-            title: 'Veia',
-            href: '/overview/partnerships/Veia',
-          },
-        ],
-      },
-      {
-        title: 'Departments',
-        icon: HomeIcon,
-        href: '/overview/departments/',
-        items: [
-          {
-            title: 'Adult Probation',
-            href: '/overview/departments/adult-probation',
-          },
-          {
-            title: 'Bureau of Admin',
-            href: '/overview/departments/bureau-of-admin',
-          },
-          {
-            title: 'Central Bond Court',
-            href: '/overview/departments/central-bond-court',
-          },
-          {
-            title: 'Conference Center',
-            href: '/overview/departments/conference-center',
-          },
-          {
-            title: 'Department of Revenue',
-            href: '/overview/departments/department-of-revenue',
-          },
-          {
-            title: 'Maywood',
-            href: '/overview/departments/maywood',
-          },
-          {
-            title: 'Medical Examiners Office',
-            href: '/overview/departments/medical-examiners-office',
-          },
-          {
-            title: 'Secretary to the Board',
-            href: '/overview/departments/secretary-to-the-board',
-          },
-        ],
-      },
-    ],
-  },
-  {
     subheader: 'Inform',
     items: [
       {
         title: 'Key Contacts',
-        icon: UsersIcon,
+        icon: KeyIcon,
         href: '/inform/key-contacts',
       },
       {
-        title: 'Informational Items',
-        icon: ArchiveIcon,
-        href: '/inform/documents',
+        title: 'Design Standards',
+        icon: MapIcon,
+        href: '/inform/design-standards',
+        items: [
+          {
+            title: 'Workstations',
+            href: '/inform/design-standards/workstations',
+          },
+          {
+            title: 'Private Offices',
+            href: '/inform/design-standards/private-offices',
+          },
+          {
+            title: 'Seating',
+            href: '/inform/design-standards/Seating',
+          },
+          {
+            title: 'Conference',
+            href: '/inform/design-standards/conference',
+          },
+          {
+            title: 'Reception Area',
+            href: '/inform/design-standards/reception',
+          },
+          {
+            title: 'Filing/Storage',
+            href: '/inform/design-standards/storage',
+          },
+          {
+            title: 'Accessories',
+            href: '/inform/design-standards/',
+          },
+        ],
       },
       {
-        title: 'COVID-19',
+        title: 'Care & Maintenance',
+        icon: BookIcon,
+        href: '/inform/care-maintenance',
+      },
+      {
+        title: 'Covid Procedures & Response',
         icon: HeartIcon,
-        href: '/inform/covid-19',
+        href: '/inform/covid',
+      },
+      {
+        title: 'FAQs',
+        icon: HelpCircleIcon,
+        href: '/inform/faqs',
+      },
+      {
+        title: 'Contact Us',
+        icon: MailIcon,
+        href: '/inform/contact-us',
       },
     ],
   },
   {
-    subheader: 'Management',
+    subheader: 'Inspire',
+    items: [
+      {
+        title: 'Customization',
+        icon: PenToolIcon,
+        href: '/inspire/customization',
+        items: [
+          {
+            title: 'Management',
+            href: '/inspire/customization/management',
+          },
+          {
+            title: 'Private Office',
+            href: '/inspire/customization/private-office',
+          },
+          {
+            title: 'Work Space',
+            href: '/inspire/customization/work-space',
+          },
+          {
+            title: 'Workstation',
+            href: '/inspire/customization/workstation',
+          },
+        ],
+      },
+    ],
+  },
+  {
+    subheader: 'Integrate',
+    items: [
+      {
+        title: 'Budgeting',
+        icon: DollarSignIcon,
+        href: '/integrate/budgeting',
+      },
+    ],
+  },
+  {
+    subheader: 'Ideas',
+    items: [
+      {
+        title: 'Locations',
+        icon: MapPinIcon,
+        href: '/ideas/locations',
+        items: [
+          {
+            title: 'Atlanta, GA',
+            href: '/ideas/locations/atlanta',
+          },
+          {
+            title: 'Boston, MA',
+            href: '/ideas/locations/boston',
+          },
+          {
+            title: 'Chicago, IL',
+            href: '/ideas/locations/chicago',
+          },
+          {
+            title: 'Columbus, OH',
+            href: '/ideas/locations/columbus',
+          },
+          {
+            title: 'Dallas, TX',
+            href: '/ideas/locations/dallas',
+          },
+        ],
+      },
+    ],
+  },
+  {
+    subheader: 'Inventory',
+    items: [
+      {
+        title: 'Inventory Control',
+        icon: DatabaseIcon,
+        href: '/inventory/control',
+      },
+    ],
+  },
+  {
+    subheader: 'Implement',
     items: [
       {
         title: 'Online Management',
-        icon: LockIcon,
-        href: '/management/',
+        icon: ClipBoardIcon,
+        href: '/implement/management',
         items: [
           {
             title: 'Proposals',
-            href: '/management/proposals',
+            href: '/implement/management/proposals',
           },
           {
-            title: 'Budgeting',
-            href: '/management/budgeting',
+            title: 'Project Details',
+            href: '/implement/management/project-details',
           },
           {
-            title: 'CAD Files',
-            href: '/management/cad',
-          },
-          {
-            title: 'Install Drawings',
-            href: '/management/drawings',
+            title: 'Work Orders',
+            href: '/implement/management/work-orders',
           },
         ],
       },
       {
         title: 'Service Request',
-        href: '/management/service',
+        href: '/implement/management/service',
         icon: EditIcon,
       },
     ],
@@ -251,16 +295,6 @@ const NavBar = ({ openMobile, onMobileClose }) => {
   const content = (
     <Box height="100%" display="flex" flexDirection="column">
       <PerfectScrollbar options={{ suppressScrollX: true }}>
-        <Hidden lgUp>
-          <Box p={2} display="flex" justifyContent="center">
-            <IconButton href="/app">
-              <Avatar
-                className={classes.avatar}
-                src="/img/logos/IIBars.png"
-              />
-            </IconButton>
-          </Box>
-        </Hidden>
         <Box p={2}>
           {navConfig.map((config) => (
             <List
