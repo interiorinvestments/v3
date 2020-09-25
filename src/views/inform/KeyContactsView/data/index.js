@@ -1,4 +1,4 @@
-const team = [
+export const team = [
   {
     title: 'Principal',
     photo: {
@@ -61,7 +61,7 @@ const team = [
     email: 'aalbrecht@interiorinvestments.com',
   },
 ];
-const team2 = [
+export const team2 = [
   {
     title: 'UI/UX Designer',
     photo: {
@@ -96,4 +96,29 @@ const team2 = [
   },
 ];
 
-export { team, team2 };
+export const partners = [
+  {
+    name: 'Airbnb',
+    logo: '/img/logos/airbnb.svg',
+  },
+  {
+    name: 'Coinbase',
+    logo: '/img/logos/coinbase.svg',
+  },
+  {
+    name: 'Dribbble',
+    logo: '/img/logos/dribbble.svg',
+  },
+  {
+    name: 'Instagram',
+    logo: '/img/logos/instagram.svg',
+  },
+  {
+    name: 'Netflix',
+    logo: '/img/logos/netflix.svg',
+  },
+  {
+    name: 'Pinterest',
+    logo: '/img/logos/pinterest.svg',
+  },
+];
