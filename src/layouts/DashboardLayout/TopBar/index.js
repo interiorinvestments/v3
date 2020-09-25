@@ -11,6 +11,7 @@ import {
   Toolbar,
 } from '@material-ui/core';
 import clsx from 'clsx';
+import Link from 'components/common/Link';
 import { useUser } from 'lib/hooks';
 import PropTypes from 'prop-types';
 
@@ -49,7 +50,7 @@ const TopBar = ({ onMobileNavOpen, ...rest }) => {
           </IconButton>
         </Hidden>
         <Hidden mdDown>
-          <IconButton href="/" size="small">
+          <IconButton href="/" size="small" component={Link}>
             <img
               src="/img/logos/IIBars.png"
               alt="Cook County Logo"
@@ -82,11 +83,13 @@ const TopBar = ({ onMobileNavOpen, ...rest }) => {
           </>
         )}
         <Box ml={2}>
-          <img
-            src="/img/logos/IILogo.png"
-            alt="Interior Investments Logo"
-            className={classes.iiLogo}
-          />
+          <Button href="/" component={Link}>
+            <img
+              src="/img/logos/IILogo.png"
+              alt="Interior Investments Logo"
+              className={classes.iiLogo}
+            />
+          </Button>
         </Box>
       </Toolbar>
     </AppBar>

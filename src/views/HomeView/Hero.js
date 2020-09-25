@@ -1,4 +1,3 @@
-import React from 'react';
 import { Button, Typography, useMediaQuery } from '@material-ui/core';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import clsx from 'clsx';
@@ -28,7 +27,7 @@ const Hero = (props) => {
           <SectionHeader
             title={(
               <Typography variant="h1">
-                Office spaces
+                Office spaces made
                 {' '}
                 <Typography variant=" h1" color="primary">easy</Typography>
               </Typography>
