@@ -2,7 +2,7 @@ import { makeStyles } from '@material-ui/core';
 import AuthGuard from 'components/common/AuthGuard';
 import Page from 'components/common/Page';
 import DashboardLayout from 'layouts/DashboardLayout';
-import KeyContactsView from 'views/inform/KeyContactsView';
+import FaqsView from 'views/inform/FaqsView';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -13,18 +13,18 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const KeyContactsPage = () => {
+const FaqsPage = () => {
   const classes = useStyles();
 
   return (
     <DashboardLayout>
-      <Page className={classes.root} title="Key Contacts">
+      <Page className={classes.root} title="FAQs">
         <AuthGuard>
-          <KeyContactsView />
+          <FaqsView />
         </AuthGuard>
       </Page>
     </DashboardLayout>
   );
 };
 
-export default KeyContactsPage;
+export default FaqsPage;
