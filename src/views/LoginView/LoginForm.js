@@ -94,7 +94,7 @@ const LoginForm = () => {
 
   return (
     <div className={classes.root}>
-      <form name="password-reset-form" method="post" onSubmit={handleSubmit}>
+      <form name="login-form" method="post" onSubmit={handleSubmit}>
         <Grid container spacing={2}>
           <Grid item xs={12}>
             <TextField
