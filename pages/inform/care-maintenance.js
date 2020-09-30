@@ -2,28 +2,29 @@ import { makeStyles } from '@material-ui/core';
 import AuthGuard from 'components/common/AuthGuard';
 import Page from 'components/common/Page';
 import DashboardLayout from 'layouts/DashboardLayout';
-import ContactUsView from 'views/inform/ContactUsView';
+import CareAndMaintenanceView from 'views/inform/CareAndMaintenanceView';
 
 const useStyles = makeStyles((theme) => ({
   root: {
     backgroundColor: theme.palette.background.dark,
     minHeight: 'calc(100vh - 64px)',
+    paddingTop: theme.spacing(3),
     paddingBottom: theme.spacing(3),
   },
 }));
 
-const ContactUsPage = () => {
+const CareAndMaintenancePage = () => {
   const classes = useStyles();
 
   return (
     <DashboardLayout>
-      <Page className={classes.root} title="Contact Us">
+      <Page className={classes.root} title="Care & Maintenance">
         <AuthGuard>
-          <ContactUsView />
+          <CareAndMaintenanceView />
         </AuthGuard>
       </Page>
     </DashboardLayout>
   );
 };
 
-export default ContactUsPage;
+export default CareAndMaintenancePage;
