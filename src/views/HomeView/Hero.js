@@ -1,5 +1,5 @@
-import { Button, Typography, useMediaQuery } from '@material-ui/core';
-import { makeStyles, useTheme } from '@material-ui/core/styles';
+import { Typography } from '@material-ui/core';
+import { makeStyles } from '@material-ui/core/styles';
 import clsx from 'clsx';
 import SectionHeader from 'components/molecules/SectionHeader';
 import SwiperAutoPlay from 'components/molecules/SwiperAutoPlay';
@@ -16,10 +16,6 @@ const Hero = (props) => {
   const { className, ...rest } = props;
   const classes = useStyles();
 
-  const theme = useTheme();
-  const isMd = useMediaQuery(theme.breakpoints.up('md'), {
-    defaultMatches: true,
-  });
   return (
     <div className={clsx(classes.root, className)} {...rest}>
       <HeroShaped
@@ -27,30 +23,15 @@ const Hero = (props) => {
           <SectionHeader
             title={(
               <Typography variant="h1">
-                Office spaces made
+                We make your place
                 {' '}
-                <Typography variant=" h1" color="primary">easy</Typography>
+                <Typography variant=" h1" color="primary">thrive!</Typography>
               </Typography>
             )}
-            subtitle="For entrepreneurs, startups and freelancers. Discover coworking spaces designed to inspire and to connect you to a community of motivated people."
-            ctaGroup={[
-              <Button
-                variant="contained"
-                color="primary"
-                size={isMd ? 'large' : 'medium'}
-              >
-                Customize
-              </Button>,
-              <Button
-                variant="outlined"
-                color="primary"
-                size={isMd ? 'large' : 'medium'}
-              >
-                Standards
-              </Button>,
-            ]}
+            subtitle="Interior Investments is in the business of making people who live, work, heal and learn more satisfied and productive, and their environments more supportive, attractive and responsive. With an impressive product portfolio, a skilled team of more than two hundred enthusiastic professionals, and a technology platform that fosters constant innovation in process management, Interior Investments is a catalyst for creating incredible workplaces on time and on budget."
             align="left"
-            titleVariant="h3"
+            titleVariant="h2"
+            subtitleVariant="h4"
           />
         )}
         rightSide={(

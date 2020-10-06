@@ -23,13 +23,13 @@ const HomeView = () => {
   return (
     <div className={classes.root}>
       <Hero />
-      <SectionAlternate>
+      {/* <SectionAlternate>
         <Advantages data={advantages} />
       </SectionAlternate>
       <Divider />
       <Section>
         <Spaces />
-      </Section>
+      </Section> */}
     </div>
   );
 };

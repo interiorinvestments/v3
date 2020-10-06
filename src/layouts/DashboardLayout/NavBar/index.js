@@ -51,6 +51,10 @@ const navConfig = [
         href: '/inform/design-standards',
         items: [
           {
+            title: 'Floor Plan',
+            href: '/inform/design-standards/floorplan',
+          },
+          {
             title: 'Workstations',
             href: '/inform/design-standards/workstations',
           },
@@ -290,7 +294,7 @@ const NavBar = ({ openMobile, onMobileClose }) => {
             <List
               key={config.subheader}
               subheader={(
-                <ListSubheader disableGutters disableSticky>
+                <ListSubheader disableGutters disableSticky color="primary">
                   {config.subheader}
                 </ListSubheader>
               )}
