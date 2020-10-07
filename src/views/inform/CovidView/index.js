@@ -1,4 +1,4 @@
-import { Container, Grid } from '@material-ui/core';
+import { Container } from '@material-ui/core';
 import SectionHeader from 'components/molecules/SectionHeader';
 
 const CovidView = () => (

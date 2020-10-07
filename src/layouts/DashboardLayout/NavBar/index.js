@@ -218,7 +218,14 @@ const renderNavItems = ({ items, ...rest }) => (
 );
 
 renderNavItems.propTypes = {
-  items: PropTypes.array,
+  items: PropTypes.arrayOf(
+    PropTypes.shape({
+      title: PropTypes.string.isRequired,
+      icon: PropTypes.element,
+      href: PropTypes.string.isRequired,
+      items: PropTypes.array,
+    }),
+  ),
 };
 
 const reduceChildRoutes = ({
