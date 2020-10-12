@@ -2,7 +2,7 @@ import {
   Button, FormControl,
   FormControlLabel, FormLabel,
   Grid, makeStyles, Radio,
-  RadioGroup,
+  RadioGroup, TextField,
 } from '@material-ui/core';
 import useLocalStorageState from 'hooks/useLocalStorageState';
 import PropTypes from 'prop-types';
@@ -27,7 +27,7 @@ const useStyles = makeStyles((theme) => ({
 
 const Primary = ({ onBack, onNext }) => {
   const classes = useStyles();
-  const [name, setName] = useLocalStorageState('name');
+  const [name] = useLocalStorageState('name');
   const [options, setOptions] = useLocalStorageState(name, {});
   const handleChoice = (e) => {
     setOptions({ ...options, [e.target.name]: e.target.value });
@@ -148,7 +148,27 @@ const Primary = ({ onBack, onNext }) => {
               <FormControlLabel value="D" control={<Radio />} label="D. Desk (Position 2)" disabled={!options['1.5.2']} />
             </RadioGroup>
           </FormControl>
-
+          <FormControl component="fieldset">
+            <FormLabel>
+              1.7 Select Desk Chair Preference ( Finish options vary, see Section 3, chairs may be viewed and tested in Room 75C):
+            </FormLabel>
+            <RadioGroup name="taskChair" value={options.taskChair} onChange={(e) => handleChoice(e)}>
+              <FormControlLabel value="A" control={<Radio />} label="A. Keilhauer - Tom" />
+              <FormControlLabel value="B" control={<Radio />} label="B. Bernhardt - Pilot" />
+              <FormControlLabel value="C" control={<Radio />} label="C. Vitra - Meda" />
+              <FormControlLabel value="D" control={<Radio />} label="D. Vitra - Imago" />
+              <FormControlLabel value="E" control={<Radio />} label="E. Herman Miller - Aeron" />
+            </RadioGroup>
+          </FormControl>
+          <FormControl>
+            <FormLabel>
+              1.8 Select Accessories and Indicate Quantities
+            </FormLabel>
+            <TextField value={options.accessories?.a} name="accessories.a" onChange={(e) => handleChoice(e)} type="number" size="small" variant="outlined" label="A. Telephone Holder" margin="dense" />
+            <TextField value={options.accessories?.b} name="accessories.b" onChange={(e) => handleChoice(e)} type="number" size="small" variant="outlined" label="B. Stackable Paper Tray (In/Out Box)" margin="dense" />
+            <TextField value={options.accessories?.c} name="accessories.c" onChange={(e) => handleChoice(e)} type="number" size="small" variant="outlined" label="C. Diagonal Paper Tray" margin="dense" />
+            <TextField value={options.accessories?.d} name="accessories.d" onChange={(e) => handleChoice(e)} type="number" size="small" variant="outlined" label="D. Glass Shelf - Maximum of (3)" margin="dense" />
+          </FormControl>
         </Grid>
         <Grid xs={12} sm={8} lg={7}>
           <Canvas options={options} />

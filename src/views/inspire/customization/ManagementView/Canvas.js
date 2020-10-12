@@ -28,6 +28,13 @@ const Canvas = ({ options }) => {
       <img className={clsx(classes.img, options['1.1'] === 'A' && !options['1.2'] ? {} : classes.hidden)} src="/img/customization/management/2A.png" alt="table" />
       <img className={clsx(classes.img, options['1.1'] === 'B' && !options['1.2'] ? {} : classes.hidden)} src="/img/customization/management/2B.png" alt="table" />
       <img className={clsx(classes.img, options['1.1'] === 'C' && !options['1.2'] ? {} : classes.hidden)} src="/img/customization/management/2C.png" alt="table" />
+      {/* task Chairs */}
+      <img className={clsx(classes.img, options.taskChair === 'A' ? {} : classes.hidden)} src="/img/customization/management/12A-TaskChair-Tom1-A.png" alt="Task Chair" />
+      <img className={clsx(classes.img, options.taskChair === 'B' ? {} : classes.hidden)} src="/img/customization/management/12B-TaskChair-Pilot1-A.png" alt="Task Chair" />
+      <img className={clsx(classes.img, options.taskChair === 'C' ? {} : classes.hidden)} src="/img/customization/management/12C-TaskChair-Meda1-A.png" alt="Task Chair" />
+      <img className={clsx(classes.img, options.taskChair === 'D' ? {} : classes.hidden)} src="/img/customization/management/12D-TaskChair-Imago1-A.png" alt="Task Chair" />
+      <img className={clsx(classes.img, options.taskChair === 'E' ? {} : classes.hidden)} src="/img/customization/management/12E-TaskChair-Aeron1-D.png" alt="Task Chair" />
+
       {/* 1.4 */}
       <img className={clsx(classes.img, options['1.4'] === 'B' ? {} : classes.hidden)} src="/img/customization/management/6B.png" alt="Additional Storage" />
       {/* 1.2  */}
@@ -124,6 +131,20 @@ const Canvas = ({ options }) => {
       <img className={clsx(classes.img, options['1.6'] === 'D' && options['1.2'] === 'J' && options['1.5.2'] === 'B' ? {} : classes.hidden)} src="/img/customization/management/11d-3B-8b.png" alt="Monitor" />
       <img className={clsx(classes.img, options['1.6'] === 'D' && options['1.2'] === 'K' && options['1.5.2'] === 'B' ? {} : classes.hidden)} src="/img/customization/management/11a-3C-8b.png" alt="Monitor" />
       <img className={clsx(classes.img, options['1.6'] === 'D' && options['1.2'] === 'L' && options['1.5.2'] === 'B' ? {} : classes.hidden)} src="/img/customization/management/11d-3E-8b.png" alt="Monitor" />
+      {/* Secondary */}
+      {/* 2.1 */}
+      <img className={clsx(classes.img, options['2.1'] === 'C' ? {} : classes.hidden)} src="/img/customization/management/18C-A.png" alt="Seating" />
+      <img className={clsx(classes.img, options['2.1'] === 'D' ? {} : classes.hidden)} src="/img/customization/management/18D-A.png" alt="Seating" />
+      <img className={clsx(classes.img, options['2.1'] === 'E' ? {} : classes.hidden)} src="/img/customization/management/18E-A.png" alt="Seating" />
+      {/* 2.2 */}
+      <img className={clsx(classes.img, options['2.2'] === 'A' ? {} : classes.hidden)} src="/img/customization/management/19A-A.png" alt="Additional Storage" />
+      <img className={clsx(classes.img, options['2.2'] === 'B' ? {} : classes.hidden)} src="/img/customization/management/19B-A.png" alt="Additional Storage" />
+      <img className={clsx(classes.img, options['2.2'] === 'C' ? {} : classes.hidden)} src="/img/customization/management/19C-A.png" alt="Additional Storage" />
+      <img className={clsx(classes.img, options['2.2'] === 'D' ? {} : classes.hidden)} src="/img/customization/management/19D-A.png" alt="Additional Storage" />
+      {/* 2.3 */}
+      <img className={clsx(classes.img, options['2.3'] === 'A' ? {} : classes.hidden)} src="/img/customization/management/20A.png" alt="Additional Storage" />
+      <img className={clsx(classes.img, options['2.3'] === 'B' ? {} : classes.hidden)} src="/img/customization/management/20B.png" alt="Additional Storage" />
+      <img className={clsx(classes.img, options['2.3'] === 'C' ? {} : classes.hidden)} src="/img/customization/management/20C.png" alt="Additional Storage" />
     </div>
   );
 };

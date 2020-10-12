@@ -20,6 +20,7 @@ import NameForm from 'components/common/NameForm';
 import Overview from './Overview';
 import Plan from './Plan';
 import Primary from './Primary';
+import Secondary from './Secondary';
 
 const steps = [
   {
@@ -110,13 +111,15 @@ const ManagementView = () => {
 
   const handleNext = () => {
     setActiveStep((prevActiveStep) => prevActiveStep + 1);
+    window.scrollTo(0, 0);
   };
 
   const handleBack = () => {
     setActiveStep((prevActiveStep) => prevActiveStep - 1);
+    window.scrollTo(0, 0);
   };
   return (
-    <Container maxWidth="lg">
+    <Container maxWidth={null}>
       <Box mb={3}>
         <Typography
           variant="h3"
@@ -162,6 +165,9 @@ const ManagementView = () => {
               )}
               {activeStep === 3 && (
                 <Primary onBack={handleBack} onNext={handleNext} />
+              )}
+              {activeStep === 4 && (
+                <Secondary onBack={handleBack} onNext={handleNext} />
               )}
             </Box>
           </Grid>
