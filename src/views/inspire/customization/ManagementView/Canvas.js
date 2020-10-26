@@ -69,12 +69,12 @@ const Canvas = ({ options }) => {
       <img className={clsx(classes.img, options['1.2'] === 'L' ? {} : classes.hidden)} src="/img/customization/management/3f-Table-W1.png" alt="table" />
       <img className={clsx(classes.img, options['1.2'] === 'L' ? {} : classes.hidden)} src="/img/customization/management/3i-MATable-W1.png" alt="table" />
       {/* 1.3 */}
-      <img className={clsx(classes.img, options['1.3'] === 'B' ? {} : classes.hidden)} src="/img/customization/management/4B.png" alt="Storage" zIndex="5" />
-      <img className={clsx(classes.img, options['1.3'] === 'C' ? {} : classes.hidden)} src="/img/customization/management/4C.png" alt="Storage" zIndex="5" />
-      <img className={clsx(classes.img, options['1.3'] === 'D' ? {} : classes.hidden)} src="/img/customization/management/4D.png" alt="Storage" zIndex="5" />
-      <img className={clsx(classes.img, options['1.3'] === 'E' ? {} : classes.hidden)} src="/img/customization/management/4E.png" alt="Storage" zIndex="5" />
-      <img className={clsx(classes.img, options['1.3'] === 'F' ? {} : classes.hidden)} src="/img/customization/management/4F.png" alt="Storage" zIndex="5" />
-      <img className={clsx(classes.img, options['1.3'] === 'G' ? {} : classes.hidden)} src="/img/customization/management/4G.png" alt="Storage" zIndex="5" />
+      <img className={clsx(classes.img, options['1.3'] === 'B' ? {} : classes.hidden)} src="/img/customization/management/4B.png" alt="Storage" zindex="5" />
+      <img className={clsx(classes.img, options['1.3'] === 'C' ? {} : classes.hidden)} src="/img/customization/management/4C.png" alt="Storage" zindex="5" />
+      <img className={clsx(classes.img, options['1.3'] === 'D' ? {} : classes.hidden)} src="/img/customization/management/4D.png" alt="Storage" zindex="5" />
+      <img className={clsx(classes.img, options['1.3'] === 'E' ? {} : classes.hidden)} src="/img/customization/management/4E.png" alt="Storage" zindex="5" />
+      <img className={clsx(classes.img, options['1.3'] === 'F' ? {} : classes.hidden)} src="/img/customization/management/4F.png" alt="Storage" zindex="5" />
+      <img className={clsx(classes.img, options['1.3'] === 'G' ? {} : classes.hidden)} src="/img/customization/management/4G.png" alt="Storage" zindex="5" />
       {/* Monitor */}
       <img className={clsx(classes.img, options['1.6'] === 'A' && options['1.2'] === 'A' && options['1.5.2'] === 'A' ? {} : classes.hidden)} src="/img/customization/management/11a-3A-8a.png" alt="Monitor" />
       <img className={clsx(classes.img, options['1.6'] === 'A' && options['1.2'] === 'B' && options['1.5.2'] === 'A' ? {} : classes.hidden)} src="/img/customization/management/11a-3B-8a.png" alt="Monitor" />

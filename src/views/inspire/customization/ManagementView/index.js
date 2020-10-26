@@ -153,7 +153,7 @@ const ManagementView = () => {
           >
             <Box p={3}>
               {activeStep === 0 && (
-                <Grid sm={6} md={3}>
+                <Grid item sm={6} md={3}>
                   <NameForm onNext={handleNext} localStorageKey="management" />
                 </Grid>
               )}

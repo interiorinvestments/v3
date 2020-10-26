@@ -26,7 +26,7 @@ const Overview = ({ onBack, onNext }) => {
   return (
     <>
       <Grid container>
-        <Grid xs={12} sm={4} lg={5}>
+        <Grid item xs={12} sm={4} lg={5}>
           <Typography variant="subtitle1">
             Choices for you to make in your office:
           </Typography>
@@ -98,7 +98,7 @@ const Overview = ({ onBack, onNext }) => {
             11. Work tool rail integrated in wood panels, additional trays, stackers, etc. may be hung off of tool rail
           </Typography>
         </Grid>
-        <Grid xs={12} sm={8} lg={7}>
+        <Grid item xs={12} sm={8} lg={7}>
           <img className={classes.img} src="/img/customization/management/UniversalWorkwall-A-NESW.png" alt="floor plan" />
         </Grid>
 

@@ -36,7 +36,7 @@ const Primary = ({ onBack, onNext }) => {
   return (
     <>
       <Grid container>
-        <Grid xs={12} sm={4} lg={5}>
+        <Grid item xs={12} sm={4} lg={5}>
           <FormControl component="fieldset">
             <FormLabel>
               1.1 Select a Desk Configuration that Best Supports Your Work Process
@@ -164,10 +164,10 @@ const Primary = ({ onBack, onNext }) => {
             <FormLabel>
               1.8 Select Accessories and Indicate Quantities
             </FormLabel>
-            <TextField value={options.accessories?.a} name="accessories.a" onChange={(e) => handleChoice(e)} type="number" size="small" variant="outlined" label="A. Telephone Holder" margin="dense" />
-            <TextField value={options.accessories?.b} name="accessories.b" onChange={(e) => handleChoice(e)} type="number" size="small" variant="outlined" label="B. Stackable Paper Tray (In/Out Box)" margin="dense" />
-            <TextField value={options.accessories?.c} name="accessories.c" onChange={(e) => handleChoice(e)} type="number" size="small" variant="outlined" label="C. Diagonal Paper Tray" margin="dense" />
-            <TextField value={options.accessories?.d} name="accessories.d" onChange={(e) => handleChoice(e)} type="number" size="small" variant="outlined" label="D. Glass Shelf - Maximum of (3)" margin="dense" />
+            <TextField value={options['accessories.a']} name="accessories.a" onChange={(e) => handleChoice(e)} type="number" size="small" variant="outlined" label="A. Telephone Holder" margin="dense" />
+            <TextField value={options['accessories.b']} name="accessories.b" onChange={(e) => handleChoice(e)} type="number" size="small" variant="outlined" label="B. Stackable Paper Tray (In/Out Box)" margin="dense" />
+            <TextField value={options['accessories.c']} name="accessories.c" onChange={(e) => handleChoice(e)} type="number" size="small" variant="outlined" label="C. Diagonal Paper Tray" margin="dense" />
+            <TextField value={options['accessories.d']} name="accessories.d" onChange={(e) => handleChoice(e)} type="number" size="small" variant="outlined" label="D. Glass Shelf - Maximum of (3)" margin="dense" />
           </FormControl>
         </Grid>
         <Grid xs={12} sm={8} lg={7}>

@@ -1,4 +1,3 @@
-import { Typography } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import clsx from 'clsx';
 import SectionHeader from 'components/molecules/SectionHeader';
@@ -9,6 +8,9 @@ import PropTypes from 'prop-types';
 const useStyles = makeStyles((theme) => ({
   root: {
     backgroundColor: theme.palette.background.default,
+  },
+  thrive: {
+    color: theme.palette.primary.main,
   },
 }));
 
@@ -22,15 +24,15 @@ const Hero = (props) => {
         leftSide={(
           <SectionHeader
             title={(
-              <Typography variant="h1">
+              <div>
                 We make your place
                 {' '}
-                <Typography variant=" h1" color="primary">thrive!</Typography>
-              </Typography>
+                <span className={classes.thrive}>thrive!</span>
+              </div>
             )}
             subtitle="Interior Investments is in the business of making people who live, work, heal and learn more satisfied and productive, and their environments more supportive, attractive and responsive. With an impressive product portfolio, a skilled team of more than two hundred enthusiastic professionals, and a technology platform that fosters constant innovation in process management, Interior Investments is a catalyst for creating incredible workplaces on time and on budget."
             align="left"
-            titleVariant="h2"
+            titleVariant="h1"
             subtitleVariant="h4"
           />
         )}
