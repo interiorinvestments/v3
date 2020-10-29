@@ -103,7 +103,7 @@ const Details = ({ onBack, onNext }) => {
       </Grid>
       <div className={classes.buttons}>
         <Button onClick={onBack}>Back</Button>
-        <Button color="primary" variant="contained" onClick={onNext}>Next</Button>
+        <Button color="primary" variant="contained" onClick={onNext}>Submit</Button>
       </div>
     </>
   );
