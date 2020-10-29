@@ -21,15 +21,13 @@ const useStyles = makeStyles((theme) => ({
 }));
 const Plan = ({ onBack, onNext, localStorageKey }) => {
   const classes = useStyles();
-  const [name, setName] = useLocalStorageState(localStorageKey);
+  const [name] = useLocalStorageState(localStorageKey);
   return (
     <>
       <Typography variant="body1">
         Welcome
         {' '}
-        {name.firstName}
-        {' '}
-        {name.lastName}
+        {name}
         {' '}
         your office is number 36NE34 in NE Exterior Corner
       </Typography>

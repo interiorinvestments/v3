@@ -24,7 +24,7 @@ const schema = {
 
 const NameForm = ({ onNext, localStorageKey }) => {
   const classes = useStyles();
-  const [name, setName] = useLocalStorageState(localStorageKey, { firstName: '', lastName: '' });
+  const [name, setName] = useLocalStorageState(localStorageKey, '');
   const [formState, setFormState] = useState({
     isValid: false,
     values: {},
@@ -63,7 +63,7 @@ const NameForm = ({ onNext, localStorageKey }) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    await setName({ firstName: formState.values.firstName, lastName: formState.values.lastName });
+    await setName(`${formState.values.firstName} ${formState.values.lastName}`);
     onNext();
   };
 

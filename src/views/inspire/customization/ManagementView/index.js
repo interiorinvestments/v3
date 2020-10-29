@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import {
   Check as CheckIcon,
+  Clipboard as ClipboardIcon,
   Layers as LayersIcon,
   List as ListIcon,
   Map as MapIcon,
@@ -17,9 +18,12 @@ import {
 import clsx from 'clsx';
 import NameForm from 'components/common/NameForm';
 
+import Details from './Details';
+import Finishes from './Finishes';
 import Overview from './Overview';
 import Plan from './Plan';
 import Primary from './Primary';
+import Receipt from './Receipt';
 import Secondary from './Secondary';
 
 const steps = [
@@ -49,6 +53,10 @@ const steps = [
   },
   {
     label: 'Details & Conclusions',
+    icon: ClipboardIcon,
+  },
+  {
+    label: 'Receipt',
     icon: CheckIcon,
   },
 ];
@@ -168,6 +176,15 @@ const ManagementView = () => {
               )}
               {activeStep === 4 && (
                 <Secondary onBack={handleBack} onNext={handleNext} />
+              )}
+              {activeStep === 5 && (
+                <Finishes onBack={handleBack} onNext={handleNext} />
+              )}
+              {activeStep === 6 && (
+                <Details onBack={handleBack} onNext={handleNext} />
+              )}
+              {activeStep === 7 && (
+                <Receipt onBack={handleBack} onNext={handleNext} />
               )}
             </Box>
           </Grid>
