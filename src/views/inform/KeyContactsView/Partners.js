@@ -1,7 +1,6 @@
 import { Grid, Typography } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import clsx from 'clsx';
-import Image from 'components/atoms/Image';
 import PropTypes from 'prop-types';
 
 const useStyles = makeStyles((theme) => ({
@@ -25,7 +24,8 @@ const useStyles = makeStyles((theme) => ({
     marginBottom: theme.spacing(2),
   },
   logoImg: {
-    maxWidth: 175,
+    width: '100%',
+    height: '100%',
     padding: theme.spacing(1),
   },
   fontWeight700: {
@@ -54,12 +54,11 @@ const Partners = (props) => {
           <Grid item xs={12}>
             <Grid container justify="space-between">
               {data.map((partner, index) => (
-                <Grid item xs={6} sm={2} key={index}>
-                  <Image
+                <Grid item xs={6} sm={3} key={index}>
+                  <img
                     src={partner.logo}
                     alt={partner.name}
                     className={classes.logoImg}
-                    lazy={false}
                   />
                 </Grid>
               ))}

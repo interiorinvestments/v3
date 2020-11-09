@@ -1,6 +1,6 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import Image from 'components/atoms/Image';
+import Image from 'next/image';
 import PropTypes from 'prop-types';
 import SwiperCore, { Autoplay } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -35,7 +35,8 @@ const SwiperAutoPlay = ({ items }) => {
             src={item.src}
             alt={item.alt}
             srcSet={item.srcSet}
-            lazyProps={{ width: '100%', height: '100%' }}
+            layout="fill"
+            loading="eager"
             className={classes.image}
           />
         </SwiperSlide>
