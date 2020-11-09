@@ -26,6 +26,7 @@ const useStyles = makeStyles((theme) => ({
   },
   logoImg: {
     maxWidth: 175,
+    padding: theme.spacing(1),
   },
   fontWeight700: {
     fontWeight: 700,
@@ -78,6 +79,7 @@ Partners.propTypes = {
   /**
    * data to be rendered
    */
+  // eslint-disable-next-line react/forbid-prop-types
   data: PropTypes.array.isRequired,
 };
 

@@ -98,27 +98,23 @@ export const team2 = [
 
 export const partners = [
   {
-    name: 'Airbnb',
-    logo: '/img/logos/airbnb.svg',
+    name: 'Herman Miller',
+    logo: '/img/logos/HMVector.svg',
+  },
+  // {
+  //   name: 'Geiger',
+  //   logo: '/img/logos/Geiger.svg',
+  // },
+  {
+    name: 'Nemschoff',
+    logo: '/img/logos/nemschoff.svg',
   },
   {
-    name: 'Coinbase',
-    logo: '/img/logos/coinbase.svg',
+    name: 'Design Within Reach',
+    logo: '/img/logos/logo-naughtone.svg',
   },
   {
-    name: 'Dribbble',
-    logo: '/img/logos/dribbble.svg',
-  },
-  {
-    name: 'Instagram',
-    logo: '/img/logos/instagram.svg',
-  },
-  {
-    name: 'Netflix',
-    logo: '/img/logos/netflix.svg',
-  },
-  {
-    name: 'Pinterest',
-    logo: '/img/logos/pinterest.svg',
+    name: 'HAY',
+    logo: '/img/logos/HAY.svg',
   },
 ];
