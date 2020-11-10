@@ -1,5 +1,5 @@
 import {
-  Button, FormControl, FormControlLabel, FormLabel, Grid,
+  Box, Button, FormControl, FormControlLabel, FormLabel, Grid,
   makeStyles, Radio, RadioGroup, TextField, Typography,
 } from '@material-ui/core';
 import useLocalStorageState from 'hooks/useLocalStorageState';
@@ -37,54 +37,64 @@ const Details = ({ onBack, onNext }) => {
     <>
       <Grid container>
         <Grid item xs={12} sm={4} lg={5}>
-          <FormControl component="fieldset">
-            <FormLabel>
-              {managementData['4.1'].label}
-            </FormLabel>
-            <RadioGroup name="4.1" value={options['4.1']} onChange={(e) => handleChoice(e)}>
-              <FormControlLabel value="A" control={<Radio size="small" />} label={<Typography variant="body2">{managementData['4.1'].A}</Typography>} />
-              <FormControlLabel value="B" control={<Radio size="small" />} label={<Typography variant="body2">{managementData['4.1'].B}</Typography>} />
-            </RadioGroup>
-          </FormControl>
-          <FormControl component="fieldset">
-            <FormLabel>
-              {managementData['4.2'].label}
-            </FormLabel>
-            <RadioGroup name="4.2" value={options['4.2']} onChange={(e) => handleChoice(e)}>
-              <FormControlLabel value="A" control={<Radio size="small" />} label={<Typography variant="body2">{managementData['4.2'].A}</Typography>} />
-              <FormControlLabel value="B" control={<Radio size="small" />} label={<Typography variant="body2">{managementData['4.2'].B}</Typography>} />
-            </RadioGroup>
-          </FormControl>
-          <FormControl component="fieldset">
-            <FormLabel>
-              {managementData['4.3'].label}
-            </FormLabel>
-            <RadioGroup name="4.3" value={options['4.3']} onChange={(e) => handleChoice(e)}>
-              <FormControlLabel value="A" control={<Radio size="small" />} label={<Typography variant="body2">{managementData['4.3'].A}</Typography>} />
-              <FormControlLabel value="B" control={<Radio size="small" />} label={<Typography variant="body2">{managementData['4.3'].B}</Typography>} />
-            </RadioGroup>
-          </FormControl>
-          <FormControl component="fieldset">
-            <FormLabel>
-              {managementData['4.4'].label}
-            </FormLabel>
-            <RadioGroup name="4.4" value={options['4.4']} onChange={(e) => handleChoice(e)}>
-              <FormControlLabel value="A" control={<Radio size="small" />} label={<Typography variant="body2">{managementData['4.4'].A}</Typography>} />
-              <FormControlLabel value="B" control={<Radio size="small" />} label={<Typography variant="body2">{managementData['4.4'].B}</Typography>} />
-              <FormControlLabel value="C" control={<Radio size="small" />} label={<Typography variant="body2">{managementData['4.4'].C}</Typography>} />
-            </RadioGroup>
-          </FormControl>
-          <FormControl component="fieldset">
-            <FormLabel>
-              {managementData['4.5'].label}
-            </FormLabel>
-            <RadioGroup name="4.5" value={options['4.5']} onChange={(e) => handleChoice(e)}>
-              <FormControlLabel value="A" control={<Radio size="small" />} label={<Typography variant="body2">{managementData['4.5'].A}</Typography>} />
-              <FormControlLabel value="B" control={<Radio size="small" />} label={<Typography variant="body2">{managementData['4.5'].B}</Typography>} />
-              <FormControlLabel value="C" control={<Radio size="small" />} label={<Typography variant="body2">{managementData['4.5'].C}</Typography>} />
-              <FormControlLabel value="D" control={<Radio size="small" />} label={<Typography variant="body2">{managementData['4.5'].D}</Typography>} />
-            </RadioGroup>
-          </FormControl>
+          <Box my={2}>
+            <FormControl component="fieldset">
+              <FormLabel>
+                {managementData['4.1'].label}
+              </FormLabel>
+              <RadioGroup name="4.1" value={options['4.1']} onChange={(e) => handleChoice(e)}>
+                <FormControlLabel value="A" control={<Radio size="small" />} label={<Typography variant="body2">{managementData['4.1'].A}</Typography>} />
+                <FormControlLabel value="B" control={<Radio size="small" />} label={<Typography variant="body2">{managementData['4.1'].B}</Typography>} />
+              </RadioGroup>
+            </FormControl>
+          </Box>
+          <Box my={2}>
+            <FormControl component="fieldset">
+              <FormLabel>
+                {managementData['4.2'].label}
+              </FormLabel>
+              <RadioGroup name="4.2" value={options['4.2']} onChange={(e) => handleChoice(e)}>
+                <FormControlLabel value="A" control={<Radio size="small" />} label={<Typography variant="body2">{managementData['4.2'].A}</Typography>} />
+                <FormControlLabel value="B" control={<Radio size="small" />} label={<Typography variant="body2">{managementData['4.2'].B}</Typography>} />
+              </RadioGroup>
+            </FormControl>
+          </Box>
+          <Box my={2}>
+            <FormControl component="fieldset">
+              <FormLabel>
+                {managementData['4.3'].label}
+              </FormLabel>
+              <RadioGroup name="4.3" value={options['4.3']} onChange={(e) => handleChoice(e)}>
+                <FormControlLabel value="A" control={<Radio size="small" />} label={<Typography variant="body2">{managementData['4.3'].A}</Typography>} />
+                <FormControlLabel value="B" control={<Radio size="small" />} label={<Typography variant="body2">{managementData['4.3'].B}</Typography>} />
+              </RadioGroup>
+            </FormControl>
+          </Box>
+          <Box my={2}>
+            <FormControl component="fieldset">
+              <FormLabel>
+                {managementData['4.4'].label}
+              </FormLabel>
+              <RadioGroup name="4.4" value={options['4.4']} onChange={(e) => handleChoice(e)}>
+                <FormControlLabel value="A" control={<Radio size="small" />} label={<Typography variant="body2">{managementData['4.4'].A}</Typography>} />
+                <FormControlLabel value="B" control={<Radio size="small" />} label={<Typography variant="body2">{managementData['4.4'].B}</Typography>} />
+                <FormControlLabel value="C" control={<Radio size="small" />} label={<Typography variant="body2">{managementData['4.4'].C}</Typography>} />
+              </RadioGroup>
+            </FormControl>
+          </Box>
+          <Box my={2}>
+            <FormControl component="fieldset">
+              <FormLabel>
+                {managementData['4.5'].label}
+              </FormLabel>
+              <RadioGroup name="4.5" value={options['4.5']} onChange={(e) => handleChoice(e)}>
+                <FormControlLabel value="A" control={<Radio size="small" />} label={<Typography variant="body2">{managementData['4.5'].A}</Typography>} />
+                <FormControlLabel value="B" control={<Radio size="small" />} label={<Typography variant="body2">{managementData['4.5'].B}</Typography>} />
+                <FormControlLabel value="C" control={<Radio size="small" />} label={<Typography variant="body2">{managementData['4.5'].C}</Typography>} />
+                <FormControlLabel value="D" control={<Radio size="small" />} label={<Typography variant="body2">{managementData['4.5'].D}</Typography>} />
+              </RadioGroup>
+            </FormControl>
+          </Box>
           <TextField
             variant="outlined"
             name="4.6"

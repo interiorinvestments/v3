@@ -1,6 +1,6 @@
 /* eslint-disable max-len */
 import {
-  Button, Grid, makeStyles, Typography,
+  Box, Button, Grid, makeStyles, Typography,
 } from '@material-ui/core';
 import PropTypes from 'prop-types';
 
@@ -57,25 +57,27 @@ const Overview = ({ onBack, onNext }) => {
           <Typography variant="body2" color="textPrimary" gutterBottom>
             <strong>C. Finishes</strong>
           </Typography>
-          <Typography variant="subtitle1">
-            Architectural Framework:
-          </Typography>
-          <Typography variant="body2" color="textSecondary">
-            1. Wall-mounted light fixture - directs light at ceiling to reduce glare within office (supplemented by additional ceiling lights)
-          </Typography>
-          <Typography variant="body2" color="textSecondary">
-            2. Frosted glass door & sidelight - provides privacy within office and light to interior corridor
-          </Typography>
-          <Typography variant="body2" color="textSecondary">
-            3. Painted wall finish - soft white color
-          </Typography>
-          <Typography variant="body2" color="textSecondary">
-            4. Wood floor - dark color, walnut wood
-          </Typography>
-          <Typography variant="body2" color="textSecondary" gutterBottom>
-            5. Floor box - provides power, voice, data connections at table desk
-            Note solar shades included in office, not shown in image
-          </Typography>
+          <Box my={2}>
+            <Typography variant="subtitle1">
+              Architectural Framework:
+            </Typography>
+            <Typography variant="body2" color="textSecondary">
+              1. Wall-mounted light fixture - directs light at ceiling to reduce glare within office (supplemented by additional ceiling lights)
+            </Typography>
+            <Typography variant="body2" color="textSecondary">
+              2. Frosted glass door & sidelight - provides privacy within office and light to interior corridor
+            </Typography>
+            <Typography variant="body2" color="textSecondary">
+              3. Painted wall finish - soft white color
+            </Typography>
+            <Typography variant="body2" color="textSecondary">
+              4. Wood floor - dark color, walnut wood
+            </Typography>
+            <Typography variant="body2" color="textSecondary" gutterBottom>
+              5. Floor box - provides power, voice, data connections at table desk
+              Note solar shades included in office, not shown in image
+            </Typography>
+          </Box>
           <Typography variant="subtitle1">
             Furniture Framework:
           </Typography>

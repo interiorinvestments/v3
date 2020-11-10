@@ -80,7 +80,7 @@ const navConfig = [
           },
           {
             title: 'Accessories',
-            href: '/inform/design-standards/',
+            href: '/inform/design-standards/accessories',
           },
         ],
       },
