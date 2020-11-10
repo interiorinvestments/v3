@@ -64,7 +64,7 @@ const navConfig = [
           },
           {
             title: 'Seating',
-            href: '/inform/design-standards/Seating',
+            href: '/inform/design-standards/seating',
           },
           {
             title: 'Conference',
