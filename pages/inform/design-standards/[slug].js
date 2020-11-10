@@ -1,13 +1,15 @@
 import { makeStyles } from '@material-ui/core';
+import AuthGuard from 'components/common/AuthGuard';
 import Page from 'components/common/Page';
 import DashboardLayout from 'layouts/DashboardLayout';
 import PropTypes from 'prop-types';
+import StandardsView from 'views/inform/designStandards/StandardsView';
 
 import { getData } from '../../../src/data/designStandards';
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    // backgroundColor: theme.palette.background.dark,
+    backgroundColor: theme.palette.background.dark,
     minHeight: 'calc(100vh - 64px)',
     paddingBottom: theme.spacing(3),
   },
@@ -20,11 +22,12 @@ const titleCase = (slug) => {
 
 const DesignStandardsPage = ({ slug, products }) => {
   const classes = useStyles();
-
   return (
     <DashboardLayout>
       <Page className={classes.root} title={titleCase(slug)}>
-        <h1>{products.title}</h1>
+        <AuthGuard>
+          <StandardsView standards={products} />
+        </AuthGuard>
       </Page>
     </DashboardLayout>
   );

@@ -15,7 +15,7 @@ const Header = ({ className, ...rest }) => {
       {...rest}
     >
       <Typography
-        variant="body1"
+        variant="h3"
         color="textPrimary"
       >
         Floor Plan
