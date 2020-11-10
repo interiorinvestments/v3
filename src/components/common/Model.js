@@ -5,8 +5,8 @@ import Proptypes from 'prop-types';
 
 const useStyles = makeStyles({
   model: {
-    height: 'auto',
-    width: '100%',
+    height: 200,
+    width: 400,
   },
 });
 
@@ -21,7 +21,7 @@ const Model = ({ product }) => {
       auto-rotate
       auto-rotate-delay
       camera-controls
-      className={classes.model}
+      style={{ width: '400px', height: '300px' }}
     />
   );
 };

@@ -40,19 +40,22 @@ TabPanel.propTypes = {
 };
 
 const useStyles = makeStyles((theme) => ({
-  root: {
+  container: {
     paddingTop: theme.spacing(3),
     paddingBottom: theme.spacing(3),
   },
-  tab: {
+  root: {
     flexGrow: 1,
     backgroundColor: theme.palette.background.paper,
-    display: 'flex',
-    marginTop: theme.spacing(3),
+    width: '100%',
   },
-  tabs: {
-    borderRight: `1px solid ${theme.palette.divider}`,
-  },
+  // tabPanel: {
+
+  //   backgroundColor: theme.palette.background.paper,
+  // },
+  // tabs: {
+  //   backgroundColor: theme.palette.background.paper,
+  // },
 }));
 
 const StandardsView = ({ standards }) => {
@@ -63,26 +66,25 @@ const StandardsView = ({ standards }) => {
     setValue(newValue);
   };
   return (
-    <Container className={classes.root}>
+    <Container className={classes.container}>
       <Header title={standards.title} />
-      <Grid sm={12} md={6}>
-        <div className={classes.tab}>
+      <Grid sm={8} md={6}>
+        <div className={classes.root}>
           <Tabs
-            orientation="vertical"
-            variant="scrollable"
             value={value}
             onChange={handleChange}
-            aria-label="Vertical tabs example"
             className={classes.tabs}
+            variant="scrollable"
           >
             {standards.products.map((product) => (
-              <Tab label={product.name} key={product.name} />
+              <Tab label={product.name} key={product.name} className={classes.tab} />
             ))}
           </Tabs>
           {standards.products.map((product, index) => (
-            <TabPanel value={value} index={index} key={product.name}>
+            <TabPanel value={value} index={index} className={classes.tabPanel}>
               <Dynamic product={product} />
             </TabPanel>
+
           ))}
         </div>
       </Grid>
