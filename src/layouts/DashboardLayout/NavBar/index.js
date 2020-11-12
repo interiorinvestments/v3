@@ -90,10 +90,19 @@ const navConfig = [
         href: '/inform/care-maintenance',
       },
       {
-        title: 'Covid Procedures & Response',
+        title: 'Covid Response',
         icon: HeartIcon,
-        href: 'https://scout.atlasdigitalsuite.com/ProjectViewer/41aaf5cb-0ac3-dab5-2918-8cf8aef7d96a/b753a3ce-2942-4dd7-bcb0-4b350d31d350',
-        target: '_blank',
+        items: [
+          {
+            title: 'Return To Work Services',
+            href: 'https://scout.atlasdigitalsuite.com/ProjectViewer/41aaf5cb-0ac3-dab5-2918-8cf8aef7d96a/b753a3ce-2942-4dd7-bcb0-4b350d31d350',
+            target: '_blank',
+          },
+          {
+            title: 'Work From Home',
+            href: '/',
+          },
+        ],
       },
       {
         title: 'FAQs',

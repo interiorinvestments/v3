@@ -1,86 +1,14 @@
 export const team = [
   {
-    title: 'Principal',
-    photo: {
-      src: '/img/people/Mike_Greenberg-300x300.jpg',
-      srcSet: '/img/people/Mike_Greenberg-300x300.jpg',
-    },
-    name: 'Mike Greenberg',
-    phone: '(847)-325-1025',
-    email: 'mgreenberg@interiorinvestments.com',
-
-  },
-  {
-    title: 'Sales Manager',
-    photo: {
-      src: '/img/people/Lyle_Wells-300x300.jpg',
-      srcSet: '/img/people/Lyle_Wells-300x300.jpg',
-    },
-    name: 'Lyle Wells',
-    phone: '(847)-325-1079',
-    email: 'lwells@interiorinvestments.com',
-  },
-  {
-    title: 'Senior Team Leader',
-    photo: {
-      src: '/img/people/Gary_Spangler-300x300.jpg',
-      srcSet: '/img/people/Gary_Spangler-300x300.jpg',
-    },
-    name: 'Gary Spangler',
-    phone: '(847)-325-1039',
-    email: 'gspangle@interiorinvestments.com',
-  },
-  {
     title: 'Corporate Accounts Manager',
     photo: {
-      src: '/img/people/Katie_Todd-300x300.jpg',
-      srcSet: '/img/people/Katie_Todd-300x300.jpg',
+      src: '/img/people/FiorellaWilson.jpg',
+      srcSet: '/img/people/FiorellaWilson.jpg',
     },
-    name: 'Katie Todd',
-    phone: '(847)-325-1043',
-    email: 'ktodd@interiorinvestments.com',
-  },
-  {
-    title: 'Account Coordinator',
-    photo: {
-      src: '/img/people/Pat_Tully-300x300.jpg',
-      srcSet: '/img/people/Pat_Tully-300x300.jpg',
-    },
-    name: 'Pat Tully',
-    phone: '(847)-325-1042',
-    email: 'ptully@interiorinvestments.com',
-  },
-  {
-    title: 'Installation Manager',
-    photo: {
-      src: '/img/people/Adam_Albrecht-300x300.jpg',
-      srcSet: '/img/people/Adam_Albrecht-300x300.jpg',
-    },
-    name: 'Adam Albrecht',
-    phone: '(847)-325-1089',
-    email: 'aalbrecht@interiorinvestments.com',
-  },
-  {
-    title: 'Project Coordinator',
-    photo: {
-      src: '/img/people/Colin_Corr-300x300.jpg',
-      srcSet: '/img/people/Colin_Corr-300x300.jpg',
-    },
-    name: 'Colin Corr',
-    phone: '(847)-325-1071',
-    email: 'ccorr@interiorinvestments.com',
-    soapbox: 'https://soapbox.wistia.com/videos/VI1SFIf6rY?preview=true',
-  },
-  {
-    title: 'Senior Designer',
-    photo: {
-      src: '/img/people/Megan_Klock-300x300.jpg',
-      srcSet: '/img/people/Megan_Klock-300x300.jpg',
-    },
-    name: 'Megan Klock',
-    phone: '(312)-212-5138',
-    email: 'mklock@interiorinvestments.com',
-    soapbox: 'https://soapbox.wistia.com/videos/LJ3AzzQdUv',
+    name: 'Fiorella Wilson',
+    phone: '(312)-212-5130',
+    email: 'fwilson@interiorinvestments.com',
+    soapbox: 'https://soapbox.wistia.com/videos/IC8i8RRwe3',
   },
   {
     title: 'Account Manager',
@@ -94,15 +22,26 @@ export const team = [
     soapbox: 'https://soapbox.wistia.com/videos/yYo1Yww34z',
   },
   {
-    title: 'Corporate Accounts Manager',
+    title: 'Senior Designer',
     photo: {
-      src: '/img/people/FiorellaWilson.jpg',
-      srcSet: '/img/people/FiorellaWilson.jpg',
+      src: '/img/people/Megan_Klock-300x300.jpg',
+      srcSet: '/img/people/Megan_Klock-300x300.jpg',
     },
-    name: 'Fiorella Wilson',
-    phone: '(312)-212-5130',
-    email: 'fwilson@interiorinvestments.com',
-    soapbox: 'https://soapbox.wistia.com/videos/IC8i8RRwe3',
+    name: 'Megan Klock',
+    phone: '(312)-212-5138',
+    email: 'mklock@interiorinvestments.com',
+    soapbox: 'https://soapbox.wistia.com/videos/LJ3AzzQdUv',
+  },
+  {
+    title: 'Project Coordinator',
+    photo: {
+      src: '/img/people/Colin_Corr-300x300.jpg',
+      srcSet: '/img/people/Colin_Corr-300x300.jpg',
+    },
+    name: 'Colin Corr',
+    phone: '(847)-325-1071',
+    email: 'ccorr@interiorinvestments.com',
+    soapbox: 'https://soapbox.wistia.com/videos/VI1SFIf6rY?preview=true',
   },
   {
     title: 'Accounting Coordinator',
