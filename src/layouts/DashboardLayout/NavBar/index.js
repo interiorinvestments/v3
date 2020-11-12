@@ -92,7 +92,8 @@ const navConfig = [
       {
         title: 'Covid Procedures & Response',
         icon: HeartIcon,
-        href: '/inform/covid',
+        href: 'https://scout.atlasdigitalsuite.com/ProjectViewer/41aaf5cb-0ac3-dab5-2918-8cf8aef7d96a/b753a3ce-2942-4dd7-bcb0-4b350d31d350',
+        target: '_blank',
       },
       {
         title: 'FAQs',
@@ -242,6 +243,7 @@ const reduceChildRoutes = ({
         info={item.info}
         open={Boolean(open)}
         title={item.title}
+        target={item.target}
       >
         {renderNavItems({
           depth: depth + 1,
@@ -259,6 +261,7 @@ const reduceChildRoutes = ({
         key={key}
         info={item.info}
         title={item.title}
+        target={item.target}
       />,
     );
   }

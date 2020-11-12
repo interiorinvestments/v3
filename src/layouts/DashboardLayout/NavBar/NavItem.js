@@ -70,6 +70,7 @@ function NavItem({
   className,
   open: openProp,
   info: Info,
+  target,
   ...rest
 }) {
   const classes = useStyles();
@@ -127,6 +128,7 @@ function NavItem({
         href={href}
         naked
         style={style}
+        target={target}
       >
         {Icon && <Icon className={classes.icon} size="20" />}
         <span className={classes.title}>{title}</span>
@@ -144,6 +146,7 @@ NavItem.propTypes = {
   icon: PropTypes.any,
   info: PropTypes.any,
   open: PropTypes.bool,
+  target: PropTypes.string,
   title: PropTypes.string.isRequired,
 };
 
