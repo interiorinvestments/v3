@@ -57,6 +57,9 @@ const useStyles = makeStyles((theme) => ({
   title: {
     fontWeight: 'bold',
   },
+  soapbox: {
+    textDecoration: 'none',
+  },
 }));
 
 const Team = (props) => {
@@ -92,6 +95,16 @@ const Team = (props) => {
                       <Typography>{item.title}</Typography>
                       <Typography>{item.phone}</Typography>
                       <Typography>{item.email}</Typography>
+                      {item.soapbox && (
+                        <a href={item.soapbox} target="_blank" rel="noreferrer" className={classes.soapbox}>
+                          <Typography color="primary">
+                            Learn more about
+                            {' '}
+                            {item.name.split(' ')[0]}
+                            's role
+                          </Typography>
+                        </a>
+                      )}
                     </>
         )}
                   primaryTypographyProps={{
