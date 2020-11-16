@@ -18,7 +18,7 @@ const Header = ({ className, ...rest }) => {
         variant="h3"
         color="textPrimary"
       >
-        Floor Plan
+        Sample Floor Plan
       </Typography>
     </div>
   );

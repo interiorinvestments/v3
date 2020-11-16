@@ -1,3 +1,17 @@
+import {
+  Box,
+  Divider,
+  Drawer,
+  Hidden,
+  IconButton,
+  List,
+  ListSubheader,
+  makeStyles,
+  Typography,
+} from '@material-ui/core';
+import PinterestIcon from '@material-ui/icons/Pinterest';
+import { useRouter } from 'next/router';
+import PropTypes from 'prop-types';
 import { useEffect } from 'react';
 import {
   Book as BookIcon,
@@ -19,20 +33,6 @@ import {
   Youtube as YouTubeIcon,
 } from 'react-feather';
 import PerfectScrollbar from 'react-perfect-scrollbar';
-import {
-  Box,
-  Divider,
-  Drawer,
-  Hidden,
-  IconButton,
-  List,
-  ListSubheader,
-  makeStyles,
-  Typography,
-} from '@material-ui/core';
-import PinterestIcon from '@material-ui/icons/Pinterest';
-import { useRouter } from 'next/router';
-import PropTypes from 'prop-types';
 
 import NavItem from './NavItem';
 

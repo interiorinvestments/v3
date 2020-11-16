@@ -30,7 +30,7 @@ const Hero = (props) => {
                 <span className={classes.thrive}>thrive!</span>
               </div>
             )}
-            subtitle="Interior Investments is in the business of making people who live, work, heal and learn more satisfied and productive, and their environments more supportive, attractive and responsive. With an impressive product portfolio, a skilled team of more than two hundred enthusiastic professionals, and a technology platform that fosters constant innovation in process management, Interior Investments is a catalyst for creating incredible workplaces on time and on budget."
+            subtitle="Hello! this on-line tool is for your use when developing, budgeting and or implementing anywhere in the United States. This web-based tool was designed to quickly show you the design standards, develop projected pricing with installation and review all project documents, proposal and drawings anytime and from anywhere."
             align="left"
             titleVariant="h1"
             subtitleVariant="h4"

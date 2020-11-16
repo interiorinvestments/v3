@@ -16,7 +16,7 @@ const FloorPlanView = () => {
   return (
     <Container className={classes.root}>
       <Header />
-      <Image src="/img/floorplans/level17spec.jpg" height={847} width={1072} />
+      <Image src="/img/floorplans/level17spec.jpg" height={600} width={800} />
       <SpacesList />
     </Container>
   );
