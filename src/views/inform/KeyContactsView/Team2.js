@@ -1,4 +1,3 @@
-import React from 'react';
 import {
   Avatar,
   colors,
@@ -14,6 +13,7 @@ import clsx from 'clsx';
 import SectionHeader from 'components/molecules/SectionHeader';
 import CardBase from 'components/organisms/CardBase';
 import PropTypes from 'prop-types';
+import React from 'react';
 
 const useStyles = makeStyles((theme) => ({
   root: {},

@@ -41,15 +41,7 @@ module.exports = {
     'react/jsx-props-no-spreading': 1,
     'react/react-in-jsx-scope': 0,
     'react/require-default-props': 0,
-    'simple-import-sort/sort': [
-      2, {
-        groups: [
-          ['^\\u0000'],
-          ['^react', '^@?\\w'],
-          ['^[^.]'],
-          ['^\\.'],
-        ],
-      },
-    ],
+    'simple-import-sort/imports': 2,
+    'simple-import-sort/exports': 2,
   },
 };
