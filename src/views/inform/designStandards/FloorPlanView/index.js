@@ -1,4 +1,6 @@
-import { Container, makeStyles } from '@material-ui/core';
+import {
+  Box, Container, Grid, makeStyles,
+} from '@material-ui/core';
 import Image from 'next/image';
 
 import Header from './Header';
@@ -16,8 +18,12 @@ const FloorPlanView = () => {
   return (
     <Container className={classes.root}>
       <Header />
-      <Image src="/img/floorplans/level17spec.jpg" height={600} width={800} />
-      <SpacesList />
+      <Grid container justify="center">
+        <Image src="/img/floorplans/level17spec.jpg" height={500} width={700} />
+      </Grid>
+      <Box mt={3}>
+        <SpacesList />
+      </Box>
     </Container>
   );
 };
