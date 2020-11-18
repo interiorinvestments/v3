@@ -92,18 +92,19 @@ const navConfig = [
       {
         title: 'Covid Response',
         icon: HeartIcon,
-        items: [
-          {
-            title: 'Return To Work Services',
-            href: 'https://scout.atlasdigitalsuite.com/ProjectViewer/41aaf5cb-0ac3-dab5-2918-8cf8aef7d96a/b753a3ce-2942-4dd7-bcb0-4b350d31d350',
-            target: '_blank',
-          },
-          {
-            title: 'Work From Home',
-            href: 'https://scout.atlasdigitalsuite.com/ProjectViewer/b3023292-6dfb-2a10-9b18-b1f1dff7e5e4/b753a3ce-2942-4dd7-bcb0-4b350d31d350',
-            target: '_blank',
-          },
-        ],
+        href: '/inform/covid',
+        // items: [
+        //   {
+        //     title: 'Return To Work Services',
+        //     href: 'https://scout.atlasdigitalsuite.com/ProjectViewer/41aaf5cb-0ac3-dab5-2918-8cf8aef7d96a/b753a3ce-2942-4dd7-bcb0-4b350d31d350',
+        //     target: '_blank',
+        //   },
+        //   {
+        //     title: 'Work From Home',
+        //     href: 'https://scout.atlasdigitalsuite.com/ProjectViewer/b3023292-6dfb-2a10-9b18-b1f1dff7e5e4/b753a3ce-2942-4dd7-bcb0-4b350d31d350',
+        //     target: '_blank',
+        //   },
+        // ],
       },
       {
         title: 'FAQs',
