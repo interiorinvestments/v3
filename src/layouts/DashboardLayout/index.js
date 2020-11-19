@@ -1,14 +1,14 @@
-import React, { useState } from 'react';
 import { makeStyles } from '@material-ui/core';
 import { useUser } from 'lib/hooks';
 import PropTypes from 'prop-types';
+import React, { useState } from 'react';
 
 import NavBar from './NavBar';
 import TopBar from './TopBar';
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    backgroundColor: theme.palette.background.default,
+    backgroundColor: theme.palette.background.dark,
     display: 'flex',
     height: '100%',
     overflow: 'hidden',

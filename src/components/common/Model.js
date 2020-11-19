@@ -2,20 +2,22 @@ import '@google/model-viewer';
 
 import Proptypes from 'prop-types';
 
-const Model = ({ product }) => (
+const Model = ({ model }) => (
   <model-viewer
-    src={product.glb}
-    ios-src={product.usdz}
-    alt={product.name}
+    src={model.glb}
+    ios-src={model.usdz}
+    alt={model.name}
     ar
     auto-rotate
     auto-rotate-delay
     camera-controls
-    style={{ width: '400px', height: '300px' }}
+    style={{
+      height: '80%', minHeight: '300px', width: '100%',
+    }}
   />
 );
 Model.propTypes = {
-  product: Proptypes.object,
+  model: Proptypes.object,
 };
 
 export default Model;

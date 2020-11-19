@@ -1,7 +1,7 @@
-import { LazyLoadImage } from 'react-lazy-load-image-component';
 import { makeStyles } from '@material-ui/core/styles';
 import clsx from 'clsx';
 import PropTypes from 'prop-types';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 const useStyles = makeStyles(() => ({
   root: {
