@@ -40,28 +40,68 @@ const Hero = (props) => {
           <SwiperAutoPlay
             items={[
               {
-                src: '/img/hq/hq1.jpg',
-                srcSet: '/img/hq/hq1.jpg',
+                src: '/img/home/1164_010.jpg',
+                srcSet: '/img/home/1164_010.jpg',
                 alt: 'Interior Investments',
               },
               {
-                src: '/img/hq/hq2.jpg',
-                srcSet: '/img/hq/hq2.jpg',
+                src: '/img/home/1164_012.jpg',
+                srcSet: '/img/home/1164_012.jpg',
                 alt: 'Interior Investments',
               },
               {
-                src: '/img/hq/hq3.jpg',
-                srcSet: '/img/hq/hq3.jpg',
+                src: '/img/home/BartlitBeckBBWeb1.png',
+                srcSet: '/img/home/BartlitBeckBBWeb1.png',
                 alt: 'Interior Investments',
               },
               {
-                src: '/img/hq/hq4.jpg',
-                srcSet: '/img/hq/hq4.jpg',
+                src: '/img/home/BBConferenceV1People.jpg',
+                srcSet: '/img/home/BBConferenceV1People.jpg',
                 alt: 'Interior Investments',
               },
               {
-                src: '/img/hq/hq5.jpg',
-                srcSet: '/img/hq/hq5.jpg',
+                src: '/img/home/BBWorkstationsV1.jpg',
+                srcSet: '/img/home/BBWorkstationsV1.jpg',
+                alt: 'Interior Investments',
+              },
+              {
+                src: '/img/home/IntersportWorkstations.jpg',
+                srcSet: '/img/home/IntersportWorkstations.jpg',
+                alt: 'Interior Investments',
+              },
+              {
+                src: '/img/home/PowerReviewBooths.png',
+                srcSet: '/img/home/PowerReviewBooths.png',
+                alt: 'Interior Investments',
+              },
+              {
+                src: '/img/home/PowerReviewsWorkstations.png',
+                srcSet: '/img/home/PowerReviewsWorkstations.png',
+                alt: 'Interior Investments',
+              },
+              {
+                src: '/img/home/ReceptionV1Web.jpg',
+                srcSet: '/img/home/ReceptionV1Web.jpg',
+                alt: 'Interior Investments',
+              },
+              {
+                src: '/img/home/ShumanWebRes.jpg',
+                srcSet: '/img/home/ShumanWebRes.jpg',
+                alt: 'Interior Investments',
+              },
+              {
+                src: '/img/home/WebViewConferenceRoom.jpg',
+                srcSet: '/img/home/WebViewConferenceRoom.jpg',
+                alt: 'Interior Investments',
+              },
+              {
+                src: '/img/home/WHVyaireWoodlandsCafe1stEdit8.jpg',
+                srcSet: '/img/home/WHVyaireWoodlandsCafe1stEdit8.jpg',
+                alt: 'Interior Investments',
+              },
+              {
+                src: '/img/home/WHVyaireWoodlandsCafe1stEdit13.jpg',
+                srcSet: '/img/home/WHVyaireWoodlandsCafe1stEdit13.jpg',
                 alt: 'Interior Investments',
               },
             ]}

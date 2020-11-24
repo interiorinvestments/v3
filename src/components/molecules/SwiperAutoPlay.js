@@ -25,7 +25,7 @@ const SwiperAutoPlay = ({ items }) => {
   const classes = useStyles();
 
   return (
-    <Swiper loop autoplay={{ delay: 7000 }} className={classes.root}>
+    <Swiper loop autoplay={{ delay: 13000 }} className={classes.root}>
       {items.map((item) => (
         <SwiperSlide
           className={classes.swiperSlide}
