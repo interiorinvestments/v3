@@ -13,8 +13,8 @@ export const team = [
   {
     title: 'Account Manager',
     photo: {
-      src: '/img/logos/IIBars.png',
-      srcSet: '/img/logos/IIBars.png',
+      src: '/img/people/SVukovljak.png',
+      srcSet: '/img/people/SVukovljak.png',
     },
     name: 'Shannon Vukovljak',
     phone: '(312)-212-5112',

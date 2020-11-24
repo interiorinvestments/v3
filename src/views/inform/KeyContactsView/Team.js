@@ -73,12 +73,12 @@ const Team = (props) => {
 
   return (
     <div className={clsx(classes.root, className)} {...rest}>
-      <SectionHeader
+      {/* <SectionHeader
         title="Meet our team"
         titleVariant="h1"
         subtitle="Our team isn’t strong because it’s big, it’s big because we’re strong."
         align={isMd ? 'center' : 'left'}
-      />
+      /> */}
       <Grid container spacing={isMd ? 2 : 1}>
         {data.map((item, index) => (
           <Grid item xs={12} sm={6} key={index} data-aos="fade-up">
