@@ -1,6 +1,9 @@
 import 'react-pdf/dist/esm/Page/AnnotationLayer.css';
 
-import { Box, Button, Grid } from '@material-ui/core';
+import {
+  Box, Button, Grid,
+} from '@material-ui/core';
+import { Pagination } from '@material-ui/lab';
 import PropTypes from 'prop-types';
 import { useState } from 'react';
 import {
@@ -14,30 +17,18 @@ const PdfViewer = ({ pdf }) => {
     setNumPages(numPages);
   };
 
+  const handleChange = (e, value) => {
+    setPageNumber(value);
+  };
+
   return (
     <div>
       <Document file={pdf} onLoadSuccess={onDocumentLoadSuccess}>
         <Page pageNumber={pageNumber} />
       </Document>
-      <Grid container>
-        <Box mx={3}>
-          <Button onClick={() => setPageNumber(pageNumber - 1)}>back</Button>
-        </Box>
-        <Box mx={3}>
-          <span>
-            Page
-            {' '}
-            {pageNumber}
-            {' '}
-            of
-            {' '}
-            {numPages}
-          </span>
-        </Box>
-        <Box mx={3}>
-          <Button onClick={() => setPageNumber(pageNumber + 1)}>next</Button>
-        </Box>
-      </Grid>
+      <Box pl={12}>
+        <Pagination count={numPages} page={pageNumber} onChange={handleChange} size="large" variant="rounded" />
+      </Box>
     </div>
   );
 };
