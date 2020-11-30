@@ -59,8 +59,23 @@ const location = {
   floorplans: [{
     src: `${imgPath}hanaFloorPlan.jpg`,
   }],
-  lookbook: `${docPath}HanaDallasLookBook.pdf`,
-  manufacture: `${docPath}HanaDallasLookBookManufacture.pdf`,
+  lookbooks: [{ src: `${docPath}HanaDallasLookBook.pdf` }, {
+    src: `${docPath}HanaDallasLookBookManufacture.pdf`,
+  }],
+  typicals: [
+    {
+      src: `${imgPath}Hana_Rendering.png`,
+    },
+    {
+      src: `${imgPath}Hana_Rendering2.png`,
+    },
+    {
+      src: `${imgPath}Hana_Rendering3.jpg`,
+    },
+    {
+      src: `${imgPath}Hana_Rendering4.jpg`,
+    },
+  ],
 };
 
 export default location;

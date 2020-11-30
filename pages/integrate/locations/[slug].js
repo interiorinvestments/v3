@@ -31,7 +31,7 @@ export async function getStaticPaths() {
   return {
     paths: [
       { params: { slug: 'hana' } },
-      // { params: { slug: 'scotsman' } },
+      { params: { slug: 'scotsman' } },
       // { params: { slug: 'esd' } },
       // { params: { slug: 'intersport' } },
     ],

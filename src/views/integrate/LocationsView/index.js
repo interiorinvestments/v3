@@ -1,5 +1,6 @@
 import {
   Box,
+  Card, CardMedia,
   Chip,
   Container, Grid, makeStyles, Tab,
   Tabs, Typography,
@@ -47,15 +48,18 @@ const LocationsView = ({ location }) => {
           </Grid>
         </Grid>
         <Grid item>
-          <Tabs
-            value={value}
-            onChange={handleChange}
-            indicatorColor="primary"
-            textColor="primary"
-          >
-            <Tab label="FloorPlan" />
-            <Tab label="Look Book" />
-          </Tabs>
+          <Box mb={3}>
+            <Tabs
+              value={value}
+              onChange={handleChange}
+              indicatorColor="primary"
+              textColor="primary"
+            >
+              <Tab label="FloorPlan" />
+              <Tab label="Look Book" />
+              <Tab label="Typicals" />
+            </Tabs>
+          </Box>
         </Grid>
         <Grid item>
           {
@@ -67,12 +71,24 @@ const LocationsView = ({ location }) => {
           }
           {
             value === 1 && (
-              <>
-                <Box mb={3}>
-                  <PdfViewer pdf={location.lookbook} />
-                </Box>
-                <PdfViewer pdf={location.manufacture} />
-              </>
+              location.lookbooks?.map((lookbook) => (
+                <PdfViewer pdf={lookbook.src} />
+              ))
+            )
+          }
+          {
+            value === 2 && (
+              <Grid container spacing={3}>
+                {location.typicals?.map((typical, index) => (
+                  <Grid key={index} item xs={12} sm={6} md={4}>
+                    <Card>
+                      <CardMedia>
+                        <Image src={typical.src} height={200} width={400} alt="typicals" />
+                      </CardMedia>
+                    </Card>
+                  </Grid>
+                ))}
+              </Grid>
             )
           }
         </Grid>
