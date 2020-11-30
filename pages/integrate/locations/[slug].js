@@ -1,14 +1,10 @@
 import { makeStyles } from '@material-ui/core';
 import AuthGuard from 'components/common/AuthGuard';
 import Page from 'components/common/Page';
+import { getData } from 'data/locations';
 import DashboardLayout from 'layouts/DashboardLayout';
 import PropTypes from 'prop-types';
 import LocationsView from 'views/integrate/LocationsView';
-
-const getData = (input) => ({
-  location: 'Hana',
-  name: 'tiesto',
-});
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -18,11 +14,11 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const LocationsPage = ({ slug, location }) => {
+const LocationsPage = ({ location }) => {
   const classes = useStyles();
   return (
     <DashboardLayout>
-      <Page className={classes.root} title="Location">
+      <Page className={classes.root} title={location.name}>
         <AuthGuard>
           <LocationsView location={location} />
         </AuthGuard>
@@ -48,14 +44,12 @@ export async function getStaticProps({ params }) {
   const location = getData(slug);
   return {
     props: {
-      slug,
       location,
     },
   };
 }
 
 LocationsPage.propTypes = {
-  slug: PropTypes.string.isRequired,
   location: PropTypes.object.isRequired,
 };
 

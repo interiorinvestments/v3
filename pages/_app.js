@@ -1,11 +1,13 @@
 import 'react-perfect-scrollbar/dist/css/styles.css';
 import 'swiper/swiper-bundle.min.css';
+import 'react-image-gallery/styles/css/image-gallery.css';
+import '../styles/globals.css';
 
-import React from 'react';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import { ThemeProvider } from '@material-ui/core/styles';
 import Head from 'next/head';
 import PropTypes from 'prop-types';
+import React from 'react';
 
 import theme from '../src/theme';
 
