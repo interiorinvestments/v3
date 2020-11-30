@@ -33,7 +33,7 @@ export async function getStaticPaths() {
       { params: { slug: 'hana' } },
       { params: { slug: 'scotsman' } },
       { params: { slug: 'esd' } },
-      // { params: { slug: 'intersport' } },
+      { params: { slug: 'intersport' } },
     ],
     fallback: false,
   };
