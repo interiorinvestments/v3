@@ -1,3 +1,5 @@
+import 'react-pdf/dist/esm/Page/AnnotationLayer.css';
+
 import { Box, Button, Grid } from '@material-ui/core';
 import PropTypes from 'prop-types';
 import { useState } from 'react';

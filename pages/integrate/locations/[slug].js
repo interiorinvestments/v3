@@ -32,7 +32,7 @@ export async function getStaticPaths() {
     paths: [
       { params: { slug: 'hana' } },
       { params: { slug: 'scotsman' } },
-      // { params: { slug: 'esd' } },
+      { params: { slug: 'esd' } },
       // { params: { slug: 'intersport' } },
     ],
     fallback: false,

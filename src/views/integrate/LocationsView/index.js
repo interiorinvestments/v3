@@ -64,23 +64,23 @@ const LocationsView = ({ location }) => {
         <Grid item>
           {
             value === 0 && (
-              location.floorplans?.map((floorplan, index) => (
-                <Image src={floorplan.src} width={600} height={500} alt="floorplan" key={index} />
+              location.floorplans?.map((floorplan) => (
+                <Image src={floorplan.src} width={600} height={500} alt="floorplan" key={floorplan.src} />
               ))
             )
           }
           {
             value === 1 && (
               location.lookbooks?.map((lookbook) => (
-                <PdfViewer pdf={lookbook.src} />
+                <PdfViewer pdf={lookbook.src} key={lookbook.src} />
               ))
             )
           }
           {
             value === 2 && (
               <Grid container spacing={3}>
-                {location.typicals?.map((typical, index) => (
-                  <Grid key={index} item xs={12} sm={6} md={4}>
+                {location.typicals?.map((typical) => (
+                  <Grid key={typical.src} item xs={12} sm={6} md={4}>
                     <Card>
                       <CardMedia>
                         <Image src={typical.src} height={200} width={400} alt="typicals" />
