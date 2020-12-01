@@ -13,11 +13,14 @@ import {
 const PdfViewer = ({ pdf }) => {
   const [numPages, setNumPages] = useState(null);
   const [pageNumber, setPageNumber] = useState(1);
+
   const onDocumentLoadSuccess = ({ numPages }) => {
     setNumPages(numPages);
+    setPageNumber(1);
   };
 
   const handleChange = (e, value) => {
+    e.preventDefault();
     setPageNumber(value);
   };
 
@@ -27,7 +30,7 @@ const PdfViewer = ({ pdf }) => {
         <Page pageNumber={pageNumber} />
       </Document>
       <Box pl={12}>
-        <Pagination count={numPages} page={pageNumber} onChange={handleChange} size="large" variant="rounded" />
+        <Pagination count={numPages} page={pageNumber || 1} onChange={handleChange} size="large" variant="rounded" />
       </Box>
     </div>
   );
