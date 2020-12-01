@@ -38,12 +38,12 @@ export async function getStaticPaths() {
   return {
     paths: [
       { params: { slug: 'workstations' } },
-      { params: { slug: 'private-offices' } },
-      { params: { slug: 'seating' } },
-      { params: { slug: 'conference' } },
-      { params: { slug: 'reception' } },
-      { params: { slug: 'storage' } },
-      { params: { slug: 'accessories' } },
+      // { params: { slug: 'private-offices' } },
+      // { params: { slug: 'seating' } },
+      // { params: { slug: 'conference' } },
+      // { params: { slug: 'reception' } },
+      // { params: { slug: 'storage' } },
+      // { params: { slug: 'accessories' } },
     ],
     fallback: false,
   };
