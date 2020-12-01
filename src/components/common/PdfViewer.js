@@ -1,7 +1,7 @@
 import 'react-pdf/dist/esm/Page/AnnotationLayer.css';
 
 import {
-  Box, Button, Grid,
+  Box,
 } from '@material-ui/core';
 import { Pagination } from '@material-ui/lab';
 import PropTypes from 'prop-types';

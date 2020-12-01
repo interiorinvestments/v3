@@ -11,13 +11,13 @@ const OrgChart = () => {
   }, [enter]);
   return (
     <>
-      <Image useMap="#image-map" alt="orgchart" src="/img/people/orgchart.jpg" height={1000} width={3000} onMouseEnter={() => setEnter(!enter)} />
+      <Image useMap="#image-map" alt="orgchart" src="/img/people/orgchart.jpg" height={600} width={2800} onMouseEnter={() => setEnter(!enter)} />
       <map name="image-map">
-        <area target="_blank" alt="Shannon" title="Shannon" href="https://soapbox.wistia.com/videos/yYo1Yww34z" coords="530,762,978,556" shape="rect" />
-        <area target="_blank" alt="Fiorella" title="Fiorella" href="https://soapbox.wistia.com/videos/IC8i8RRwe3" coords="1561,751,2007,537" shape="rect" />
-        <area target="_blank" alt="Megan" title="Megan" href="https://soapbox.wistia.com/videos/LJ3AzzQdUv" coords="2069,743,2512,548" shape="rect" />
-        <area target="_blank" alt="Nikki" title="Nikki" href="https://soapbox.wistia.com/videos/nEUvcLaG6X" coords="2072,998,2512,789" shape="rect" />
-        <area target="_blank" alt="colin" title="colin" href="https://soapbox.wistia.com/videos/VI1SFIf6rY?preview=true" coords="2582,998,3022,795" shape="rect" />
+        <area target="_blank" alt="Shannon" title="Shannon" href="https://soapbox.wistia.com/videos/yYo1Yww34z" coords="948,460,493,241" shape="rect" />
+        <area target="_blank" alt="Fiorella" title="Fiorella" href="https://soapbox.wistia.com/videos/IC8i8RRwe3" coords="1519,230,1981,450" shape="rect" />
+        <area target="_blank" alt="Megan" title="Megan" href="https://soapbox.wistia.com/videos/LJ3AzzQdUv" coords="2489,447,2034,228" shape="rect" />
+        <area target="_blank" alt="Nikki" title="Nikki" href="https://soapbox.wistia.com/videos/nEUvcLaG6X" coords="2032,479,2489,695" shape="rect" />
+        <area target="_blank" alt="Colin" title="Colin" href="https://soapbox.wistia.com/videos/VI1SFIf6rY" coords="2539,479,2991,695" shape="rect" />
       </map>
     </>
   );

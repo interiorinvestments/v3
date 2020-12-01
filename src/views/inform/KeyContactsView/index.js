@@ -1,9 +1,8 @@
 import { Box, Container } from '@material-ui/core';
 import dynamic from 'next/dynamic';
 
-import { partners, team } from './data';
+import { team } from './data';
 import Header from './Header';
-import Partners from './Partners';
 import Team from './Team';
 
 const OrgChart = dynamic(() => import('./OrgChart'), {
@@ -17,7 +16,6 @@ const KeyContactsView = () => (
     <Box py={4}>
       <Team data={team} />
     </Box>
-    <Partners data={partners} />
   </Container>
 );
 
