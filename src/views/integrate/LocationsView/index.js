@@ -55,9 +55,9 @@ const LocationsView = ({ location }) => {
               indicatorColor="primary"
               textColor="primary"
             >
-              <Tab label="FloorPlan" />
-              <Tab label="Look Book" />
-              <Tab label="Typicals" />
+              <Tab label="FloorPlan" disabled={!location.floorplans} />
+              <Tab label="Look Book" disabled={!location.lookbooks} />
+              <Tab label="Typicals" disabled={!location.typicals} />
             </Tabs>
           </Box>
         </Grid>
