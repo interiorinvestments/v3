@@ -6,28 +6,29 @@ import {
 } from '@material-ui/core/styles';
 import KeyboardArrowLeft from '@material-ui/icons/KeyboardArrowLeft';
 import KeyboardArrowRight from '@material-ui/icons/KeyboardArrowRight';
+import Image from 'next/image';
 import PropTypes from 'prop-types';
 import { useState } from 'react';
 import SwipeableViews from 'react-swipeable-views';
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    maxWidth: 600,
+    maxWidth: 500,
     flexGrow: 1,
   },
   img: {
-    height: 500,
+    height: 400,
     display: 'block',
-    maxWidth: 600,
+    maxWidth: 500,
     overflow: 'hidden',
     width: '100%',
   },
 }));
 
-function SwipeableTextMobileStepper({ images }) {
+function SwipeableTextMobileStepper({ images, activeStep, setActiveStep }) {
   const classes = useStyles();
   const theme = useTheme();
-  const [activeStep, setActiveStep] = useState(0);
+
   const maxSteps = images.length;
 
   const handleNext = () => {
@@ -53,7 +54,7 @@ function SwipeableTextMobileStepper({ images }) {
         {images.map((step, index) => (
           <div key={step.imgPath}>
             {Math.abs(activeStep - index) <= 2 ? (
-              <img className={classes.img} src={step.imgPath} alt={step.label} />
+              <Image className={classes.img} src={step.imgPath} alt={step.label} loading="eager" height={400} width={500} />
             ) : null}
           </div>
         ))}
@@ -82,6 +83,8 @@ function SwipeableTextMobileStepper({ images }) {
 
 SwipeableTextMobileStepper.propTypes = {
   images: PropTypes.array.isRequired,
+  activeStep: PropTypes.number.isRequired,
+  setActiveStep: PropTypes.func.isRequired,
 };
 
 export default SwipeableTextMobileStepper;

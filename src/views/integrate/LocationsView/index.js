@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 import {
   Box,
   Card, CardMedia,
@@ -27,6 +28,7 @@ const useStyles = makeStyles((theme) => ({
 const LocationsView = ({ location }) => {
   const classes = useStyles();
   const [value, setValue] = useState(0);
+  const [activeStep, setActiveStep] = useState(0);
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
@@ -34,49 +36,51 @@ const LocationsView = ({ location }) => {
   return (
     <>
       <Container className={classes.root}>
+
+        <Typography variant="h6" color="textSecondary">{location.location}</Typography>
+        <Typography variant="h1" color="textPrimary">{location.name}</Typography>
+        <Box mb={2}>
+          <Chip color="secondary" variant="outlined" size="small" label={`${location.sqft} sqft`} />
+        </Box>
+        <Typography variant="body1" color="textPrimary">{location.subTitle}</Typography>
         <Grid container spacing={3}>
-          <Grid item xs={12} sm={5}>
-            <Typography variant="h6" color="textSecondary">{location.location}</Typography>
-            <Typography variant="h1" color="textPrimary">{location.name}</Typography>
-            <Box mb={2}>
-              <Chip color="secondary" variant="outlined" size="small" label={`${location.sqft} sqft`} />
-            </Box>
-            <Typography variant="body1" color="textPrimary">{location.subTitle}</Typography>
+          <Grid item xs={12} md={5} lg={4}>
+            <SwipeableViews images={location.images} activeStep={activeStep} setActiveStep={setActiveStep} />
           </Grid>
-          <Grid item xs={12} sm={7}>
-            <SwipeableViews images={location.images} />
-          </Grid>
-        </Grid>
-        <Grid item>
-          <Box mb={3}>
-            <Tabs
-              value={value}
-              onChange={handleChange}
-              indicatorColor="primary"
-              textColor="primary"
-            >
-              <Tab label="FloorPlan" disabled={!location.floorplans} />
-              <Tab label="Look Book" disabled={!location.lookbooks} />
-              <Tab label="Typicals" disabled={!location.typicals} />
-            </Tabs>
-          </Box>
-        </Grid>
-        <Grid item>
-          {
+          <Grid item xs={12} md={7} lg={8}>
+            <Grid item>
+              <Box mb={3}>
+                <Tabs
+                  value={value}
+                  onChange={handleChange}
+                  indicatorColor="primary"
+                  textColor="primary"
+                >
+                  <Tab label="FloorPlan" disabled={!location.floorplans} />
+                  <Tab label="Look Book" disabled={!location.lookbooks} />
+                  <Tab label="Typicals" disabled={!location.typicals} />
+                </Tabs>
+              </Box>
+            </Grid>
+            <Grid item>
+              {
             value === 0 && (
-              location.floorplans?.map((floorplan) => (
-                <Image src={floorplan.src} width={600} height={500} alt="floorplan" key={floorplan.src} />
-              ))
+              location.floorplans && (
+                <Image src={location.floorplans[activeStep].src} width={600} height={500} alt="floorplan" key={location.floorplans[activeStep].src} />
+              )
+              // location.floorplans?.map((floorplan) => (
+              //   <Image src={floorplan.src} width={600} height={500} alt="floorplan" key={floorplan.src} />
+              // ))
             )
           }
-          {
+              {
             value === 1 && (
               location.lookbooks?.map((lookbook) => (
                 <PdfViewer pdf={lookbook.src} key={lookbook.src} />
               ))
             )
           }
-          {
+              {
             value === 2 && (
               <Grid container spacing={3}>
                 {location.typicals?.map((typical) => (
@@ -91,6 +95,8 @@ const LocationsView = ({ location }) => {
               </Grid>
             )
           }
+            </Grid>
+          </Grid>
         </Grid>
       </Container>
     </>
