@@ -19,7 +19,7 @@ const FloorPlanView = () => {
     <Container className={classes.root}>
       <Header />
       <Grid container justify="center">
-        <Image src="/img/floorplans/level17spec.jpg" height={500} width={700} />
+        <Image src="/img/designStandards/floorplan/floorplan.png" height={500} width={900} />
       </Grid>
       <Box mt={3}>
         <SpacesList />

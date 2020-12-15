@@ -1,7 +1,7 @@
 const glbPath = '/img/designStandards/';
 
 const items = {
-  title: 'Conference',
+  title: 'Tables',
   products: [
     {
       name: 'Good',

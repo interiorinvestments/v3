@@ -5,34 +5,34 @@ import Link from 'components/common/Link';
 
 const spaces = [
   {
-    name: 'Workstations',
+    name: 'Settings',
     color: '#FFFFF0',
-    href: '/inform/design-standards/workstations',
-  },
-  {
-    name: 'Private Offices',
-    color: '#CDE1E9',
-    href: '/inform/design-standards/private-offices',
+    href: '/inform/design-standards/settings',
   },
   {
     name: 'Seating',
-    color: '#C0C0C0',
+    color: '#CDE1E9',
     href: '/inform/design-standards/seating',
   },
   {
-    name: 'Conference',
+    name: 'Tables',
+    color: '#C0C0C0',
+    href: '/inform/design-standards/tables',
+  },
+  {
+    name: 'Accessories',
     color: '#D3EBAE',
-    href: '/inform/design-standards/conference',
+    href: '/inform/design-standards/accessories',
   },
   {
-    name: 'Reception Area',
+    name: 'Casegoods',
     color: '#FEF0DC',
-    href: '/inform/design-standards/reception',
+    href: '/inform/design-standards/casegoods',
   },
   {
-    name: 'Filing/Storage',
+    name: 'Misc',
     color: '#B9C4C7',
-    href: '/inform/design-standards/storage',
+    href: '/inform/design-standards/misc',
   },
 ];
 
