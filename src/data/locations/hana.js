@@ -57,51 +57,51 @@ const location = {
     },
   ],
   floorplans: [{
-    src: `${imgPath}hanaFloorPlan.jpg`,
+    src: `${imgPath}hanaFloorPlan1.jpg`,
   }, {
-    src: `${imgPath}Hana399801.jpg`,
+    src: `${imgPath}hanaFloorPlan.jpg`,
   },
   {
-    src: `${imgPath}Hana44555.jpg`,
+    src: `${imgPath}hanaFloorPlan3.jpg`,
   },
   {
-    src: `${imgPath}Hana45091.jpg`,
+    src: `${imgPath}hanaFloorPlan4.jpg`,
   },
   {
-    src: `${imgPath}Hana45507.jpg`,
+    src: `${imgPath}hanaFloorPlan5.jpg`,
   },
   {
-    src: `${imgPath}Hana46807.jpg`,
+    src: `${imgPath}hanaFloorPlan6.jpg`,
   },
   {
-    src: `${imgPath}Hana47105.jpg`,
+    src: `${imgPath}hanaFloorPlan7.jpg`,
   },
   {
-    src: `${imgPath}Hana47120.jpg`,
+    src: `${imgPath}hanaFloorPlan8.jpg`,
   },
   {
-    src: `${imgPath}Hana41777.jpg`,
+    src: `${imgPath}hanaFloorPlan9.jpg`,
   },
   {
-    src: `${imgPath}Hana42885.jpg`,
+    src: `${imgPath}hanaFloorPlan10.jpg`,
   },
   {
-    src: `${imgPath}Hana43089.jpg`,
+    src: `${imgPath}hanaFloorPlan11.jpg`,
   },
   {
-    src: `${imgPath}Hana43232.jpg`,
+    src: `${imgPath}hanaFloorPlan12.jpg`,
   },
   {
-    src: `${imgPath}Hana43576.jpg`,
+    src: `${imgPath}hanaFloorPlan13.jpg`,
   },
   {
-    src: `${imgPath}Hana44037.jpg`,
+    src: `${imgPath}hanaFloorPlan14.jpg`,
   },
   {
-    src: `${imgPath}Hana44055.jpg`,
+    src: `${imgPath}hanaFloorPlan.jpg`,
   },
   {
-    src: `${imgPath}Hana399801.jpg`,
+    src: `${imgPath}hanaFloorPlan16.jpg`,
   }],
   lookbooks: [{ src: `${docPath}HanaDallasLookBook.pdf` }, {
     src: `${docPath}HanaDallasLookBookManufacture.pdf`,

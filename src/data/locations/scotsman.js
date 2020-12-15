@@ -17,9 +17,6 @@ const location = {
       imgPath: `${imgPath}ScotsmanEditFlat.jpg`,
     },
     {
-      imgPath: `${imgPath}ScotsmanEditFlatLighter.jpg`,
-    },
-    {
       imgPath: `${imgPath}ScotsmanLounge.jpg`,
     },
     {
@@ -47,6 +44,33 @@ const location = {
     },
     {
       src: `${imgPath}scotsmanFloorplan2.jpg`,
+    },
+    {
+      src: `${imgPath}ScotsmanEditFlat.jpg`,
+    },
+    {
+      src: `${imgPath}ScotsmanEditFlatLighter.jpg`,
+    },
+    {
+      src: `${imgPath}ScotsmanLounge.jpg`,
+    },
+    {
+      src: `${imgPath}ScotsmanMeetingSpace.jpg`,
+    },
+    {
+      src: `${imgPath}ScotsmanOutside.jpg`,
+    },
+    {
+      src: `${imgPath}ScotsmanTestingRoom.jpg`,
+    },
+    {
+      src: `${imgPath}ScotsmanTrainingRoom.jpg`,
+    },
+    {
+      src: `${imgPath}ScotsmanWorkstationLounge.jpg`,
+    },
+    {
+      src: `${imgPath}ScotsmanWorkstations.jpg`,
     },
   ],
   lookbooks: [

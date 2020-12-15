@@ -45,6 +45,36 @@ const location = {
     {
       src: `${imgPath}intersportFloorplan.jpg`,
     },
+    {
+      imgPath: `${imgPath}intersport2.jpg`,
+    },
+    {
+      imgPath: `${imgPath}intersport3.jpg`,
+    },
+    {
+      imgPath: `${imgPath}intersport4.jpg`,
+    },
+    {
+      imgPath: `${imgPath}intersport5.jpg`,
+    },
+    {
+      imgPath: `${imgPath}intersport6.jpg`,
+    },
+    {
+      imgPath: `${imgPath}intersport7.jpg`,
+    },
+    {
+      imgPath: `${imgPath}intersport8.jpg`,
+    },
+    {
+      imgPath: `${imgPath}intersport9.jpg`,
+    },
+    {
+      imgPath: `${imgPath}intersport10.jpg`,
+    },
+    {
+      imgPath: `${imgPath}intersport11.jpg`,
+    },
   ],
   lookbooks: [
     {

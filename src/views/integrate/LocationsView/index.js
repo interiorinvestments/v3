@@ -33,6 +33,7 @@ const LocationsView = ({ location }) => {
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
+
   return (
     <>
       <Container className={classes.root}>

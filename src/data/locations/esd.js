@@ -30,6 +30,9 @@ const location = {
     {
       src: `${imgPath}esdExpansion.jpg`,
     },
+    {
+      imgPath: `${imgPath}esd4.png`,
+    },
   ],
   lookbooks: [
     {
