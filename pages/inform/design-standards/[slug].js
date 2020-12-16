@@ -39,6 +39,7 @@ export async function getStaticPaths() {
     paths: [
       { params: { slug: 'settings' } },
       { params: { slug: 'workstations' } },
+      { params: { slug: 'tables' } },
     ],
     fallback: false,
   };
