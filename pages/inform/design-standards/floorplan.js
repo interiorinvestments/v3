@@ -1,6 +1,7 @@
 import { makeStyles } from '@material-ui/core';
 import AuthGuard from 'components/common/AuthGuard';
 import Page from 'components/common/Page';
+import { floorplan } from 'data/designStandards/floorplan';
 import DashboardLayout from 'layouts/DashboardLayout';
 import FloorPlanView from 'views/inform/designStandards/FloorPlanView';
 
@@ -19,7 +20,7 @@ const FloorPlanPage = () => {
     <DashboardLayout>
       <Page className={classes.root} title="Floor Plan">
         <AuthGuard>
-          <FloorPlanView />
+          <FloorPlanView floorplan={floorplan} />
         </AuthGuard>
       </Page>
     </DashboardLayout>

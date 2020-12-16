@@ -8,7 +8,7 @@ const items = {
     glb: '/img/designStandards/privateOffices/POBest.glb',
     usdz: '/img/designStandards/privateOffices/POBest.usdz',
   },
-  finishes: [
+  standards: [
     {
       name: 'Herman Miller 91 Laminate',
       description: 'Laminate Work Surface',

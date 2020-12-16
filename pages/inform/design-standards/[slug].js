@@ -4,7 +4,7 @@ import Page from 'components/common/Page';
 import { getData } from 'data/designStandards';
 import DashboardLayout from 'layouts/DashboardLayout';
 import PropTypes from 'prop-types';
-import StandardsView from 'views/inform/designStandards/StandardsView';
+import StandardsView from 'views/inform/designStandards/StandardsView/index';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -37,13 +37,8 @@ const camelCased = (myString) => myString.replace(/-([a-z])/g, (g) => g[1].toUpp
 export async function getStaticPaths() {
   return {
     paths: [
+      { params: { slug: 'settings' } },
       { params: { slug: 'workstations' } },
-      // { params: { slug: 'private-offices' } },
-      // { params: { slug: 'seating' } },
-      // { params: { slug: 'conference' } },
-      // { params: { slug: 'reception' } },
-      // { params: { slug: 'storage' } },
-      // { params: { slug: 'accessories' } },
     ],
     fallback: false,
   };

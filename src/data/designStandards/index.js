@@ -1,18 +1,18 @@
 import accessories from './accessories';
-import conference from './conference';
-import privateOffices from './privateOffices';
-import reception from './reception';
+import casegoods from './casegoods';
+import misc from './misc';
 import seating from './seating';
-import storage from './storage';
+import settings from './settings';
+import tables from './tables';
 import workstations from './workstations';
 
 const DATA = {
   workstations,
-  privateOffices,
+  casegoods,
+  misc,
+  settings,
+  tables,
   seating,
-  conference,
-  reception,
-  storage,
   accessories,
 };
 

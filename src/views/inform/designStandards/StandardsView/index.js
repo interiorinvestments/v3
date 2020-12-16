@@ -1,17 +1,10 @@
 import {
-  Box, Button, Container, Grid, Hidden, makeStyles, Typography,
+  Box, Container, Grid, Hidden, makeStyles, Typography,
 } from '@material-ui/core';
-import dynamic from 'next/dynamic';
 import Image from 'next/image';
 import PropTypes from 'prop-types';
-import { useState } from 'react';
-import { Codepen as CodepenIcon, Image as ImageIcon } from 'react-feather';
 
-import Finishes from './Finishes';
-
-const Model = dynamic(() => import('components/common/Model'), {
-  ssr: false,
-});
+import Standards from './Standards';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -26,33 +19,13 @@ const useStyles = makeStyles((theme) => ({
 
 const StandardsView = ({ standards }) => {
   const classes = useStyles();
-  const [showModel, setShowModel] = useState(false);
   return (
     <Container maxWidth={false} className={classes.root}>
       <Grid container spacing={3}>
         <Grid item xs={12} md={6}>
           <Typography variant="h3" color="textPrimary">{standards.title}</Typography>
-          {!showModel ? (
-            <Image src={standards.image} height={750} width={1300} alt="unsplash" />
-          ) : (
-            <Model model={standards.model} />
-
-          )}
+          <Image src={standards.image} height={750} width={1300} alt="unsplash" />
           <Typography variant="body1" color="textPrimary">{standards.description}</Typography>
-          {!showModel ? (
-            <Button variant="contained" color="primary" onClick={() => setShowModel(true)} disabled={!standards.model}>
-              {' '}
-              <CodepenIcon />
- &nbsp; 3D View
-            </Button>
-          ) : (
-            <Button variant="contained" color="primary" onClick={() => setShowModel(false)}>
-              <ImageIcon />
-              {' '}
-              &nbsp;
-              View
-            </Button>
-          )}
           <Hidden smUp>
             <Box my={4} />
           </Hidden>
@@ -61,7 +34,7 @@ const StandardsView = ({ standards }) => {
           <Hidden smUp>
             <Box my={4} />
           </Hidden>
-          <Finishes finishes={standards.finishes} />
+          <Standards standards={standards.standards} />
         </Grid>
       </Grid>
     </Container>

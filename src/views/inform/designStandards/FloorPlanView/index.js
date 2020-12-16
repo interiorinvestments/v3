@@ -1,30 +1,69 @@
 import {
-  Box, Container, Grid, makeStyles,
+  Box, Card, CardActionArea, CardContent,
+  CardMedia, Container, Grid, Hidden, makeStyles, Typography,
 } from '@material-ui/core';
+import Link from 'components/common/Link';
 import Image from 'next/image';
-
-import Header from './Header';
-import SpacesList from './SpacesList';
+import PropTypes from 'prop-types';
 
 const useStyles = makeStyles((theme) => ({
   root: {
     paddingTop: theme.spacing(3),
     paddingBottom: theme.spacing(3),
   },
+  model: {
+    width: '100%',
+    height: '100%',
+  },
 }));
 
-const FloorPlanView = () => {
+const FloorplanView = ({ floorplan }) => {
   const classes = useStyles();
   return (
-    <Container className={classes.root}>
-      <Header />
-      <Grid container justify="center">
-        <Image src="/img/designStandards/floorplan/floorplan.png" height={500} width={900} />
+    <Container maxWidth="xl" className={classes.root}>
+      <Grid container spacing={3}>
+        <Grid item xs={12} md={6}>
+          <Typography variant="h3" color="textPrimary">{floorplan.title}</Typography>
+          <Image src={floorplan.image} height={750} width={1300} alt="unsplash" />
+          <Typography variant="body1" color="textPrimary">{floorplan.description}</Typography>
+          <Hidden smUp>
+            <Box my={4} />
+          </Hidden>
+        </Grid>
+        <Grid item xs={12} md={6}>
+          <Hidden smUp>
+            <Box my={4} />
+          </Hidden>
+          <>
+            <Typography variant="h4" color="textPrimary">Spaces</Typography>
+            <Grid container spacing={2}>
+              {floorplan.areas.map((standard) => (
+                <Grid item xs={12} sm={6} md={4} key={standard.name}>
+                  <Card style={{ backgroundColor: standard.color }}>
+                    <CardActionArea component={Link} href={standard.href} naked>
+                      <CardMedia>
+                        <Image src={standard.image} height={200} width={400} alt={standard.name} />
+                      </CardMedia>
+                      <CardContent>
+                        <Typography gutterBottom variant="h6" component="h2">
+                          {standard.description}
+                        </Typography>
+                        <Typography variant="body2" color="textSecondary" component="p">{standard.name}</Typography>
+                      </CardContent>
+                    </CardActionArea>
+                  </Card>
+                </Grid>
+              ))}
+            </Grid>
+          </>
+        </Grid>
       </Grid>
-      <Box mt={3}>
-        <SpacesList />
-      </Box>
     </Container>
   );
 };
-export default FloorPlanView;
+
+FloorplanView.propTypes = {
+  floorplan: PropTypes.object.isRequired,
+};
+
+export default FloorplanView;
