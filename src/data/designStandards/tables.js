@@ -11,6 +11,23 @@ const items = {
       manufacturer: 'National',
       collection: 'Waveworks Table',
       image: `${imgPath}tb01.jpg`,
+      floor: `${imgPath}tb01f.jpg`,
+      description: '(1) 30"Dia, waveworks round meeting table - wood veneer top and powered- coated metal base.',
+      finishes: 'Wood components in Matte/Satin Sonoma (SM) wood veneer, meeting table metal base in polished finish',
+      location: 'Confo Rooms',
+      quantity: '(17)',
+      options: [
+        {
+          name: 'HAT Top',
+          description: 'Sonoma (SM) Matte/Satin finish',
+          image: `${optionsPath}sonoma.jpg`,
+        },
+        {
+          name: 'Base',
+          description: 'Polished Paint',
+          image: `${optionsPath}polishedpaint.jpg`,
+        },
+      ],
     },
     {
       code: 'TB.02',
@@ -18,6 +35,26 @@ const items = {
       manufacturer: 'Herman Miller',
       collection: 'Motia',
       image: `${imgPath}tb02.jpg`,
+      floor: `${imgPath}tb02f.jpg`,
+      description: '72"W x 24"D (actual 70"W x 23"D) height adjustable desk with rectangular laminate top and T-leg base on glides. Floor to top-of-surface height adjustment ranges are 27" - 46" for the electric standard. Maximum load of 250lbs. including top. Table specified with "paddle switch" Table comes with 6\' power corded. Includes hinged cable manager trough underneath table top.',
+      finishes: 'Table top in Studio White 98 laminate and Metallic Champagne CN powder-coated base. Finish to match workstations',
+      location: 'Focus Rooms',
+      quantity: '(10)',
+      options: [
+        {
+          name: 'Table Top',
+          description: 'Studio White 98',
+          image: `${optionsPath}studiowhite98.jpg`,
+        }, {
+          name: 'Base',
+          description: 'Metallic Champagne CN',
+          image: `${optionsPath}metallicchampagnecn.jpg`,
+        }, {
+          name: 'Switch Detail',
+          description: 'Paddle Switch',
+          image: `${optionsPath}paddleswitch.jpg`,
+        },
+      ],
     },
     {
       code: 'TB.02 + STO.01',
@@ -57,20 +94,85 @@ const items = {
       manufacturer: 'OFS',
       collection: 'Applause',
       image: `${imgPath}tb03.jpg`,
+      floor: `${imgPath}tb03f.jpg`,
+      description: '60"W x 30"D flip and nest training table with t-legs base on casters. Table specified without power or modesty panel. Tables ca be ganged together as required.',
+      finishes: 'Frosty White laminate top with Luster Grey base on Black casters',
+      Location: 'Multi-purpose 4401',
+      quantity: '(9) as shown on plan',
+      options: [
+        {
+          name: 'Table Top',
+          description: 'Frosty White',
+          image: `${optionsPath}frostywhite.jpg`,
+        }, {
+          name: 'Base',
+          description: 'Luster Grey',
+          image: `${optionsPath}lustergrey.jpg`,
+        },
+        {
+          name: 'Casters',
+          description: 'Black',
+          image: `${optionsPath}black.jpg`,
+        },
+      ],
     },
     {
-      code: 'TB.04',
+      code: 'TB.04 & TB.04A',
       name: 'Meeting Table',
       manufacturer: 'Enwork',
       collection: 'Custom HAT',
       image: `${imgPath}tb04.jpg`,
+      floor: `${imgPath}tb04f.jpg`,
+      description: 'Height adjustable meeting table with 48"Dia round top (TB.04) and 54"Dia (TB.04A) with square edge detail and height adjustable legs. Table specified with power unit. Interior Investments will include all required power manager to conceal and manage power cords/cables.',
+      power: 'Custom power unit: (4) power outlets, (1) opening for data by others and (2) USB "A" charging ports, (2) USB "C" 18W charging ports. Power unit comes with 6\' hardwire conduits. Table must be hardwired.',
+      finishes: 'Natural recon 7996 table top and silver painted height adjustable legs. Power lid in clear aluminum with black interior.',
+      location: 'Huddle Rooms 4411 (TB.04A), 4424, 4442, and 4448',
+      quantity: '(3) TB.04 and (1) TB.04A',
+      options: [
+        {
+          name: 'Table Top',
+          description: 'Natural Recon 7996',
+          image: `${optionsPath}naturalrecon7996.jpg`,
+        }, {
+          name: 'Base and Power lid',
+          description: 'Silver',
+          image: `${optionsPath}silver.jpg`,
+        },
+        {
+          name: 'Power module',
+          description: 'Double sided',
+          image: `${optionsPath}powerdoublesided.jpg`,
+        },
+      ],
     },
     {
-      code: 'TB.05',
+      code: 'TB.05 & TB.05A',
       name: 'Meeting Table',
       manufacturer: 'Enwork',
       collection: 'Custom HAT',
       image: `${imgPath}tb05.jpg`,
+      floor: `${imgPath}tb05f.jpg`,
+      description: 'Height adjustable meeting table with 72"W X 42"D (TB.05) rectangular top or 84"W X 42"D (TB.05A) with square edge detail and height adjustable legs. Table specified with power unit. Interior Investments will include all required power manager to conceal and manage power cords/cables.',
+      power: 'Custom power unit: (4) power outlet, (1) opening for data by others and (2) USB "A" charging ports, (2) USB "C" charging ports. Power unit comes with (2) 6\' hardwire conduits. Table must be hardwired',
+      finishes: 'Natural recon 7996 table top and silver painted height adjustable legs. Power lid in clear aluminum with black interior.',
+      location: 'Huddle Rooms 4414, 4436, and 4452 (TB.05A)',
+      quantity: '(2) TB.05 and (1) TB.05A',
+      options: [
+        {
+          name: 'Table Top',
+          description: 'Natural Recon 7996',
+          image: `${optionsPath}naturalrecon7996.jpg`,
+        }, {
+          name: 'Base and Power lid',
+          description: 'Silver',
+          image: `${optionsPath}silver.jpg`,
+        },
+        {
+          name: 'Power module',
+          description: 'Double sided',
+          image: `${optionsPath}powerdoublesided.jpg`,
+        },
+      ],
     },
     {
       code: 'TB.06',
@@ -78,6 +180,28 @@ const items = {
       manufacturer: 'OFS',
       collection: 'Heya',
       image: `${imgPath}tb06.jpg`,
+      floor: `${imgPath}tb06f.jpg`,
+      description: '72"W X 42"D soft rectangular bar height café tale, surface to have a knife edge detail, (4) wooden legs and metal footrail. Each table accommodates 4 - 6 people.',
+      finishes: 'Table top in Frosty White, wooden base in Dessert DST and Footrail finished in Latte powder-coat finish.',
+      location: 'Café/Work Zone',
+      quantity: '(4)',
+      options: [
+        {
+          name: 'Table Top',
+          description: 'Frosty White',
+          image: `${optionsPath}frostywhite.jpg`,
+        },
+        {
+          name: 'Wood Legs',
+          description: 'Dessert DST',
+          image: `${optionsPath}dessertdst.jpg`,
+        },
+        {
+          name: 'Base',
+          description: 'Latte (LATT)',
+          image: `${optionsPath}latte.jpg`,
+        },
+      ],
     },
     {
       code: 'TB.07',

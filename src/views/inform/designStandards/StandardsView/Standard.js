@@ -82,6 +82,17 @@ const Standard = ({ standard, setStandard }) => (
               {standard.description}
             </Typography>
           </Grid>
+          {standard.power && (
+            <Grid item>
+              <Typography variant="body1" color="textPrimary" display="inline">
+                Power/Data:
+                {' '}
+              </Typography>
+              <Typography variant="body2" color="textSecondary" display="inline">
+                {standard.power}
+              </Typography>
+            </Grid>
+          )}
           <Grid item>
             <Typography variant="body1" color="textPrimary" display="inline">
               Finishes:
