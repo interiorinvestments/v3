@@ -1,9 +1,11 @@
 import {
-  Card, CardActionArea, CardContent,
-  CardMedia, Container, Grid, makeStyles, Typography,
+  Container, makeStyles,
 } from '@material-ui/core';
-import Image from 'next/image';
 import PropTypes from 'prop-types';
+import { useState } from 'react';
+
+import Standard from './Standard';
+import StandardsList from './StandardsList';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -14,36 +16,14 @@ const useStyles = makeStyles((theme) => ({
 
 const StandardsView = ({ standards }) => {
   const classes = useStyles();
+  const [standard, setStandard] = useState(null);
   return (
-    <Container className={classes.root}>
-      <Typography variant="h1">{standards.title}</Typography>
-      <Grid container spacing={4}>
-        {standards.products.map((product) => (
-          <Grid item key={product} xs={12} sm={6} md={4}>
-            <Card className={classes.card}>
-              <CardActionArea>
-                <CardMedia>
-                  <Image src={product.image} height={300} width={550} />
-                </CardMedia>
-                <CardContent className={classes.cardContent}>
-                  <Typography gutterBottom variant="subtitle1" component="h2" color="textPrimary">
-                    {product.code}
-                  </Typography>
-                  <Typography color="primary" display="inline" variant="body1">
-                    {product.manufacturer}
-                  </Typography>
-                  <Typography color="textSecondary" display="inline" variant="body1">
-                    {' '}
-                    -
-                    {' '}
-                    {product.name}
-                  </Typography>
-                </CardContent>
-              </CardActionArea>
-            </Card>
-          </Grid>
-        ))}
-      </Grid>
+    <Container className={classes.root} maxWidth="xl">
+      {standard ? (
+        <Standard standard={standard} setStandard={setStandard} />
+      ) : (
+        <StandardsList standards={standards} setStandard={setStandard} />
+      )}
     </Container>
   );
 };

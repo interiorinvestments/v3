@@ -24,7 +24,7 @@ const FloorplanView = ({ floorplan }) => {
       <Grid container spacing={3}>
         <Grid item xs={12} md={6}>
           <Typography variant="h3" color="textPrimary">{floorplan.title}</Typography>
-          <Image src={floorplan.image} height={750} width={1300} alt="unsplash" />
+          <Image src={floorplan.image} height={750} width={1300} alt="floorplan" />
           <Typography variant="body1" color="textPrimary">{floorplan.description}</Typography>
           <Hidden smUp>
             <Box my={4} />
