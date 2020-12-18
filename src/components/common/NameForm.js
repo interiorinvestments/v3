@@ -1,10 +1,10 @@
 /* eslint-disable no-shadow */
-import { useEffect, useState } from 'react';
 import {
   Button, Grid, makeStyles, TextField,
 } from '@material-ui/core';
 import useLocalStorageState from 'hooks/useLocalStorageState';
 import PropTypes from 'prop-types';
+import { useEffect, useState } from 'react';
 import validate from 'validate.js';
 
 const useStyles = makeStyles({
@@ -24,7 +24,7 @@ const schema = {
 
 const NameForm = ({ onNext, localStorageKey }) => {
   const classes = useStyles();
-  const [name, setName] = useLocalStorageState(localStorageKey, '');
+  const [, setName] = useLocalStorageState(localStorageKey, '');
   const [formState, setFormState] = useState({
     isValid: false,
     values: {},

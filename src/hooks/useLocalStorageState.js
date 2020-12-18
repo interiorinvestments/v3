@@ -1,4 +1,4 @@
-import React from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 /**
  *
@@ -12,7 +12,7 @@ function useLocalStorageState(
   defaultValue = '',
   { serialize = JSON.stringify, deserialize = JSON.parse } = {},
 ) {
-  const [state, setState] = React.useState(() => {
+  const [state, setState] = useState(() => {
     const valueInLocalStorage = window.localStorage.getItem(key);
     if (valueInLocalStorage) {
       return deserialize(valueInLocalStorage);
@@ -20,9 +20,9 @@ function useLocalStorageState(
     return typeof defaultValue === 'function' ? defaultValue() : defaultValue;
   });
 
-  const prevKeyRef = React.useRef(key);
+  const prevKeyRef = useRef(key);
 
-  React.useEffect(() => {
+  useEffect(() => {
     const prevKey = prevKeyRef.current;
     if (prevKey !== key) {
       window.localStorage.removeItem(prevKey);

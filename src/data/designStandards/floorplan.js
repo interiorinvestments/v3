@@ -2,7 +2,7 @@ const imgPath = '/img/designStandards/floorplan/';
 
 const floorplan = {
   title: 'Floorplan',
-  image: `${imgPath}floorplan.png`,
+  image: `${imgPath}floorplancolored.png`,
   areas: [
     {
       name: 'Settings',

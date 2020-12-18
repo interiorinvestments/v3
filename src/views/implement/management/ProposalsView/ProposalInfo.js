@@ -1,10 +1,3 @@
-import { useEffect, useState } from 'react';
-import {
-  Check as CheckIcon,
-  CheckSquare as CheckSquareIcon,
-  File as FileIcon,
-  FileText as FileTextIcon,
-} from 'react-feather';
 import {
   Box,
   Button,
@@ -21,6 +14,13 @@ import {
 import clsx from 'clsx';
 import Label from 'components/common/Label';
 import PropTypes from 'prop-types';
+import { useEffect, useState } from 'react';
+import {
+  Check as CheckIcon,
+  CheckSquare as CheckSquareIcon,
+  File as FileIcon,
+  FileText as FileTextIcon,
+} from 'react-feather';
 import formatCurrency from 'utils/formatCurrency';
 
 const useStyles = makeStyles((theme) => ({
