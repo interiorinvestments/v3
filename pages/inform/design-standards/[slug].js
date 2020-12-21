@@ -37,9 +37,12 @@ const camelCased = (myString) => myString.replace(/-([a-z])/g, (g) => g[1].toUpp
 export async function getStaticPaths() {
   return {
     paths: [
-      { params: { slug: 'settings' } },
       { params: { slug: 'workstations' } },
-      { params: { slug: 'tables' } },
+      { params: { slug: 'private-offices' } },
+      { params: { slug: 'meeting-rooms' } },
+      { params: { slug: 'cafe-area' } },
+      { params: { slug: 'collaboration-lounge' } },
+      { params: { slug: 'accessories' } },
     ],
     fallback: false,
   };

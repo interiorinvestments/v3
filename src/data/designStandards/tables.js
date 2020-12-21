@@ -3,7 +3,6 @@ const optionsPath = '/img/designStandards/options/';
 
 const items = {
   title: 'Tables',
-  floorplan: '/img/designStandards/floorplan/floorplan.png',
   products: [
     {
       code: 'TB.01',

@@ -55,32 +55,28 @@ const navConfig = [
             href: '/inform/design-standards/floorplan',
           },
           {
-            title: 'Settings',
-            href: '/inform/design-standards/settings',
+            title: 'Workstations',
+            href: '/inform/design-standards/workstations',
           },
           {
-            title: 'Seating',
-            href: '/inform/design-standards/seating',
+            title: 'Private Offices',
+            href: '/inform/design-standards/private-offices',
           },
           {
-            title: 'Tables',
-            href: '/inform/design-standards/tables',
+            title: 'Meeting Rooms',
+            href: '/inform/design-standards/meeting-rooms',
+          },
+          {
+            title: 'Café Area',
+            href: '/inform/design-standards/cafe-area',
+          },
+          {
+            title: 'Collaboration/Lounge Area',
+            href: '/inform/design-standards/collaboration-lounge',
           },
           {
             title: 'Accessories',
             href: '/inform/design-standards/accessories',
-          },
-          {
-            title: 'Casegoods',
-            href: '/inform/design-standards/casegoods',
-          },
-          {
-            title: 'Misc',
-            href: '/inform/design-standards/misc',
-          },
-          {
-            title: 'Workstations',
-            href: '/inform/design-standards/workstations',
           },
         ],
       },

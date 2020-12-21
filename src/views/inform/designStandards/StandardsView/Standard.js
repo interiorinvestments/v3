@@ -39,11 +39,13 @@ const Standard = ({ standard, setStandard }) => (
     </Grid>
     <Grid container spacing={3}>
       <Grid item xs={12} md={6}>
-        <Image src={standard.floor} height={300} width={550} />
-      </Grid>
-      <Grid item xs={12} md={6}>
         <Image src={standard.image} height={300} width={550} />
       </Grid>
+      {standard.floor && (
+      <Grid item xs={12} md={6}>
+        <Image src={standard.floor} height={300} width={550} />
+      </Grid>
+      )}
       <Grid item xs={12} md={6}>
         <Grid container direction="column">
           <Grid item>
@@ -122,9 +124,11 @@ const Standard = ({ standard, setStandard }) => (
           </Grid>
         </Grid>
       </Grid>
-      <Grid item xs={12} md={6}>
-        <Options options={standard.options} />
-      </Grid>
+      {standard.options && (
+        <Grid item xs={12} md={6}>
+          <Options options={standard.options} />
+        </Grid>
+      ) }
 
     </Grid>
   </>
