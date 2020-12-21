@@ -92,7 +92,7 @@ const items = {
       collection: 'Lolly',
       image: `${imgPath}ac03.jpg`,
       floor: `${imgPath}ac03f.jpg`,
-      Description: 'Freestanding personal task light provides light and USB charging for personal devices. It has one standard type A USB port adn one type C USB port charges at 3 amps and provides USB power delivery charging technology. LED provided lumens and has a 4-stage touch sensitive dimming feature. The light has an automatic shutoff after 4 hours.',
+      Description: 'Freestanding personal task light provides light and USB charging for personal devices. It has one standard type A USB port and one type C USB port charges at 3 amps and provides USB power delivery charging technology. LED provided lumens and has a 4-stage touch sensitive dimming feature. The light has an automatic shutoff after 4 hours.',
       finishes: 'White',
       location: 'Typical Workstations',
       quantity: '(168) - One per station',

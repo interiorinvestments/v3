@@ -1,19 +1,17 @@
 import accessories from './accessories';
-import casegoods from './casegoods';
-import misc from './misc';
-import seating from './seating';
-import settings from './settings';
-import tables from './tables';
+import cafeArea from './cafeArea';
+import collaborationLounge from './collaborationLounge';
+import meetingRooms from './meetingRooms';
+import privateOffices from './privateOffices';
 import workstations from './workstations';
 
 const DATA = {
-  workstations,
-  casegoods,
-  misc,
-  settings,
-  tables,
-  seating,
   accessories,
+  cafeArea,
+  collaborationLounge,
+  meetingRooms,
+  privateOffices,
+  workstations,
 };
 
 const getData = (data) => DATA[data];
