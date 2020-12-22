@@ -1,0 +1,336 @@
+const tablePath = '/img/designStandards/tables/';
+const chairPath = '/img/designStandards/seating/';
+const optionsPath = '/img/designStandards/options/';
+
+const items = {
+  title: 'Collaboration / Lounge',
+  products: [
+    {
+      code: 'CH.10',
+      name: 'Rocker Chair',
+      manufacturer: 'National',
+      collection: 'Delgado',
+      image: `${chairPath}ch10.jpg`,
+      floor: `${chairPath}ch10f.jpg`,
+      description: 'Lounge chair with on "Rocker" base; constructed with polished, tubular steel and wood base. Fully upholstered shell, interior seat and back or exposed plywood shell with upholstered interior seat/back.',
+      finishes: 'Tubular steel base finished in Satin Nickel Metallic with wood rocker base finished in Portico. DesignTex Dapple color Mineral 3937-401',
+      location: 'Open Office | Social Area',
+      quantity: '(4)',
+      options: [
+        {
+          name: 'Exterior Shell',
+          description: 'Dapple Mineral 3937-401',
+          image: `${optionsPath}dapplemineral.jpg`,
+        },
+        {
+          name: 'Metal Base',
+          description: 'Satin Nickel Metallic',
+          image: `${optionsPath}satinnickelmetallic.jpg`,
+        },
+        {
+          name: 'Rocker base',
+          description: 'Portico',
+          image: `${optionsPath}portico.jpg`,
+        },
+      ],
+    },
+    {
+      code: 'CH.11',
+      name: 'Barstool',
+      manufacturer: 'National',
+      collection: 'Grin Bar Stool',
+      image: `${chairPath}ch11.jpg`,
+      floor: `${chairPath}ch11f.jpg`,
+      description: 'Armless, low back bar height stool, fully upholstery seat and back on sled metal base with footrest. Interior seat and back will have 2.5" stitching details.',
+      finishes: 'Special Base powder-coated in NOL Stain Nickel Metallic. COM fabric: Guilford of Main Open House 2334 Pumpkin 2021',
+      location: 'Open Office | Social Area',
+      quantity: '(6)',
+      options: [
+        {
+          name: 'Fabric Upholstery',
+          description: 'Open House Pumpkin',
+          image: `${optionsPath}pumpkin.jpg`,
+        },
+        {
+          name: 'Base',
+          description: 'Satin Nickel Metallic',
+          image: `${optionsPath}satinnickelmetallic.jpg`,
+        },
+        {
+          name: 'Stitching Detail',
+          description: '2.5" Horizontal Stitch',
+          image: `${optionsPath}horizontalstitch.jpg`,
+        },
+      ],
+    },
+    {
+      code: 'CH.13',
+      name: 'Lounge Chair',
+      manufacturer: 'National',
+      collection: 'Fringe',
+      image: `${chairPath}ch13.jpg`,
+      floor: `${chairPath}ch13f.jpg`,
+      description: 'Fringe lounge chair with fully upholstered seat/back and arms on 4-legged base. Interior Investment will include cable grips that can be attached to underside of seating cushion for cord management.',
+      finishes: 'Based finished in Satin Nickel Metallic. Seat and low back kupholstered in Arc Com Perspective AX-63510 color Pewter#11 and Upper back and arms upholstered in Maharam Article vinyl 458600-014 Storm',
+      location: 'Open Office - Individual seating',
+      quantity: '(4)',
+      options: [
+        {
+          name: 'Seat and Back',
+          description: 'Perspective Pewter',
+          image: `${optionsPath}perspectivepewter.jpg`,
+        },
+        {
+          name: 'Arms',
+          description: 'Article Storm',
+          image: `${optionsPath}articlestorm.jpg`,
+        },
+        {
+          name: 'Base',
+          description: 'Satin Nickel Metallic',
+          image: `${optionsPath}satinnickelmetallic.jpg`,
+        },
+      ],
+    },
+    {
+      code: 'CH.14a & CH.14b',
+      name: 'Private Lounge Chair',
+      manufacturer: 'Keilhauer',
+      collection: 'Lull 74111',
+      image: `${chairPath}ch14.jpg`,
+      floor: `${chairPath}ch14f.jpg`,
+      description: 'High back private lounge chair, fully upholstered seat, high back and 360-degree swivel base; allows people to angle the seat to shelter their focus from any distractions. Overall dimensions: 50"H x 35,5"W x 31.5"D; seat height: 17.5"H.',
+      finishes: '(2) lounge chairs upholstered in Guilford of Maine Twilight 9935 color Merlot 5020 and (2) lounge chairs in Guilford of Maine Twilight 9935 color Cotton 5090',
+      location: 'Open Office - Private lounge seating',
+      quantity: '(4): (2) CH.14a and (2) CH.14b',
+      options: [
+        {
+          name: 'Fabric Upholstery',
+          description: 'Twilight Merlot 9935-5020',
+          image: `${optionsPath}twilightmerlot.jpg`,
+        },
+        {
+          name: 'Fabric Upholstery',
+          description: 'Twilight Cotton 9935-5090',
+          image: `${optionsPath}twilightcotton.jpg`,
+        },
+      ],
+    },
+    {
+      code: 'CH.15',
+      name: 'Private Lounge Chair',
+      manufacturer: 'OFS',
+      collection: 'LeanTo',
+      image: `${chairPath}ch15.jpg`,
+      floor: `${chairPath}ch15f.jpg`,
+      description: 'Freestanding single seat unit with upholstered outside back panel and upholstered base, fully upholstered high back surround for privacy, upholstered cushions and inset back panel with optional wood veneer shroud. *Lounge chair to be specified with power (left or right facing) to be hardwired per Chicago code. Task light in unit cannot be installed per Chicago code. Each power unit has (1) 15 Amp Outlet and (1) dual USB charging port with hardwire conduit.',
+      finishes: 'Fabric surrounds, base and insert back panel upholstered in Spradling Silvertex color Storm STX-8822 vinyl and seat upholstered in Momentum Flock Flannel. Steel (MGO) wood veneer finishes for wood shroud Power plate in Black',
+      location: 'Open Office - Private lounge seating',
+      quantity: '(6)',
+      options: [
+        {
+          name: 'Fabric Surrounds',
+          description: 'Silvertex Storm',
+          image: `${optionsPath}silvertexstorm.jpg`,
+        },
+        {
+          name: 'Fabric set cushion',
+          description: 'Flock Flannel',
+          image: `${optionsPath}flockflannel.jpg`,
+        },
+        {
+          name: 'Wood Shroud',
+          description: 'Steel (MGO)',
+          image: `${optionsPath}steelmgo.jpg`,
+        },
+        {
+          name: 'Fabric Base & Back',
+          description: 'Silvertex Storm',
+          image: `${optionsPath}silvertexstorm.jpg`,
+        },
+        {
+          name: 'Power',
+          description: 'Gloss Black',
+          image: `${optionsPath}glossblack.jpg`,
+        },
+      ],
+    },
+    {
+      code: 'CH.16',
+      name: 'Ottoman',
+      manufacturer: 'National',
+      collection: 'Whimsy',
+      image: `${chairPath}ch16.jpg`,
+      floor: `${chairPath}ch16f.jpg`,
+      description: 'Lightweight fully upholstered round ottoman on casters with vertical leather pull.',
+      finishes: 'Graded-in fabric (grade D) DesignTex Brushed Flannel in colors Yellow Gold 3797-202, Dark Red 3797-301, Blue 3797-403, Snap Pea 3797-501 and Tangerine 3797-701. Florence Lorenzo 82013',
+      location: 'Open Office | Social Area & Open Collaboration Area',
+      quantity: '(10)',
+      options: [
+        {
+          name: 'Fabric',
+          description: 'Brushed Flannel Yellow Gold 3797-202',
+          image: `${optionsPath}yellowgold3797.jpg`,
+        },
+        {
+          name: 'Fabric',
+          description: 'Brushed Flannel Dark Red 3797-301',
+          image: `${optionsPath}darkred3797.jpg`,
+        },
+        {
+          name: 'Fabric',
+          description: 'Brushed Flannel Blue 3797-403',
+          image: `${optionsPath}blue3797.jpg`,
+        },
+        {
+          name: 'Fabric',
+          description: 'Brushed Flannel Snap Pea 3797-501',
+          image: `${optionsPath}snappea3797.jpg`,
+        },
+        {
+          name: 'Fabric',
+          description: 'Brushed Flannel Tangerine 3797-701',
+          image: `${optionsPath}tangerine3797.jpg`,
+        },
+        {
+          name: 'Leather Pull',
+          description: 'Black',
+          image: `${optionsPath}black.jpg`,
+        },
+      ],
+    },
+    {
+      code: 'SF.01',
+      name: 'Sofa',
+      manufacturer: 'Geiger',
+      collection: 'Tuxedo Component',
+      image: `${chairPath}sf01.jpg`,
+      floor: `${chairPath}sf01f.jpg`,
+      description: 'Three-seat Tuxedo sofa, armless, low back on metal legs, back and seat cushions to have quilted detail. Overall dimensions: 84"W x 28"D x 30"H; seat height: 17"H',
+      finishes: 'Ultrafabrics Faux-leather Brisa color Evening Blue 533-2620. Satin Chrome',
+      location: 'Open Office | Social Area',
+      quantity: '(2)',
+      options: [
+        {
+          name: 'Fabric Upholstery',
+          description: 'Brisa - Evening Blue',
+          image: `${optionsPath}eveningblue.jpg`,
+        },
+        {
+          name: 'Metal Base',
+          description: 'Chrome',
+          image: `${optionsPath}chrome.jpg`,
+        },
+      ],
+    },
+    {
+      code: 'SF.02',
+      name: 'Sofa',
+      manufacturer: 'Keilhauer',
+      collection: 'Talk',
+      image: `${chairPath}sf02.jpg`,
+      floor: `${chairPath}sf02f.jpg`,
+      description: 'Hight back 2-seater sofa, fully upholstered seat and back, armless on metal base. High back provides visual and sound privacy. Overall dims: 67"W x 34.5"D x 48"H; seat height: lounge - 16.75"',
+      finishes: 'COM fabrics: seat upholstered in Brisa faux-leather color Evening Blue and back upholstered in Pallas textiles Polka Dotty color Sea#27.227.074. Standard Chrome metal base',
+      location: 'Open Office | Collaboration Area',
+      quantity: '(2)',
+      options: [
+        {
+          name: 'Seat Upholstery',
+          description: 'Brisa - Evening Blue',
+          image: `${optionsPath}eveningblue.jpg`,
+        },
+        {
+          name: 'Back Upholstery',
+          description: 'Polka Dotty color Sea#27.227.074',
+          image: `${optionsPath}polkadotty.jpg`,
+        },
+        {
+          name: 'Metal Base',
+          description: 'Chrome',
+          image: `${optionsPath}chromemetal.jpg`,
+        },
+      ],
+    },
+    {
+      code: 'CO.01',
+      name: 'Collaboration Unit',
+      manufacturer: 'OFS',
+      collection: 'Heya Talk',
+      image: `${chairPath}co01.jpg`,
+      floor: `${chairPath}co01f.jpg`,
+      description: 'Collaboration unit to be constructed w/ fully upholstered triple booth with arms and fabric partial surround on wooden base. Fabric surrounds provide privacy and acoustical control, fabric media panel to support TV/monitor screen by others. Includes TV support panel, wire manager, power and 72"W x 29.5"D x 27.5"H table; table top mounted to media panel on one side and supporting wooden leg on the other side. The unit specified with power modules to be hardwired per Chicago code. The in-surface power unit comes with (3) power outlets, (1) dual USB type A port, (2) openings for data by others and hardwire conduit.',
+      finishes: 'Seat and back cushions upholstered in Graded in fabric Designtex Pause color Greige 3854-102, fabric surrounds and fabric media panel upholstered in Camira Synergy Chain LDS19. Frosty White laminate top, White wire manager and special wood stain in Natural Champagne',
+      location: 'Open Office - Collaboration Area',
+      quantity: '(2) units',
+      options: [
+        {
+          name: 'Fabric Surrounds',
+          description: 'Synergy - Chain LDS19',
+          image: `${optionsPath}synergy.jpg`,
+        },
+        {
+          name: 'Fabric Upholstery',
+          description: 'Pause Greige 3854-102',
+          image: `${optionsPath}pausegreige.jpg`,
+        },
+        {
+          name: 'Fabric Media Panel',
+          description: 'Synergy - Chain LDS19',
+          image: `${optionsPath}synergy.jpg`,
+        },
+        {
+          name: 'Wooden Base',
+          description: 'Special stain',
+          image: `${optionsPath}specialstain.jpg`,
+        },
+        {
+          name: 'Table Top',
+          description: 'Frosty White',
+          image: `${optionsPath}frostywhite.jpg`,
+        },
+      ],
+    },
+    {
+      code: 'CO.02',
+      name: 'Collaboration Unit',
+      manufacturer: 'OFS',
+      collection: 'Heya Double',
+      image: `${chairPath}co02.jpg`,
+      floor: `${chairPath}co02f.jpg`,
+      description: 'Collaboration unit to be constructed w/ fully upholstered triple booth with arms and fabric partial surround on wooden base. Fabric surrounds provide privacy and acoustical control, fabric media panel to support TV/monitor screen by others. Includes TV support panel, wire manager, power and 72"W x 29.5"D x 27.5"H table; table top mounted to media panel on one side and supporting wooden leg on the other side. The unit specified with power modules to be hardwired per Chicago code. The in-surface power unit comes with (3) power outlets, (1) dual USB type A port, (2) openings for data by others and hardwire conduit.',
+      finishes: 'Seat and back cushions upholstered in Graded in fabric Designtex Pause color Greige 3854-102, fabric surrounds and fabric media panel upholstered in Camira Synergy Chain LDS19. Frosty White laminate top, White wire manager and special wood stain in Natural Champagne',
+      location: 'Open Office - Collaboration Area',
+      quantity: '(2) units',
+      options: [
+        {
+          name: 'Fabric Surrounds',
+          description: 'Synergy - Chain LDS19',
+          image: `${optionsPath}synergy.jpg`,
+        },
+        {
+          name: 'Fabric Upholstery',
+          description: 'Pause Greige 3854-102',
+          image: `${optionsPath}pausegreige.jpg`,
+        },
+        {
+          name: 'Fabric Media Panel',
+          description: 'Synergy - Chain LDS19',
+          image: `${optionsPath}synergy.jpg`,
+        },
+        {
+          name: 'Wooden Base',
+          description: 'Special stain',
+          image: `${optionsPath}specialstain.jpg`,
+        },
+        {
+          name: 'Table Top',
+          description: 'Frosty White',
+          image: `${optionsPath}frostywhite.jpg`,
+        },
+      ],
+    },
+  ],
+};
+
+export default items;
