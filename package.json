@@ -19,7 +19,7 @@
     "image-map": "^2.0.1",
     "material-table": "^1.69.2",
     "mongoose": "^5.11.8",
-    "next": "^10.0.3",
+    "next": "^10.0.4",
     "next-connect": "^0.9.1",
     "nprogress": "^0.2.0",
     "passport": "^0.4.1",

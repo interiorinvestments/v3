@@ -85,7 +85,7 @@ const items = {
       image: '/img/designStandards/seating/ch02.jpg',
       floor: '/img/designStandards/seating/ch02f.jpg',
       description: 'Guest chair with fully upholstered seat, back and curved arms on high-profile polished aluminum base.',
-      finishes: 'Graded-in fabric: Shenanigans color 20364 Stunt. Polished Aluminium base only (standard)',
+      finishes: 'Graded-in fabric: Shenanigans color 20364 Stunt. Polished Aluminum base only (standard)',
       location: 'Confo. rooms',
       quantity: '(17)',
       options: [
