@@ -6,7 +6,6 @@ import PropTypes from 'prop-types';
 
 const Options = ({ options }) => (
   <>
-    {/* <Typography variant="h4" color="textPrimary">options</Typography> */}
     <Grid container spacing={2}>
       {options.map((option, index) => (
         <Grid item xs={12} sm={6} md={4} key={index}>
