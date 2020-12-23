@@ -42,7 +42,7 @@ const FloorplanView = ({ floorplan }) => {
                   <Card style={{ backgroundColor: standard.color }}>
                     <CardActionArea component={Link} href={standard.href} naked>
                       <CardMedia>
-                        <Image src={standard.image} height={200} width={400} alt={standard.name} />
+                        <Image src={standard.image} height={300} width={500} alt={standard.name} />
                       </CardMedia>
                       <CardContent>
                         <Typography gutterBottom variant="h6" component="h2">

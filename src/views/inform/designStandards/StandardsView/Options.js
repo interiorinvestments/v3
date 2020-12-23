@@ -11,7 +11,7 @@ const Options = ({ options }) => (
         <Grid item xs={12} sm={6} md={4} key={index}>
           <Card>
             <CardMedia>
-              <Image src={option.image} height={200} width={400} alt={option.description} />
+              <Image src={option.image} height={300} width={500} alt={option.description} />
             </CardMedia>
             <CardContent>
               <Typography gutterBottom variant="h6" component="h2">
