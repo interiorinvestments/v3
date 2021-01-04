@@ -115,16 +115,20 @@ const navConfig = [
             href: '/inspire/customization/management',
           },
           {
-            title: 'Private Office',
-            href: '/inspire/customization/private-office',
-          },
-          {
-            title: 'Work Space',
-            href: '/inspire/customization/work-space',
+            title: 'Benching',
+            href: '/inspire/customization/customize/benching',
           },
           {
             title: 'Workstation',
-            href: '/inspire/customization/workstation',
+            href: '/inspire/customization/customize/workstation',
+          },
+          {
+            title: 'Private Office',
+            href: '/inspire/customization/customize/private-office',
+          },
+          {
+            title: 'Executive Office',
+            href: '/inspire/customization/customize/executive-office',
           },
         ],
       },

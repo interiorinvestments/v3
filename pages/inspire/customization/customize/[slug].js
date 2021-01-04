@@ -1,12 +1,12 @@
 import { makeStyles } from '@material-ui/core';
 import AuthGuard from 'components/common/AuthGuard';
 import Page from 'components/common/Page';
-import { getData } from 'data/designStandards';
+import { getData } from 'data/customize';
 import DashboardLayout from 'layouts/DashboardLayout';
 import PropTypes from 'prop-types';
 import toCamelCased from 'utils/toCamelCased';
 import toTitleCase from 'utils/toTitleCase';
-import StandardsView from 'views/inform/designStandards/StandardsView/index';
+import CustomizeView from 'views/inspire/customization/CustomizeView';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -16,13 +16,13 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const DesignStandardsPage = ({ slug, products }) => {
+const CustomizePage = ({ slug, area }) => {
   const classes = useStyles();
   return (
     <DashboardLayout>
-      <Page className={classes.root} title={`Design Standards ${toTitleCase(slug)}`}>
+      <Page className={classes.root} title={`Customize ${toTitleCase(slug)}`}>
         <AuthGuard>
-          <StandardsView standards={products} />
+          <CustomizeView area={area} />
         </AuthGuard>
       </Page>
     </DashboardLayout>
@@ -32,12 +32,18 @@ const DesignStandardsPage = ({ slug, products }) => {
 export async function getStaticPaths() {
   return {
     paths: [
-      { params: { slug: 'workstations' } },
-      { params: { slug: 'private-offices' } },
-      { params: { slug: 'meeting-rooms' } },
-      { params: { slug: 'cafe-area' } },
-      { params: { slug: 'collaboration-lounge' } },
-      { params: { slug: 'accessories' } },
+      {
+        params: { slug: 'benching' },
+      },
+      {
+        params: { slug: 'workstation' },
+      },
+      {
+        params: { slug: 'private-office' },
+      },
+      {
+        params: { slug: 'executive-office' },
+      },
     ],
     fallback: false,
   };
@@ -45,18 +51,18 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params }) {
   const { slug } = params;
-  const products = getData(toCamelCased(slug));
+  const area = getData(toCamelCased(slug));
   return {
     props: {
       slug,
-      products,
+      area,
     },
   };
 }
 
-DesignStandardsPage.propTypes = {
+CustomizePage.propTypes = {
   slug: PropTypes.string.isRequired,
-  products: PropTypes.object.isRequired,
+  area: PropTypes.object.isRequired,
 };
 
-export default DesignStandardsPage;
+export default CustomizePage;

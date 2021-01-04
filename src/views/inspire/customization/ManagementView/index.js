@@ -1,3 +1,13 @@
+import {
+  Avatar,
+  Box, Container, Grid, makeStyles,
+  Paper, Step, StepConnector,
+  StepLabel,
+  Stepper, Typography, withStyles,
+} from '@material-ui/core';
+import clsx from 'clsx';
+import NameForm from 'components/common/NameForm';
+import PropTypes from 'prop-types';
 import { useState } from 'react';
 import {
   Check as CheckIcon,
@@ -8,15 +18,6 @@ import {
   Package as PackageIcon,
   User as UserIcon,
 } from 'react-feather';
-import {
-  Avatar,
-  Box, Container, Grid, makeStyles,
-  Paper, Step, StepConnector,
-  StepLabel,
-  Stepper, Typography, withStyles,
-} from '@material-ui/core';
-import clsx from 'clsx';
-import NameForm from 'components/common/NameForm';
 
 import Details from './Details';
 import Finishes from './Finishes';
@@ -99,6 +100,12 @@ const CustomStepIcon = ({ active, completed, icon }) => {
       <Icon size="20" />
     </Avatar>
   );
+};
+
+CustomStepIcon.propTypes = {
+  active: PropTypes.bool.isRequired,
+  completed: PropTypes.bool.isRequired,
+  icon: PropTypes.element.isRequired,
 };
 
 const useStyles = makeStyles((theme) => ({
