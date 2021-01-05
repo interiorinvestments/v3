@@ -6,7 +6,7 @@ const floorplan = {
   areas: [
     {
       name: 'Workstations',
-      image: `${imgPath}workstations.jpg`,
+      image: `${imgPath}wks01.jpg`,
       color: '#F87171',
       href: '/inform/design-standards/workstations',
     },
@@ -30,7 +30,7 @@ const floorplan = {
     },
     {
       name: 'Collaboration/Lounge Area',
-      image: `${imgPath}collaboration.jpg`,
+      image: `${imgPath}co01.jpg`,
       color: '#A78BFA',
       href: '/inform/design-standards/collaboration-lounge',
     },

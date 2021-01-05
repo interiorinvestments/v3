@@ -3,6 +3,7 @@ import {
   Card, CardActionArea, CardContent,
   CardMedia, Container, Grid, Typography,
 } from '@material-ui/core';
+import Link from 'components/common/Link';
 import useScroll from 'hooks/useScroll';
 import Image from 'next/image';
 import PropTypes from 'prop-types';
@@ -22,31 +23,47 @@ const StandardsList = ({
       <Grid container spacing={4}>
         {standards.products.map((product, index) => (
           <Grid item key={product.image + product.name} xs={12} sm={6} md={4} ref={(el) => itemsRef.current[index] = el}>
-            <Card>
-              <CardActionArea onClick={() => { setStandard(product); setOffsetTop(itemsRef.current[index].offsetTop - 80); }}>
-                <CardMedia>
-                  <Image src={product.image} height={300} width={550} alt={product.name} />
-                </CardMedia>
-                <CardContent>
-                  <Typography gutterBottom variant="subtitle1" component="h2" color="textPrimary">
-                    {product.code}
-                    {' '}
-                    |
-                    {' '}
-                    {product.name}
-                  </Typography>
-                  <Typography color="primary" display="inline" variant="body1">
-                    {product.manufacturer}
-                  </Typography>
-                  <Typography color="textSecondary" display="inline" variant="body1">
-                    {' '}
-                    -
-                    {' '}
-                    {product.collection}
-                  </Typography>
-                </CardContent>
-              </CardActionArea>
-            </Card>
+            {product.href ? (
+              <Card>
+                <CardActionArea as={Link} href={product.href}>
+                  <CardMedia>
+                    <Image src={product.image} height={300} width={550} alt={product.name} />
+                  </CardMedia>
+                  <CardContent>
+                    <Typography gutterBottom variant="subtitle1" component="h2" color="textPrimary">
+                      {product.name}
+                    </Typography>
+                  </CardContent>
+                </CardActionArea>
+              </Card>
+            ) : (
+              <Card>
+                <CardActionArea onClick={() => { setStandard(product); setOffsetTop(itemsRef.current[index].offsetTop - 80); }}>
+                  <CardMedia>
+                    <Image src={product.image} height={300} width={550} alt={product.name} />
+                  </CardMedia>
+                  <CardContent>
+                    <Typography gutterBottom variant="subtitle1" component="h2" color="textPrimary">
+                      {product.code}
+                      {' '}
+                      |
+                      {' '}
+                      {product.name}
+                    </Typography>
+                    <Typography color="primary" display="inline" variant="body1">
+                      {product.manufacturer}
+                    </Typography>
+                    <Typography color="textSecondary" display="inline" variant="body1">
+                      {' '}
+                      -
+                      {' '}
+                      {product.collection}
+                    </Typography>
+                  </CardContent>
+                </CardActionArea>
+              </Card>
+            )}
+
           </Grid>
         ))}
       </Grid>
