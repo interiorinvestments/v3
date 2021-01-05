@@ -2,36 +2,36 @@ const imgPath = '/img/designStandards/floorplan/';
 
 const floorplan = {
   title: 'Floorplan',
-  image: `${imgPath}floorplancolored.png`,
+  image: `${imgPath}floorplan.jpg`,
   areas: [
     {
       name: 'Workstations',
       image: `${imgPath}wks01.jpg`,
-      color: '#F87171',
+      color: '#FCA5A5',
       href: '/inform/design-standards/workstations',
     },
     {
       name: 'Private Offices',
       image: `${imgPath}privateoffice.jpg`,
-      color: '#FBBF24',
+      color: '#FCD34D',
       href: '/inform/design-standards/private-offices',
     },
     {
       name: 'Meeting Rooms',
       image: `${imgPath}meetingroom.jpg`,
-      color: '#34D399',
+      color: '#6EE7B7',
       href: '/inform/design-standards/meeting-rooms',
     },
     {
       name: 'Café Area',
       image: `${imgPath}cafe.jpg`,
-      color: '#60A5FA',
+      color: '#93C5FD',
       href: '/inform/design-standards/cafe-area',
     },
     {
       name: 'Collaboration/Lounge Area',
       image: `${imgPath}co01.jpg`,
-      color: '#A78BFA',
+      color: '#C4B5FD',
       href: '/inform/design-standards/collaboration-lounge',
     },
     {

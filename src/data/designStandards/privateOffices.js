@@ -5,15 +5,15 @@ const items = {
   title: 'Private Offices',
   products: [
     {
-      code: 'OF.01 & TB.01',
-      name: 'Typical Confo Room Table',
-      manufacturer: 'National',
-      collection: 'Tessera + Waveworks Table',
-      image: `${imgPath}of01.jpg`,
+      code: 'PO.01',
+      name: 'Private Office',
+      manufacturer: 'Herman Miller',
+      collection: 'Canvas',
+      image: `${imgPath}privateoffice.jpg`,
       floor: `${imgPath}of01f.jpg`,
-      description: '66"W x 30"D Wood veneer height adjustable desk (range: 29.1875" to 44"H), with fully enclosed base and a recessed breakfront modesty panel to conceal height adjustable base kit, inner shroud only seen in "up" position. Includes wire manager. control pad can be moved left or right. Table specified without storage. Maximum weight: 85 lbs. Desk Each Confo room to have (1) 30"Dia, waveworks round meeting table - wood veneer top and powered- coated metal base. Includes (1) Box/File static pedestal, locking.',
+      description: 'Herman Miller Canvas private office, constructed w/ (1) 66W x 30D Motia adjustable height desk with shroud, modesty panel, 48W fixed height return worksurface, wall-mounted tackboards, wall-mounted overhead storage with hinged doors above return worksurface. Floor storage includes (1) BBF pedestal and (1) wardrobe tower with a coat rack. Accessories: (1) undershelf talk light, (1) clamp-on power unit and (2) single monitor arms.',
       finishes: 'Wood components in Matte/Satin Sonoma (SM) wood veneer, meeting table metal base in polished finish. Standard storage pulls in Platinum Metallic',
-      location: 'Confo Rooms',
+      location: 'Private Offices',
       quantity: '(17)',
       options: [
         {
