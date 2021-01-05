@@ -22,23 +22,20 @@ const FloorplanView = ({ floorplan }) => {
   return (
     <Container maxWidth="xl" className={classes.root}>
       <Grid container spacing={3}>
-        <Grid item xs={12} md={6}>
+        <Grid item>
           <Typography variant="h3" color="textPrimary">{floorplan.title}</Typography>
-          <Image src={floorplan.image} height={750} width={1300} alt="floorplan" />
+          <Image src={floorplan.image} height={550} width={1100} alt="floorplan" />
           <Typography variant="body1" color="textPrimary">{floorplan.description}</Typography>
           <Hidden smUp>
             <Box my={4} />
           </Hidden>
         </Grid>
-        <Grid item xs={12} md={6}>
-          <Hidden smUp>
-            <Box my={4} />
-          </Hidden>
+        <Grid item>
           <>
             <Typography variant="h4" color="textPrimary">Spaces</Typography>
             <Grid container spacing={2}>
               {floorplan.areas.map((standard) => (
-                <Grid item xs={12} sm={6} md={4} key={standard.name}>
+                <Grid item xs={12} sm={6} md={2} key={standard.name}>
                   <Card style={{ backgroundColor: standard.color }}>
                     <CardActionArea component={Link} href={standard.href} naked>
                       <CardMedia>
