@@ -29,7 +29,7 @@ const floorplan = {
       href: '/inform/design-standards/cafe-area',
     },
     {
-      name: 'Collaboration/Lounge Area',
+      name: 'Collaboration/Lounge',
       image: `${imgPath}co01.jpg`,
       color: '#C4B5FD',
       href: '/inform/design-standards/collaboration-lounge',

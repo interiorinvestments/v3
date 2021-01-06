@@ -35,7 +35,7 @@ const FloorplanView = ({ floorplan }) => {
             <Typography variant="h4" color="textPrimary">Spaces</Typography>
             <Grid container spacing={2}>
               {floorplan.areas.map((standard) => (
-                <Grid item xs={12} sm={6} md={2} key={standard.name}>
+                <Grid item xs={4} sm={3} md={2} key={standard.name}>
                   <Card style={{ backgroundColor: standard.color }}>
                     <CardActionArea component={Link} href={standard.href} naked>
                       <CardMedia>
