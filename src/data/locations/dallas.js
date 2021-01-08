@@ -2,7 +2,6 @@ const imgPath = '/img/locations/hana/';
 const docPath = '/docs/locations/hana/';
 
 const location = {
-  name: 'Hana',
   location: 'Dallas, TX',
   sqft: '65,000',
   subTitle: 'The scope of the project is 2 floors, workstations, ancillary, walls.',

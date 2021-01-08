@@ -1,13 +1,13 @@
-import esd from './esd';
-import hana from './hana';
-import intersport from './intersport';
-import scotsman from './scotsman';
+import chicago1 from './chicago1';
+import chicago2 from './chicago2';
+import dallas from './dallas';
+import vernonhills from './vernonhills';
 
 const DATA = {
-  hana,
-  scotsman,
-  esd,
-  intersport,
+  dallas,
+  vernonhills,
+  chicago1,
+  chicago2,
 };
 
 const getData = (data) => DATA[data];

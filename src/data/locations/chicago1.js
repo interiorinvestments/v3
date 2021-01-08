@@ -2,7 +2,6 @@ const imgPath = '/img/locations/esd/';
 const docPath = '/docs/locations/esd/';
 
 const location = {
-  name: 'ESD',
   location: 'Chicago, IL',
   sqft: '47,000',
   subTitle: 'This project was 47,000 square feet over 2 floors in the Willis Tower. Products include Herman Miller Group including Eames shell chairs, Mirra 2, Eames Walnut Stools, Nemschoff Aspen and Canvas workstations.',

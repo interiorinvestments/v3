@@ -37,9 +37,7 @@ const LocationsView = ({ location }) => {
   return (
     <>
       <Container className={classes.root}>
-
-        <Typography variant="h6" color="textSecondary">{location.location}</Typography>
-        <Typography variant="h1" color="textPrimary">{location.name}</Typography>
+        <Typography variant="h1" color="textPrimary">{location.location}</Typography>
         <Box mb={2}>
           <Chip color="secondary" variant="outlined" size="small" label={`${location.sqft} sqft`} />
         </Box>

@@ -71,7 +71,7 @@ const navConfig = [
             href: '/inform/design-standards/cafe-area',
           },
           {
-            title: 'Collaboration/Lounge Area',
+            title: 'Collaboration/Lounge',
             href: '/inform/design-standards/collaboration-lounge',
           },
           {
@@ -148,20 +148,20 @@ const navConfig = [
         href: '/integrate/locations',
         items: [
           {
-            title: 'Hana - Dallas, TX',
-            href: '/integrate/locations/hana',
+            title: 'Dallas, TX',
+            href: '/integrate/locations/dallas',
           },
           {
-            title: 'Scotsman - Vernon Hills, IL',
-            href: '/integrate/locations/scotsman',
+            title: 'Vernon Hills, IL',
+            href: '/integrate/locations/vernonhills',
           },
           {
-            title: 'ESD - Chicago, IL',
-            href: '/integrate/locations/esd',
+            title: 'Chicago, IL',
+            href: '/integrate/locations/chicago1',
           },
           {
-            title: 'Intersport - Chicago, IL',
-            href: '/integrate/locations/intersport',
+            title: 'Chicago, IL',
+            href: '/integrate/locations/chicago2',
           },
         ],
       },
