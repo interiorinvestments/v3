@@ -8,7 +8,7 @@ const Options = ({ options }) => (
   <>
     <Grid container spacing={2}>
       {options.map((option, index) => (
-        <Grid item xs={12} sm={6} md={4} key={index}>
+        <Grid item xs={12} sm={6} md={4} key={option.description + index}>
           <Card>
             <CardMedia>
               <Image src={option.image} height={300} width={500} alt={option.description} />

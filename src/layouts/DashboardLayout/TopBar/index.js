@@ -1,5 +1,5 @@
+/* eslint-disable import/no-named-as-default */
 /* eslint-disable react/jsx-props-no-spreading */
-import { LogOut as LogOutIcon, Menu as MenuIcon } from 'react-feather';
 import {
   AppBar,
   Box,
@@ -14,6 +14,12 @@ import clsx from 'clsx';
 import Link from 'components/common/Link';
 import { useUser } from 'lib/hooks';
 import PropTypes from 'prop-types';
+import { LogOut as LogOutIcon, Menu as MenuIcon } from 'react-feather';
+
+import Implement from './Implement';
+import Inform from './Inform';
+import Inspire from './Inspire';
+import Integrate from './Integrate';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -42,14 +48,14 @@ const TopBar = ({ onMobileNavOpen, ...rest }) => {
   return (
     <AppBar className={clsx(classes.root)} {...rest}>
       <Toolbar className={classes.toolbar}>
-        <Hidden lgUp>
+        <Hidden mdUp>
           <IconButton color="primary" onClick={onMobileNavOpen}>
             <SvgIcon fontSize="small">
               <MenuIcon />
             </SvgIcon>
           </IconButton>
         </Hidden>
-        <Hidden mdDown>
+        <Hidden smDown>
           <IconButton href="/" size="small" component={Link}>
             <img
               src="/img/logos/IIBars.png"
@@ -59,6 +65,20 @@ const TopBar = ({ onMobileNavOpen, ...rest }) => {
           </IconButton>
         </Hidden>
         <Box ml={2} flexGrow={1} />
+        <Hidden smDown>
+          <Box mx={2}>
+            <Inform />
+          </Box>
+          <Box mx={2}>
+            <Inspire />
+          </Box>
+          <Box mx={2}>
+            <Integrate />
+          </Box>
+          <Box mx={2}>
+            <Implement />
+          </Box>
+        </Hidden>
         {user && (
           <>
             <Hidden smDown>

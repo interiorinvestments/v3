@@ -43,9 +43,6 @@ const LocationsView = ({ location }) => {
         </Box>
         <Typography variant="body1" color="textPrimary">{location.subTitle}</Typography>
         <Grid container spacing={3}>
-          <Grid item xs={12} md={5} lg={4}>
-            <SwipeableViews images={location.images} activeStep={activeStep} setActiveStep={setActiveStep} />
-          </Grid>
           <Grid item xs={12} md={7} lg={8}>
             <Grid item>
               <Box mb={3}>
@@ -67,9 +64,6 @@ const LocationsView = ({ location }) => {
               location.floorplans && (
                 <Image src={location.floorplans[activeStep].src} width={600} height={500} alt="floorplan" key={location.floorplans[activeStep].src} />
               )
-              // location.floorplans?.map((floorplan) => (
-              //   <Image src={floorplan.src} width={600} height={500} alt="floorplan" key={floorplan.src} />
-              // ))
             )
           }
               {
@@ -95,6 +89,9 @@ const LocationsView = ({ location }) => {
             )
           }
             </Grid>
+          </Grid>
+          <Grid item xs={12} md={5} lg={4}>
+            <SwipeableViews images={location.images} activeStep={activeStep} setActiveStep={setActiveStep} />
           </Grid>
         </Grid>
       </Container>

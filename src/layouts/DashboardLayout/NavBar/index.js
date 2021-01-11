@@ -295,9 +295,9 @@ const NavBar = ({ openMobile, onMobileClose }) => {
     <Box height="100%" display="flex" flexDirection="column">
       <PerfectScrollbar options={{ suppressScrollX: true }}>
         <Box p={2}>
-          {navConfig.map((config) => (
+          {navConfig.map((config, index) => (
             <List
-              key={config.subheader}
+              key={config.subheader + index}
               subheader={(
                 <ListSubheader disableGutters disableSticky color="primary">
                   {config.subheader}
@@ -373,7 +373,7 @@ const NavBar = ({ openMobile, onMobileClose }) => {
 
   return (
     <>
-      <Hidden lgUp>
+      <Hidden mdUp>
         <Drawer
           anchor="left"
           classes={{ paper: classes.mobileDrawer }}
@@ -384,7 +384,7 @@ const NavBar = ({ openMobile, onMobileClose }) => {
           {content}
         </Drawer>
       </Hidden>
-      <Hidden mdDown>
+      {/* <Hidden mdDown>
         <Drawer
           anchor="left"
           classes={{ paper: classes.desktopDrawer }}
@@ -393,7 +393,7 @@ const NavBar = ({ openMobile, onMobileClose }) => {
         >
           {content}
         </Drawer>
-      </Hidden>
+      </Hidden> */}
     </>
   );
 };
