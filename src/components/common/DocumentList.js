@@ -1,11 +1,11 @@
 import {
-  ExternalLink as ExternalLinkIcon,
-  Folder as FolderIcon,
-} from 'react-feather';
-import {
   Card, CardHeader, Divider, List, ListItem, ListItemText, makeStyles,
 } from '@material-ui/core';
 import PropTypes from 'prop-types';
+import {
+  ExternalLink as ExternalLinkIcon,
+  Folder as FolderIcon,
+} from 'react-feather';
 
 const useStyles = makeStyles((theme) => ({
   root: {

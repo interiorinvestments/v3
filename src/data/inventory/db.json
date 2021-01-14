@@ -1,0 +1,490 @@
+{
+  "items": [
+    {
+      "code": "WKS.01",
+      "name": "Typical 4-Pack",
+      "manufacturer": "Herman Miller",
+      "collection": "Canvas Vista + Motia",
+      "image": "/img/designStandards/workstations/wks01.jpg",
+      "quantity": 50,
+      "area": [
+        "Workstations"
+      ]
+    },
+    {
+      "code": "WKS.02",
+      "name": "Typical 8-Pack",
+      "manufacturer": "Herman Miller",
+      "collection": "Canvas Vista + Motia",
+      "image": "/img/designStandards/workstations/wks02.jpg",
+      "quantity": 50,
+      "area": [
+        "Workstations"
+      ]
+    },
+    {
+      "code": "WKS.03",
+      "name": "Typical 10-Pack",
+      "manufacturer": "Herman Miller",
+      "collection": "Canvas Vista + Motia",
+      "image": "/img/designStandards/workstations/wks03.jpg",
+      "quantity": 50,
+      "area": [
+        "Workstations"
+      ]
+    },
+    {
+      "code": "PO.01",
+      "name": "Private Office",
+      "manufacturer": "Herman Miller",
+      "collection": "Canvas",
+      "image": "/img/designStandards/privateOffices/privateoffice.jpg",
+      "quantity": 50,
+      "area": [
+        "Private Offices"
+      ]
+    },
+    {
+      "code": "CH.01",
+      "name": "Typical Task Chair",
+      "manufacturer": "Herman Miller",
+      "collection": "New Aeron",
+      "image": "/img/designStandards/seating/ch01.jpg",
+      "quantity": 50,
+      "area": [
+        "Workstations",
+        "Private Offices"
+      ]
+    },
+    {
+      "code": "CH.02",
+      "name": "Typical Guest Chair",
+      "manufacturer": "National",
+      "collection": "Delgado",
+      "image": "/img/designStandards/seating/ch02.jpg",
+      "quantity": 50,
+      "area": [
+        "Private Offices"
+      ]
+    },
+    {
+      "code": "CH.03",
+      "name": "Typical Huddle Room Chair",
+      "manufacturer": "OFS",
+      "collection": "Pret",
+      "image": "/img/designStandards/seating/ch03.jpg",
+      "quantity": 50,
+      "area": [
+        "Meeting Rooms"
+      ]
+    },
+    {
+      "code": "CH.05",
+      "name": "Café  Chair",
+      "manufacturer": "OFS",
+      "collection": "Harpin",
+      "image": "/img/designStandards/seating/ch05.jpg",
+      "quantity": 50,
+      "area": [
+        "Meeting Rooms"
+      ]
+    },
+    {
+      "code": "CH.06",
+      "name": "Café  Barstool",
+      "manufacturer": "OFS",
+      "collection": "Bistro #104058",
+      "image": "/img/designStandards/seating/ch06.jpg",
+      "quantity": 50,
+      "area": [
+        "Meeting Rooms"
+      ]
+    },
+    {
+      "code": "CH.08",
+      "name": "Multi-purpose Chair",
+      "manufacturer": "Herman Miller",
+      "collection": "Verus Side",
+      "image": "/img/designStandards/seating/ch08.jpg",
+      "quantity": 50,
+      "area": [
+        "Meeting Rooms"
+      ]
+    },
+    {
+      "code": "CH.09",
+      "name": "Modular Sofa",
+      "manufacturer": "National",
+      "collection": "Swift Modular",
+      "image": "/img/designStandards/seating/ch09.jpg",
+      "quantity": 50,
+      "area": [
+        "Meeting Rooms"
+      ]
+    },
+    {
+      "code": "CH.10",
+      "name": "Rocker Chair",
+      "manufacturer": "National",
+      "collection": "Delgado",
+      "image": "/img/designStandards/seating/ch10.jpg",
+      "quantity": 50,
+      "area": [
+        "Collaboration / Lounge"
+      ]
+    },
+    {
+      "code": "CH.11",
+      "name": "Barstool",
+      "manufacturer": "National",
+      "collection": "Grin Bar Stool",
+      "image": "/img/designStandards/seating/ch11.jpg",
+      "quantity": 50,
+      "area": [
+        "Collaboration / Lounge"
+      ]
+    },
+    {
+      "code": "CH.12",
+      "name": "Counter Stool",
+      "manufacturer": "National",
+      "collection": "Grin Counter Stool",
+      "image": "/img/designStandards/seating/ch12.jpg",
+      "quantity": 50,
+      "area": [
+        "Meeting Rooms"
+      ]
+    },
+    {
+      "code": "CH.13",
+      "name": "Lounge Chair",
+      "manufacturer": "National",
+      "collection": "Fringe",
+      "image": "/img/designStandards/seating/ch13.jpg",
+      "quantity": 50,
+      "area": [
+        "Collaboration / Lounge"
+      ]
+    },
+    {
+      "code": "CH.14a & CH.14b",
+      "name": "Private Lounge Chair",
+      "manufacturer": "Keilhauer",
+      "collection": "Lull 74111",
+      "image": "/img/designStandards/seating/ch14.jpg",
+      "quantity": 50,
+      "area": [
+        "Collaboration / Lounge"
+      ]
+    },
+    {
+      "code": "CH.15",
+      "name": "Private Lounge Chair",
+      "manufacturer": "OFS",
+      "collection": "LeanTo",
+      "image": "/img/designStandards/seating/ch15.jpg",
+      "quantity": 50,
+      "area": [
+        "Collaboration / Lounge"
+      ]
+    },
+    {
+      "code": "CH.16",
+      "name": "Ottoman",
+      "manufacturer": "National",
+      "collection": "Whimsy",
+      "image": "/img/designStandards/seating/ch16.jpg",
+      "quantity": 50,
+      "area": [
+        "Collaboration / Lounge"
+      ]
+    },
+    {
+      "code": "BQT.01/BQT.02",
+      "name": "Café Banquette",
+      "manufacturer": "National",
+      "collection": "Fringe Booth",
+      "image": "/img/designStandards/seating/bqt01.jpg",
+      "quantity": 50,
+      "area": [
+        "Meeting Rooms"
+      ]
+    },
+    {
+      "code": "SF.01",
+      "name": "Sofa",
+      "manufacturer": "Geiger",
+      "collection": "Tuxedo Component",
+      "image": "/img/designStandards/seating/sf01.jpg",
+      "quantity": 50,
+      "area": [
+        "Collaboration / Lounge"
+      ]
+    },
+    {
+      "code": "SF.02",
+      "name": "Sofa",
+      "manufacturer": "Keilhauer",
+      "collection": "Talk",
+      "image": "/img/designStandards/seating/sf02.jpg",
+      "quantity": 50,
+      "area": [
+        "Collaboration / Lounge"
+      ]
+    },
+    {
+      "code": "CO.01",
+      "name": "Collaboration Unit",
+      "manufacturer": "OFS",
+      "collection": "Heya Talk",
+      "image": "/img/designStandards/seating/co01.jpg",
+      "quantity": 50,
+      "area": [
+        "Collaboration / Lounge"
+      ]
+    },
+    {
+      "code": "CO.02",
+      "name": "Collaboration Unit",
+      "manufacturer": "OFS",
+      "collection": "Heya Double",
+      "image": "/img/designStandards/seating/co02.jpg",
+      "quantity": 50,
+      "area": [
+        "Collaboration / Lounge"
+      ]
+    },
+    {
+      "code": "TB.02",
+      "name": "Typical Height Adjustable",
+      "manufacturer": "Herman Miller",
+      "collection": "Motia",
+      "image": "/img/designStandards/tables/tb02.jpg",
+      "quantity": 50,
+      "area": [
+        "Workstations",
+        "Meeting Rooms"
+      ]
+    },
+    {
+      "code": "TB.03",
+      "name": "Multi-purpose Table",
+      "manufacturer": "OFS",
+      "collection": "Applause",
+      "image": "/img/designStandards/tables/tb03.jpg",
+      "quantity": 50,
+      "area": [
+        "Meeting Rooms"
+      ]
+    },
+    {
+      "code": "TB.04 & TB.04A",
+      "name": "Meeting Table",
+      "manufacturer": "Enwork",
+      "collection": "Custom HAT",
+      "image": "/img/designStandards/tables/tb04.jpg",
+      "quantity": 50,
+      "area": [
+        "Meeting Rooms"
+      ]
+    },
+    {
+      "code": "TB.05 & TB.05A",
+      "name": "Meeting Table",
+      "manufacturer": "Enwork",
+      "collection": "Custom HAT",
+      "image": "/img/designStandards/tables/tb05.jpg",
+      "quantity": 50,
+      "area": [
+        "Meeting Rooms"
+      ]
+    },
+    {
+      "code": "TB.06",
+      "name": "Bar Height Café Table",
+      "manufacturer": "OFS",
+      "collection": "Heya",
+      "image": "/img/designStandards/tables/tb06.jpg",
+      "quantity": 50,
+      "area": [
+        "Café Area"
+      ]
+    },
+    {
+      "code": "TB.07",
+      "name": "Café Table",
+      "manufacturer": "OFS",
+      "collection": "Nineteen20",
+      "image": "/img/designStandards/tables/tb07.jpg",
+      "quantity": 50,
+      "area": [
+        "Café Area"
+      ]
+    },
+    {
+      "code": "TB.08",
+      "name": "Café Table",
+      "manufacturer": "OFS",
+      "collection": "Nineteen20",
+      "image": "/img/designStandards/tables/tb08.jpg",
+      "quantity": 50,
+      "area": [
+        "Café Area"
+      ]
+    },
+    {
+      "code": "TB.09",
+      "name": "Café Table",
+      "manufacturer": "OFS",
+      "collection": "Nineteen20",
+      "image": "/img/designStandards/tables/tb09.jpg",
+      "quantity": 50,
+      "area": [
+        "Café Area"
+      ]
+    },
+    {
+      "code": "TB.10",
+      "name": "Bar Height Table",
+      "manufacturer": "National",
+      "collection": "Tessera Bar",
+      "image": "/img/designStandards/tables/tb10.jpg",
+      "quantity": 50,
+      "area": [
+        "Collaboration / Lounge"
+      ]
+    },
+    {
+      "code": "TB.11",
+      "name": "Round Meeting Table",
+      "manufacturer": "National",
+      "collection": "Universal",
+      "image": "/img/designStandards/tables/tb11.jpg",
+      "quantity": 50,
+      "area": [
+        "Collaboration / Lounge"
+      ]
+    },
+    {
+      "code": "TB.12",
+      "name": "Round Lounge Table",
+      "manufacturer": "Geiger",
+      "collection": "Saiba",
+      "image": "/img/designStandards/tables/tb12.jpg",
+      "quantity": 50,
+      "area": [
+        "Collaboration / Lounge"
+      ]
+    },
+    {
+      "code": "TB.13",
+      "name": "Round Coffee Table",
+      "manufacturer": "OFS",
+      "collection": "Roo",
+      "image": "/img/designStandards/tables/tb13.jpg",
+      "quantity": 50,
+      "area": [
+        "Collaboration / Lounge"
+      ]
+    },
+    {
+      "code": "TB.14",
+      "name": "Pull Up Laptop Table",
+      "manufacturer": "Naughtone",
+      "collection": "Riley",
+      "image": "/img/designStandards/tables/tb14.jpg",
+      "quantity": 50,
+      "area": [
+        "Meeting Rooms"
+      ]
+    },
+    {
+      "code": "TB.15",
+      "name": "Coffee Table",
+      "manufacturer": "Keilhauer",
+      "collection": "Geometry 71135",
+      "image": "/img/designStandards/tables/tb15.jpg",
+      "quantity": 50,
+      "area": [
+        "Collaboration / Lounge"
+      ]
+    },
+    {
+      "code": "TB.16",
+      "name": "Pull Up Table",
+      "manufacturer": "OFS",
+      "collection": "Heya",
+      "image": "/img/designStandards/tables/tb16.jpg",
+      "quantity": 50,
+      "area": [
+        "Collaboration / Lounge"
+      ]
+    },
+    {
+      "code": "TB.17",
+      "name": "Pull UP Table",
+      "manufacturer": "National",
+      "collection": "Personal Pull-Up",
+      "image": "/img/designStandards/tables/tb17.jpg",
+      "quantity": 50,
+      "area": [
+        "Collaboration / Lounge"
+      ]
+    },
+    {
+      "code": "AC.01",
+      "name": "Mobile Tackboard/Markerboard",
+      "manufacturer": "OFS",
+      "collection": "Heya",
+      "image": "/img/designStandards/accessories/ac01.jpg",
+      "quantity": 50,
+      "area": [
+        "Accessories"
+      ]
+    },
+    {
+      "code": "AC.02A",
+      "name": "Portable Power Module/Tower",
+      "manufacturer": "Byrne",
+      "collection": "Tully or \"Tuck-in\" unit",
+      "image": "/img/designStandards/accessories/ac02a.jpg",
+      "quantity": 50,
+      "area": [
+        "Accessories"
+      ]
+    },
+    {
+      "code": "AC.02B",
+      "name": "Portable Power Module/Tower",
+      "manufacturer": "Byrne",
+      "collection": "Vest Wireless",
+      "image": "/img/designStandards/accessories/ac02b.jpg",
+      "quantity": 50,
+      "area": [
+        "Accessories"
+      ]
+    },
+    {
+      "code": "AC.02C",
+      "name": "Portable Power Module/Tower",
+      "manufacturer": "Byrne",
+      "collection": "Vest Corded",
+      "image": "/img/designStandards/accessories/ac02c.jpg",
+      "quantity": 50,
+      "area": [
+        "Accessories"
+      ]
+    },
+    {
+      "code": "AC.03",
+      "name": "Personal Task Light",
+      "manufacturer": "Herman Miller",
+      "collection": "Lolly",
+      "image": "/img/designStandards/accessories/ac03.jpg",
+      "quantity": 50,
+      "area": [
+        "Accessories"
+      ]
+    }
+  ]
+}

@@ -14,8 +14,8 @@ export const Inspire = () => {
     }
     event.preventDefault();
     setMenuPosition({
-      top: event.pageY,
-      left: event.pageX,
+      top: event.clientY,
+      left: event.clientX,
     });
   };
 

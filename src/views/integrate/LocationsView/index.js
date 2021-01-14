@@ -35,45 +35,44 @@ const LocationsView = ({ location }) => {
   };
 
   return (
-    <>
-      <Container className={classes.root}>
-        <Typography variant="h1" color="textPrimary">{location.location}</Typography>
-        <Box mb={2}>
-          <Chip color="secondary" variant="outlined" size="small" label={`${location.sqft} sqft`} />
-        </Box>
-        <Typography variant="body1" color="textPrimary">{location.subTitle}</Typography>
-        <Grid container spacing={3}>
-          <Grid item xs={12} md={7} lg={8}>
-            <Grid item>
-              <Box mb={3}>
-                <Tabs
-                  value={value}
-                  onChange={handleChange}
-                  indicatorColor="primary"
-                  textColor="primary"
-                >
-                  <Tab label="FloorPlan" disabled={!location.floorplans} />
-                  <Tab label="Look Book" disabled={!location.lookbooks} />
-                  <Tab label="Typicals" disabled={!location.typicals} />
-                </Tabs>
-              </Box>
-            </Grid>
-            <Grid item>
-              {
+    <Container className={classes.root}>
+      <Typography variant="h1" color="textPrimary">{location.location}</Typography>
+      <Box mb={2}>
+        <Chip color="secondary" variant="outlined" size="small" label={`${location.sqft} sqft`} />
+      </Box>
+      <Typography variant="body1" color="textPrimary">{location.subTitle}</Typography>
+      <Grid container spacing={3}>
+        <Grid item xs={12} md={7} lg={8}>
+          <Grid item>
+            <Box mb={3}>
+              <Tabs
+                value={value}
+                onChange={handleChange}
+                indicatorColor="primary"
+                textColor="primary"
+              >
+                <Tab label="FloorPlan" disabled={!location.floorplans} />
+                <Tab label="Look Book" disabled={!location.lookbooks} />
+                <Tab label="Typicals" disabled={!location.typicals} />
+              </Tabs>
+            </Box>
+          </Grid>
+          <Grid item>
+            {
             value === 0 && (
               location.floorplans && (
                 <Image src={location.floorplans[activeStep].src} width={600} height={500} alt="floorplan" key={location.floorplans[activeStep].src} />
               )
             )
           }
-              {
+            {
             value === 1 && (
               location.lookbooks?.map((lookbook) => (
                 <PdfViewer pdf={lookbook.src} key={lookbook.src} />
               ))
             )
           }
-              {
+            {
             value === 2 && (
               <Grid container spacing={3}>
                 {location.typicals?.map((typical) => (
@@ -88,14 +87,13 @@ const LocationsView = ({ location }) => {
               </Grid>
             )
           }
-            </Grid>
-          </Grid>
-          <Grid item xs={12} md={5} lg={4}>
-            <SwipeableViews images={location.images} activeStep={activeStep} setActiveStep={setActiveStep} />
           </Grid>
         </Grid>
-      </Container>
-    </>
+        <Grid item xs={12} md={5} lg={4}>
+          <SwipeableViews images={location.images} activeStep={activeStep} setActiveStep={setActiveStep} />
+        </Grid>
+      </Grid>
+    </Container>
   );
 };
 

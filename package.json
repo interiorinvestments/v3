@@ -17,6 +17,7 @@
     "clsx": "^1.1.1",
     "cookie": "^0.4.1",
     "image-map": "^2.0.1",
+    "lowdb": "^1.0.0",
     "material-table": "^1.69.2",
     "material-ui-nested-menu-item": "^1.0.2",
     "mongoose": "^5.11.11",
