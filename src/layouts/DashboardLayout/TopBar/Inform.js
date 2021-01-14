@@ -13,15 +13,18 @@ export const Inform = () => {
       return;
     }
     event.preventDefault();
+    console.log({ event });
+    console.log(event.pageY);
+    console.log(event.pageX);
     setMenuPosition({
-      top: event.pageY,
-      left: event.pageX,
+      top: event.clientY,
+      left: event.clientX,
     });
   };
 
   return (
     <>
-      <Button onClick={handleClick} color="textPrimary">Inform</Button>
+      <Button onClick={handleClick}>Inform</Button>
       <Menu
         open={!!menuPosition}
         onClose={() => setMenuPosition(null)}

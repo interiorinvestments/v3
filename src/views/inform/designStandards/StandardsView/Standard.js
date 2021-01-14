@@ -1,5 +1,6 @@
 import {
   Button,
+  Container,
   Grid,
   SvgIcon,
   Typography,
@@ -14,7 +15,7 @@ import Options from './Options';
 const Standard = ({ standard, setStandard }) => {
   useScroll(0);
   return (
-    <>
+    <Container>
       <Grid container justify="space-between" spacing={3}>
         <Grid item>
           <Typography variant="h1" color="textPrimary">
@@ -134,7 +135,7 @@ const Standard = ({ standard, setStandard }) => {
         ) }
 
       </Grid>
-    </>
+    </Container>
   );
 };
 

@@ -21,7 +21,7 @@ export const Inspire = () => {
 
   return (
     <>
-      <Button onClick={handleClick} color="textPrimary">Inspire</Button>
+      <Button onClick={handleClick}>Inspire</Button>
       <Menu
         open={!!menuPosition}
         onClose={() => setMenuPosition(null)}

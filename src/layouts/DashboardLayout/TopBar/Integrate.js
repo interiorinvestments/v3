@@ -14,14 +14,14 @@ export const Integrate = () => {
     }
     event.preventDefault();
     setMenuPosition({
-      top: event.pageY,
-      left: event.pageX,
+      top: event.clientY,
+      left: event.clientX,
     });
   };
 
   return (
     <>
-      <Button onClick={handleClick} color="textPrimary">Integrate</Button>
+      <Button onClick={handleClick}>Integrate</Button>
       <Menu
         open={!!menuPosition}
         onClose={() => setMenuPosition(null)}
