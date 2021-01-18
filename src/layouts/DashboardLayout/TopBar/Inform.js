@@ -13,9 +13,6 @@ export const Inform = () => {
       return;
     }
     event.preventDefault();
-    console.log({ event });
-    console.log(event.pageY);
-    console.log(event.pageX);
     setMenuPosition({
       top: event.clientY,
       left: event.clientX,

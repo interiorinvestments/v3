@@ -156,11 +156,11 @@ const navConfig = [
             href: '/integrate/locations/vernonhills',
           },
           {
-            title: 'Chicago, IL',
+            title: 'Chicago, IL 1',
             href: '/integrate/locations/chicago1',
           },
           {
-            title: 'Chicago, IL',
+            title: 'Chicago, IL 2',
             href: '/integrate/locations/chicago2',
           },
         ],
@@ -295,9 +295,9 @@ const NavBar = ({ openMobile, onMobileClose }) => {
     <Box height="100%" display="flex" flexDirection="column">
       <PerfectScrollbar options={{ suppressScrollX: true }}>
         <Box p={2}>
-          {navConfig.map((config, index) => (
+          {navConfig.map((config) => (
             <List
-              key={config.subheader + index}
+              key={config.subheader}
               subheader={(
                 <ListSubheader disableGutters disableSticky color="primary">
                   {config.subheader}

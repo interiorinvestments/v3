@@ -1,23 +1,32 @@
 import {
-  Avatar, Card, CardHeader, Divider, List, ListItem, ListItemAvatar, ListItemSecondaryAction, ListItemText,
+  Avatar, Card, CardHeader, Divider, List, ListItem, ListItemAvatar, ListItemSecondaryAction, ListItemText, makeStyles,
+  Typography,
 } from '@material-ui/core';
 import PropTypes from 'prop-types';
 
-const InventoryItems = ({ products, title }) => {
-  console.log({ products });
+const useStyles = makeStyles((theme) => ({
+  cardAction: {
+    paddingTop: theme.spacing(1),
+  },
+}));
+
+const InventoryItems = ({
+  products, title, setOpen, setCartItem,
+}) => {
+  const classes = useStyles();
   return (
     <Card>
-      <CardHeader title={title} />
+      <CardHeader title={title} action={<Typography className={classes.cardAction} color="textSecondary" variant="body2">Quantity</Typography>} />
       <Divider />
       <List dense>
         {products.map((product) => (
-          <ListItem key={product.code + product.id} button>
+          <ListItem key={product.code} button onClick={() => { setOpen(true), setCartItem(product); }}>
             <ListItemAvatar>
               <Avatar src={product.image} variant="rounded" />
             </ListItemAvatar>
             <ListItemText primary={`${product.code} | ${product.name}`} secondary={`${product.manufacturer} - ${product.collection}`} />
             <ListItemSecondaryAction>
-              {product.quantity}
+              {product.remaining}
             </ListItemSecondaryAction>
           </ListItem>
         ))}
@@ -29,5 +38,7 @@ const InventoryItems = ({ products, title }) => {
 InventoryItems.propTypes = {
   products: PropTypes.array,
   title: PropTypes.string.isRequired,
+  setOpen: PropTypes.func.isRequired,
+  setCartItem: PropTypes.func.isRequired,
 };
 export default InventoryItems;
