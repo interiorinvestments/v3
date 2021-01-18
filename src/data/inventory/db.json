@@ -6,8 +6,8 @@
       "manufacturer": "Herman Miller",
       "collection": "Canvas Vista + Motia",
       "image": "/img/designStandards/workstations/wks01.jpg",
-      "quantity": 2,
-      "remaining": 16,
+      "quantity": 1,
+      "remaining": 4,
       "total": 50,
       "area": [
         "Workstations"
@@ -573,6 +573,11 @@
       "area": [
         "Accessories"
       ]
+    }
+  ],
+  "cart": [
+    {
+      "code": "new code"
     }
   ]
 }

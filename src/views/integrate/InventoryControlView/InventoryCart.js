@@ -29,7 +29,10 @@ const InventoryCart = ({ open, setOpen, cartItem }) => {
         method: 'PUT',
         body: JSON.stringify({ quantity }),
       });
-      if (res.status < 300) {
+      const updateCart = await fetch(`/api/inventory/cart/${cartItem.code}`, {
+        method: 'PUT',
+      });
+      if (res.status < 300 && updateCart.status < 300) {
         refreshData();
       }
     } catch (err) {

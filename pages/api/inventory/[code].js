@@ -24,8 +24,7 @@ const inventoryHandler = async (req, res) => {
       break;
     case 'PUT':
       try {
-        const item = await db.get('items').find({ code }).value();
-        const { remaining } = item;
+        const { remaining } = await db.get('items').find({ code }).value();
 
         const newRemaining = remaining - quantity;
 
