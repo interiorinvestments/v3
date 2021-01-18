@@ -35,7 +35,7 @@ InventoryControlPage.propTypes = {
 export const getServerSideProps = async () => {
   try {
     let adapter;
-    if (process.env === 'production') {
+    if (process.env.NODE_ENV === 'production') {
       adapter = new FileAsync(`${__dirname}src/data/inventory/db.json`);
     } else {
       adapter = new FileAsync('src/data/inventory/db.json');
