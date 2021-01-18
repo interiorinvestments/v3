@@ -20,7 +20,7 @@ const useStyles = makeStyles((theme) => ({
 const FloorplanView = ({ floorplan }) => {
   const classes = useStyles();
   return (
-    <Container maxWidth="xl" className={classes.root}>
+    <Container maxWidth="lg" className={classes.root}>
       <Grid container spacing={3}>
         <Grid item>
           <Typography variant="h3" color="textPrimary">{floorplan.title}</Typography>

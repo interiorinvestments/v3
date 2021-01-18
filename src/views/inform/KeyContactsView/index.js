@@ -10,7 +10,7 @@ const OrgChart = dynamic(() => import('./OrgChart'), {
 });
 
 const KeyContactsView = () => (
-  <Container maxWidth={false}>
+  <Container maxWidth="lg">
     <Header />
     <OrgChart />
     <Box py={4}>

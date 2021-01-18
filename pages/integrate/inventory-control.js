@@ -4,6 +4,7 @@ import Page from 'components/common/Page';
 import DashboardLayout from 'layouts/DashboardLayout';
 import low from 'lowdb';
 import FileAsync from 'lowdb/adapters/FileAsync';
+import path from 'path';
 import PropTypes from 'prop-types';
 import InventoryControlView from 'views/integrate/InventoryControlView';
 
@@ -33,7 +34,8 @@ InventoryControlPage.propTypes = {
 };
 
 export const getServerSideProps = async () => {
-  const adapter = new FileAsync('db.json');
+  const file = path.resolve('db.json');
+  const adapter = new FileAsync(file);
   const db = await low(adapter);
   try {
     const items = await db.get('items')
