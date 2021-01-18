@@ -31,17 +31,11 @@ const InventoryControlPage = ({ items }) => {
 InventoryControlPage.propTypes = {
   items: PropTypes.array,
 };
-// /home/tesh/Documents/Work/Websites/v3/src/data/inventory/db.json
-export const getServerSideProps = async () => {
-  try {
-    let adapter;
-    if (process.env.NODE_ENV === 'production') {
-      adapter = new FileAsync(`${__dirname}src/data/inventory/db.json`);
-    } else {
-      adapter = new FileAsync('src/data/inventory/db.json');
-    }
 
-    const db = await low(adapter);
+export const getServerSideProps = async () => {
+  const adapter = new FileAsync('db.json');
+  const db = await low(adapter);
+  try {
     const items = await db.get('items')
       .value();
     return { props: { items } };
