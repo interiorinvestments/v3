@@ -1,10 +1,18 @@
 import {
-  Avatar, Card, CardHeader, Divider, List, ListItem, ListItemAvatar, ListItemSecondaryAction, ListItemText, makeStyles,
-  Typography,
+  Avatar, Card, CardHeader, Collapse,
+  Divider, IconButton, List, ListItem, ListItemAvatar, ListItemSecondaryAction, ListItemText, ListSubheader,
+  makeStyles,
 } from '@material-ui/core';
+import ExpandLess from '@material-ui/icons/ExpandLess';
+import ExpandMore from '@material-ui/icons/ExpandMore';
 import PropTypes from 'prop-types';
+import { useState } from 'react';
 
 const useStyles = makeStyles((theme) => ({
+  root: {
+    width: 350,
+    backgroundColor: theme.palette.background.paper,
+  },
   cardAction: {
     paddingTop: theme.spacing(1),
   },
@@ -14,23 +22,29 @@ const InventoryItems = ({
   products, title, setOpen, setCartItem,
 }) => {
   const classes = useStyles();
+  const [expanded, setExpanded] = useState(false);
+  const handleClick = () => {
+    setExpanded(!expanded);
+  };
   return (
-    <Card>
-      <CardHeader title={title} action={<Typography className={classes.cardAction} color="textSecondary" variant="body2">Quantity</Typography>} />
+    <Card className={classes.root}>
+      <CardHeader title={title} onClick={handleClick} action={<IconButton>{expanded ? <ExpandLess /> : <ExpandMore />}</IconButton>} />
       <Divider />
-      <List dense>
-        {products.map((product) => (
-          <ListItem key={product.code} button onClick={() => { setOpen(true), setCartItem(product); }}>
-            <ListItemAvatar>
-              <Avatar src={product.image} variant="rounded" />
-            </ListItemAvatar>
-            <ListItemText primary={`${product.code} | ${product.name}`} secondary={`${product.manufacturer} - ${product.collection}`} />
-            <ListItemSecondaryAction>
-              {product.remaining}
-            </ListItemSecondaryAction>
-          </ListItem>
-        ))}
-      </List>
+      <Collapse in={expanded} timeout="auto" unmountOnExit>
+        <List dense>
+          {products.map((product) => (
+            <ListItem key={product.code} button onClick={() => { setOpen(true), setCartItem(product); }}>
+              <ListItemAvatar>
+                <Avatar src={product.image} variant="rounded" />
+              </ListItemAvatar>
+              <ListItemText primary={`${product.code} | ${product.name}`} secondary={`${product.manufacturer} - ${product.collection}`} />
+              <ListItemSecondaryAction>
+                {product.remaining}
+              </ListItemSecondaryAction>
+            </ListItem>
+          ))}
+        </List>
+      </Collapse>
     </Card>
   );
 };
