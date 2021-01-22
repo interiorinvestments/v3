@@ -3,7 +3,7 @@ import FileAsync from 'lowdb/adapters/FileAsync';
 import path from 'path';
 
 const inventoryHandler = async (req, res) => {
-  const file = path.resolve('db.json');
+  const file = path.resolve('pages/db.json');
   const adapter = new FileAsync(file);
   const db = await low(adapter);
 
