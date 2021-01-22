@@ -35,7 +35,7 @@ InventoryControlPage.propTypes = {
 };
 
 export const getServerSideProps = async () => {
-  const file = path.resolve('pages/db.json');
+  const file = path.resolve('db.json');
   const adapter = new FileAsync(file);
   const db = await low(adapter);
   try {
