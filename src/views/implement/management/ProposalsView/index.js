@@ -1,10 +1,10 @@
-import { useState } from 'react';
 import {
   Card, Container, Grid, Tab, Tabs,
 } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import Page from 'components/common/Page';
 import PropTypes from 'prop-types';
+import { useState } from 'react';
 
 import Header from './Header';
 import ProposalInfo from './ProposalInfo';

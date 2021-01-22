@@ -1,44 +1,41 @@
 import low from 'lowdb';
 import FileAsync from 'lowdb/adapters/FileAsync';
+import path from 'path';
 
 const inventoryHandler = async (req, res) => {
-  const adapter = new FileAsync('db.json');
+  const file = path.resolve('db.json');
+  const adapter = new FileAsync(file);
   const db = await low(adapter);
 
   const {
     query: { code },
     method,
   } = req;
-  const body = JSON.parse(req.body);
-  const { quantity } = body;
 
   switch (method) {
     case 'GET':
       try {
         const item = await db.get('items').find({ code }).value();
-        res.status(200).send(item);
+        return res.status(200).send(item);
       } catch (err) {
         console.error(err);
-        res.status(400).send(err);
+        return res.status(400).send(err);
       }
-      break;
     case 'PUT':
       try {
-        const { remaining } = await db.get('items').find({ code }).value();
-
-        const newRemaining = remaining - quantity;
-
-        const updatedItem = await db.get('items').find({ code }).assign({ remaining: newRemaining, quantity }).write();
-        // add item to cart
-        res.status(204).send(updatedItem);
+        const { quantity } = req.body;
+        const foundItem = await db.get('items').find({ code }).value();
+        const quantityDiff = quantity - foundItem.quantity;
+        const remaining = foundItem.remaining - quantityDiff;
+        const updatedItem = await db.get('items').find({ code }).assign({ remaining, quantity }).write();
+        return res.status(202).json(updatedItem);
       } catch (err) {
         console.error(err);
-        res.status(400).send(err);
+        return res.status(400).send(err);
       }
-      break;
     default:
       res.setHeader('Allow', ['GET', 'PUT']);
-      res.status(405).end(`Method ${method} Not Allowed`);
+      return res.status(405).end(`Method ${method} Not Allowed`);
   }
 };
 

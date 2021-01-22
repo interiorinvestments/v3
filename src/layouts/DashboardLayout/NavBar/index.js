@@ -85,11 +85,11 @@ const navConfig = [
         icon: BookIcon,
         href: '/inform/care-maintenance',
       },
-      {
-        title: 'Covid Response',
-        icon: HeartIcon,
-        href: '/inform/covid',
-      },
+      // {
+      //   title: 'Covid Response',
+      //   icon: HeartIcon,
+      //   href: '/inform/covid',
+      // },
       {
         title: 'FAQs',
         icon: HelpCircleIcon,

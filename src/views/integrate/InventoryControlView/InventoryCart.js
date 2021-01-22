@@ -13,8 +13,6 @@ const InventoryCart = ({ open, setOpen, cartItem }) => {
   const [quantity, setQuantity] = useState(0);
   const router = useRouter();
 
-  console.log({ quantity });
-  console.log(cartItem.quantity);
   const refreshData = () => {
     router.replace(router.asPath);
   };
@@ -27,10 +25,18 @@ const InventoryCart = ({ open, setOpen, cartItem }) => {
     try {
       const res = await fetch(`/api/inventory/${cartItem.code}`, {
         method: 'PUT',
+        headers: {
+          'Content-Type': 'application/json',
+        },
         body: JSON.stringify({ quantity }),
       });
+      const item = await res.json();
       const updateCart = await fetch(`/api/inventory/cart/${cartItem.code}`, {
         method: 'PUT',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(item),
       });
       if (res.status < 300 && updateCart.status < 300) {
         refreshData();
@@ -71,7 +77,7 @@ const InventoryCart = ({ open, setOpen, cartItem }) => {
           <Button onClick={() => setOpen(false)}>
             Cancel
           </Button>
-          <Button onClick={handleAdd} color="primary" variant="contained">
+          <Button onClick={handleAdd} color="primary" variant="contained" disabled={quantity < 1}>
             Add
           </Button>
         </DialogActions>

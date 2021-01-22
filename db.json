@@ -6,12 +6,12 @@
       "manufacturer": "Herman Miller",
       "collection": "Canvas Vista + Motia",
       "image": "/img/designStandards/workstations/wks01.jpg",
-      "quantity": 1,
-      "remaining": 4,
+      "remaining": 50,
       "total": 50,
       "area": [
         "Workstations"
-      ]
+      ],
+      "quantity": 0
     },
     {
       "code": "WKS.02",
@@ -19,8 +19,8 @@
       "manufacturer": "Herman Miller",
       "collection": "Canvas Vista + Motia",
       "image": "/img/designStandards/workstations/wks02.jpg",
-      "quantity": 5,
-      "remaining": 40,
+      "quantity": 0,
+      "remaining": 50,
       "total": 50,
       "area": [
         "Workstations"
@@ -32,8 +32,8 @@
       "manufacturer": "Herman Miller",
       "collection": "Canvas Vista + Motia",
       "image": "/img/designStandards/workstations/wks03.jpg",
-      "quantity": 10,
-      "remaining": 40,
+      "quantity": 0,
+      "remaining": 50,
       "total": 50,
       "area": [
         "Workstations"
@@ -45,8 +45,8 @@
       "manufacturer": "Herman Miller",
       "collection": "Canvas",
       "image": "/img/designStandards/privateOffices/privateoffice.jpg",
-      "quantity": 10,
-      "remaining": 40,
+      "quantity": 0,
+      "remaining": 50,
       "total": 50,
       "area": [
         "Private Offices"
@@ -58,8 +58,8 @@
       "manufacturer": "Herman Miller",
       "collection": "New Aeron",
       "image": "/img/designStandards/seating/ch01.jpg",
-      "quantity": 10,
-      "remaining": 40,
+      "quantity": 0,
+      "remaining": 50,
       "total": 50,
       "area": [
         "Workstations",
@@ -72,8 +72,8 @@
       "manufacturer": "National",
       "collection": "Delgado",
       "image": "/img/designStandards/seating/ch02.jpg",
-      "quantity": 10,
-      "remaining": 40,
+      "quantity": 0,
+      "remaining": 50,
       "total": 50,
       "area": [
         "Private Offices"
@@ -85,8 +85,8 @@
       "manufacturer": "OFS",
       "collection": "Pret",
       "image": "/img/designStandards/seating/ch03.jpg",
-      "quantity": 10,
-      "remaining": 40,
+      "quantity": 0,
+      "remaining": 50,
       "total": 50,
       "area": [
         "Meeting Rooms"
@@ -98,8 +98,8 @@
       "manufacturer": "OFS",
       "collection": "Harpin",
       "image": "/img/designStandards/seating/ch05.jpg",
-      "quantity": 10,
-      "remaining": 40,
+      "quantity": 0,
+      "remaining": 50,
       "total": 50,
       "area": [
         "Meeting Rooms"
@@ -111,8 +111,8 @@
       "manufacturer": "OFS",
       "collection": "Bistro #104058",
       "image": "/img/designStandards/seating/ch06.jpg",
-      "quantity": 10,
-      "remaining": 40,
+      "quantity": 0,
+      "remaining": 50,
       "total": 50,
       "area": [
         "Meeting Rooms"
@@ -124,8 +124,8 @@
       "manufacturer": "Herman Miller",
       "collection": "Verus Side",
       "image": "/img/designStandards/seating/ch08.jpg",
-      "quantity": 10,
-      "remaining": 40,
+      "quantity": 0,
+      "remaining": 50,
       "total": 50,
       "area": [
         "Meeting Rooms"
@@ -137,8 +137,8 @@
       "manufacturer": "National",
       "collection": "Swift Modular",
       "image": "/img/designStandards/seating/ch09.jpg",
-      "quantity": 10,
-      "remaining": 40,
+      "quantity": 0,
+      "remaining": 50,
       "total": 50,
       "area": [
         "Meeting Rooms"
@@ -150,8 +150,8 @@
       "manufacturer": "National",
       "collection": "Delgado",
       "image": "/img/designStandards/seating/ch10.jpg",
-      "quantity": 10,
-      "remaining": 40,
+      "quantity": 0,
+      "remaining": 50,
       "total": 50,
       "area": [
         "Collaboration / Lounge"
@@ -163,8 +163,8 @@
       "manufacturer": "National",
       "collection": "Grin Bar Stool",
       "image": "/img/designStandards/seating/ch11.jpg",
-      "quantity": 10,
-      "remaining": 40,
+      "quantity": 0,
+      "remaining": 30,
       "total": 50,
       "area": [
         "Collaboration / Lounge"
@@ -176,8 +176,8 @@
       "manufacturer": "National",
       "collection": "Grin Counter Stool",
       "image": "/img/designStandards/seating/ch12.jpg",
-      "quantity": 10,
-      "remaining": 40,
+      "quantity": 0,
+      "remaining": 50,
       "total": 50,
       "area": [
         "Meeting Rooms"
@@ -189,8 +189,8 @@
       "manufacturer": "National",
       "collection": "Fringe",
       "image": "/img/designStandards/seating/ch13.jpg",
-      "quantity": 10,
-      "remaining": 40,
+      "quantity": 0,
+      "remaining": 50,
       "total": 50,
       "area": [
         "Collaboration / Lounge"
@@ -202,8 +202,8 @@
       "manufacturer": "Keilhauer",
       "collection": "Lull 74111",
       "image": "/img/designStandards/seating/ch14.jpg",
-      "quantity": 10,
-      "remaining": 40,
+      "quantity": 0,
+      "remaining": 50,
       "total": 50,
       "area": [
         "Collaboration / Lounge"
@@ -215,8 +215,8 @@
       "manufacturer": "OFS",
       "collection": "LeanTo",
       "image": "/img/designStandards/seating/ch15.jpg",
-      "quantity": 10,
-      "remaining": 40,
+      "quantity": 0,
+      "remaining": 50,
       "total": 50,
       "area": [
         "Collaboration / Lounge"
@@ -228,8 +228,8 @@
       "manufacturer": "National",
       "collection": "Whimsy",
       "image": "/img/designStandards/seating/ch16.jpg",
-      "quantity": 10,
-      "remaining": 40,
+      "quantity": 0,
+      "remaining": 50,
       "total": 50,
       "area": [
         "Collaboration / Lounge"
@@ -241,8 +241,8 @@
       "manufacturer": "National",
       "collection": "Fringe Booth",
       "image": "/img/designStandards/seating/bqt01.jpg",
-      "quantity": 10,
-      "remaining": 40,
+      "quantity": 0,
+      "remaining": 50,
       "total": 50,
       "area": [
         "Meeting Rooms"
@@ -254,8 +254,8 @@
       "manufacturer": "Geiger",
       "collection": "Tuxedo Component",
       "image": "/img/designStandards/seating/sf01.jpg",
-      "quantity": 10,
-      "remaining": 40,
+      "quantity": 0,
+      "remaining": 50,
       "total": 50,
       "area": [
         "Collaboration / Lounge"
@@ -267,8 +267,8 @@
       "manufacturer": "Keilhauer",
       "collection": "Talk",
       "image": "/img/designStandards/seating/sf02.jpg",
-      "quantity": 10,
-      "remaining": 40,
+      "quantity": 0,
+      "remaining": 50,
       "total": 50,
       "area": [
         "Collaboration / Lounge"
@@ -280,8 +280,8 @@
       "manufacturer": "OFS",
       "collection": "Heya Talk",
       "image": "/img/designStandards/seating/co01.jpg",
-      "quantity": 10,
-      "remaining": 40,
+      "quantity": 0,
+      "remaining": 50,
       "total": 50,
       "area": [
         "Collaboration / Lounge"
@@ -293,8 +293,8 @@
       "manufacturer": "OFS",
       "collection": "Heya Double",
       "image": "/img/designStandards/seating/co02.jpg",
-      "quantity": 10,
-      "remaining": 40,
+      "quantity": 0,
+      "remaining": 50,
       "total": 50,
       "area": [
         "Collaboration / Lounge"
@@ -306,8 +306,8 @@
       "manufacturer": "Herman Miller",
       "collection": "Motia",
       "image": "/img/designStandards/tables/tb02.jpg",
-      "quantity": 10,
-      "remaining": 40,
+      "quantity": 0,
+      "remaining": 50,
       "total": 50,
       "area": [
         "Workstations",
@@ -320,8 +320,8 @@
       "manufacturer": "OFS",
       "collection": "Applause",
       "image": "/img/designStandards/tables/tb03.jpg",
-      "quantity": 10,
-      "remaining": 40,
+      "quantity": 0,
+      "remaining": 50,
       "total": 50,
       "area": [
         "Meeting Rooms"
@@ -333,8 +333,8 @@
       "manufacturer": "Enwork",
       "collection": "Custom HAT",
       "image": "/img/designStandards/tables/tb04.jpg",
-      "quantity": 10,
-      "remaining": 40,
+      "quantity": 0,
+      "remaining": 50,
       "total": 50,
       "area": [
         "Meeting Rooms"
@@ -346,8 +346,8 @@
       "manufacturer": "Enwork",
       "collection": "Custom HAT",
       "image": "/img/designStandards/tables/tb05.jpg",
-      "quantity": 10,
-      "remaining": 40,
+      "quantity": 0,
+      "remaining": 50,
       "total": 50,
       "area": [
         "Meeting Rooms"
@@ -359,8 +359,8 @@
       "manufacturer": "OFS",
       "collection": "Heya",
       "image": "/img/designStandards/tables/tb06.jpg",
-      "quantity": 10,
-      "remaining": 40,
+      "quantity": 0,
+      "remaining": 50,
       "total": 50,
       "area": [
         "Café Area"
@@ -372,8 +372,8 @@
       "manufacturer": "OFS",
       "collection": "Nineteen20",
       "image": "/img/designStandards/tables/tb07.jpg",
-      "quantity": 10,
-      "remaining": 40,
+      "quantity": 0,
+      "remaining": 50,
       "total": 50,
       "area": [
         "Café Area"
@@ -385,8 +385,8 @@
       "manufacturer": "OFS",
       "collection": "Nineteen20",
       "image": "/img/designStandards/tables/tb08.jpg",
-      "quantity": 10,
-      "remaining": 40,
+      "quantity": 0,
+      "remaining": 50,
       "total": 50,
       "area": [
         "Café Area"
@@ -398,8 +398,8 @@
       "manufacturer": "OFS",
       "collection": "Nineteen20",
       "image": "/img/designStandards/tables/tb09.jpg",
-      "quantity": 10,
-      "remaining": 40,
+      "quantity": 0,
+      "remaining": 50,
       "total": 50,
       "area": [
         "Café Area"
@@ -411,8 +411,8 @@
       "manufacturer": "National",
       "collection": "Tessera Bar",
       "image": "/img/designStandards/tables/tb10.jpg",
-      "quantity": 10,
-      "remaining": 40,
+      "quantity": 0,
+      "remaining": 50,
       "total": 50,
       "area": [
         "Collaboration / Lounge"
@@ -424,8 +424,8 @@
       "manufacturer": "National",
       "collection": "Universal",
       "image": "/img/designStandards/tables/tb11.jpg",
-      "quantity": 10,
-      "remaining": 40,
+      "quantity": 0,
+      "remaining": 50,
       "total": 50,
       "area": [
         "Collaboration / Lounge"
@@ -437,8 +437,8 @@
       "manufacturer": "Geiger",
       "collection": "Saiba",
       "image": "/img/designStandards/tables/tb12.jpg",
-      "quantity": 10,
-      "remaining": 40,
+      "quantity": 0,
+      "remaining": 50,
       "total": 50,
       "area": [
         "Collaboration / Lounge"
@@ -450,8 +450,8 @@
       "manufacturer": "OFS",
       "collection": "Roo",
       "image": "/img/designStandards/tables/tb13.jpg",
-      "quantity": 10,
-      "remaining": 40,
+      "quantity": 0,
+      "remaining": 50,
       "total": 50,
       "area": [
         "Collaboration / Lounge"
@@ -463,8 +463,8 @@
       "manufacturer": "Naughtone",
       "collection": "Riley",
       "image": "/img/designStandards/tables/tb14.jpg",
-      "quantity": 10,
-      "remaining": 40,
+      "quantity": 0,
+      "remaining": 50,
       "total": 50,
       "area": [
         "Meeting Rooms"
@@ -476,8 +476,8 @@
       "manufacturer": "Keilhauer",
       "collection": "Geometry 71135",
       "image": "/img/designStandards/tables/tb15.jpg",
-      "quantity": 10,
-      "remaining": 40,
+      "quantity": 0,
+      "remaining": 50,
       "total": 50,
       "area": [
         "Collaboration / Lounge"
@@ -489,8 +489,8 @@
       "manufacturer": "OFS",
       "collection": "Heya",
       "image": "/img/designStandards/tables/tb16.jpg",
-      "quantity": 10,
-      "remaining": 40,
+      "quantity": 0,
+      "remaining": 50,
       "total": 50,
       "area": [
         "Collaboration / Lounge"
@@ -502,8 +502,8 @@
       "manufacturer": "National",
       "collection": "Personal Pull-Up",
       "image": "/img/designStandards/tables/tb17.jpg",
-      "quantity": 10,
-      "remaining": 40,
+      "quantity": 0,
+      "remaining": 50,
       "total": 50,
       "area": [
         "Collaboration / Lounge"
@@ -515,8 +515,8 @@
       "manufacturer": "OFS",
       "collection": "Heya",
       "image": "/img/designStandards/accessories/ac01.jpg",
-      "quantity": 10,
-      "remaining": 40,
+      "quantity": 0,
+      "remaining": 50,
       "total": 50,
       "area": [
         "Accessories"
@@ -528,8 +528,8 @@
       "manufacturer": "Byrne",
       "collection": "Tully or \"Tuck-in\" unit",
       "image": "/img/designStandards/accessories/ac02a.jpg",
-      "quantity": 10,
-      "remaining": 40,
+      "quantity": 0,
+      "remaining": 50,
       "total": 50,
       "area": [
         "Accessories"
@@ -541,8 +541,8 @@
       "manufacturer": "Byrne",
       "collection": "Vest Wireless",
       "image": "/img/designStandards/accessories/ac02b.jpg",
-      "quantity": 10,
-      "remaining": 40,
+      "quantity": 0,
+      "remaining": 50,
       "total": 50,
       "area": [
         "Accessories"
@@ -554,8 +554,8 @@
       "manufacturer": "Byrne",
       "collection": "Vest Corded",
       "image": "/img/designStandards/accessories/ac02c.jpg",
-      "quantity": 10,
-      "remaining": 40,
+      "quantity": 0,
+      "remaining": 50,
       "total": 50,
       "area": [
         "Accessories"
@@ -567,17 +567,13 @@
       "manufacturer": "Herman Miller",
       "collection": "Lolly",
       "image": "/img/designStandards/accessories/ac03.jpg",
-      "quantity": 10,
-      "remaining": 40,
+      "quantity": 0,
+      "remaining": 50,
       "total": 50,
       "area": [
         "Accessories"
       ]
     }
   ],
-  "cart": [
-    {
-      "code": "new code"
-    }
-  ]
+  "cart": []
 }

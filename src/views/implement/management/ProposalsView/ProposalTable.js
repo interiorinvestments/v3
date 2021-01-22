@@ -1,4 +1,3 @@
-import { forwardRef } from 'react';
 import {
   ArrowDownward,
   ChevronLeft,
@@ -10,6 +9,7 @@ import {
 } from '@material-ui/icons';
 import MaterialTable from 'material-table';
 import PropTypes from 'prop-types';
+import { forwardRef } from 'react';
 
 const tableIcons = {
   FirstPage: forwardRef((props, ref) => <FirstPage {...props} ref={ref} />),

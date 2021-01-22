@@ -16,13 +16,13 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const InventoryControlPage = ({ items }) => {
+const InventoryControlPage = ({ items, cart }) => {
   const classes = useStyles();
   return (
     <DashboardLayout>
       <Page className={classes.root} title="Inventory Control">
         <AuthGuard>
-          <InventoryControlView items={items} />
+          <InventoryControlView items={items} cart={cart} />
         </AuthGuard>
       </Page>
     </DashboardLayout>
@@ -30,7 +30,8 @@ const InventoryControlPage = ({ items }) => {
 };
 
 InventoryControlPage.propTypes = {
-  items: PropTypes.array,
+  items: PropTypes.array.isRequired,
+  cart: PropTypes.array.isRequired,
 };
 
 export const getServerSideProps = async () => {
@@ -38,9 +39,9 @@ export const getServerSideProps = async () => {
   const adapter = new FileAsync(file);
   const db = await low(adapter);
   try {
-    const items = await db.get('items')
-      .value();
-    return { props: { items } };
+    const items = await db.get('items').value();
+    const cart = await db.get('cart').value();
+    return { props: { items, cart } };
   } catch (err) {
     console.error(err);
     return { props: {} };

@@ -52,7 +52,7 @@ const LocationsView = ({ location }) => {
                 textColor="primary"
               >
                 <Tab label="FloorPlan" disabled={!location.floorplans} />
-                <Tab label="Look Book" disabled={!location.lookbooks} />
+                <Tab label="Design Standards" disabled={!location.lookbooks} />
                 <Tab label="Typicals" disabled={!location.typicals} />
               </Tabs>
             </Box>

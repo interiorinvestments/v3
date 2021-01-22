@@ -1,6 +1,7 @@
+/* eslint-disable max-len */
 import {
   Avatar, Card, CardHeader, Collapse,
-  Divider, IconButton, List, ListItem, ListItemAvatar, ListItemSecondaryAction, ListItemText, ListSubheader,
+  Divider, IconButton, List, ListItem, ListItemAvatar, ListItemSecondaryAction, ListItemText,
   makeStyles,
 } from '@material-ui/core';
 import ExpandLess from '@material-ui/icons/ExpandLess';
@@ -33,7 +34,7 @@ const InventoryItems = ({
       <Collapse in={expanded} timeout="auto" unmountOnExit>
         <List dense>
           {products.map((product) => (
-            <ListItem key={product.code} button onClick={() => { setOpen(true), setCartItem(product); }}>
+            <ListItem key={product.code} button onClick={() => (setOpen(true), setCartItem(product))}>
               <ListItemAvatar>
                 <Avatar src={product.image} variant="rounded" />
               </ListItemAvatar>

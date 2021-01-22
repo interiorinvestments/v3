@@ -1,8 +1,10 @@
 import low from 'lowdb';
 import FileAsync from 'lowdb/adapters/FileAsync';
+import path from 'path';
 
 const cartHandler = async (req, res) => {
-  const adapter = new FileAsync('db.json');
+  const file = path.resolve('db.json');
+  const adapter = new FileAsync(file);
   const db = await low(adapter);
 
   const {
