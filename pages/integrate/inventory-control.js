@@ -2,9 +2,8 @@ import { makeStyles } from '@material-ui/core';
 import AuthGuard from 'components/common/AuthGuard';
 import Page from 'components/common/Page';
 import DashboardLayout from 'layouts/DashboardLayout';
-import low from 'lowdb';
-import FileAsync from 'lowdb/adapters/FileAsync';
-import path from 'path';
+import { getCart } from 'lib/cart';
+import { getItems } from 'lib/item';
 import PropTypes from 'prop-types';
 import InventoryControlView from 'views/integrate/InventoryControlView';
 
@@ -35,12 +34,18 @@ InventoryControlPage.propTypes = {
 };
 
 export const getServerSideProps = async () => {
-  const file = path.resolve('db.json');
-  const adapter = new FileAsync(file);
-  const db = await low(adapter);
   try {
-    const items = await db.get('items').value();
-    const cart = await db.get('cart').value();
+    const data = await getItems();
+    const cartData = await getCart();
+    const cart = cartData.map((cartItem) => {
+      const _id = cartItem._id.toString();
+      return { ...cartItem.toObject(), _id };
+    });
+    const items = data.map((item) => {
+      const _id = item._id.toString();
+      return { ...item.toObject(), _id };
+    });
+
     return { props: { items, cart } };
   } catch (err) {
     console.error(err);

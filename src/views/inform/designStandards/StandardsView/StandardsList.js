@@ -57,7 +57,7 @@ const StandardsList = ({
                       {' '}
                       -
                       {' '}
-                      {product.collection}
+                      {product.series}
                     </Typography>
                   </CardContent>
                 </CardActionArea>

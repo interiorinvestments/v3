@@ -1,13 +1,6 @@
-import low from 'lowdb';
-import FileAsync from 'lowdb/adapters/FileAsync';
-import path from 'path';
-
-const file = path.resolve('db.json');
-const adapter = new FileAsync(file);
+import { getCart } from 'lib/cart';
 
 const cartHandler = async (req, res) => {
-  const db = await low(adapter);
-
   const {
     method,
   } = req;
@@ -15,7 +8,7 @@ const cartHandler = async (req, res) => {
   switch (method) {
     case 'GET':
       try {
-        const cart = await db.get('cart').value();
+        const cart = await getCart();
         res.status(200).send(cart);
       } catch (err) {
         console.error(err);

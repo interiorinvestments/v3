@@ -1,5 +1,4 @@
 /* eslint-disable no-shadow */
-import { useEffect, useState } from 'react';
 import {
   Box,
   Button, Grid, TextField,
@@ -7,6 +6,7 @@ import {
 import { makeStyles } from '@material-ui/core/styles';
 import { Alert } from '@material-ui/lab';
 import { useRouter } from 'next/router';
+import { useEffect, useState } from 'react';
 import validate from 'validate.js';
 
 const useStyles = makeStyles({
@@ -76,7 +76,8 @@ const LoginForm = () => {
       if (res.status === 200) {
         router.push('/');
       } else {
-        setStatusText(res.statusText);
+        const data = await res.json();
+        setStatusText(data.error);
       }
     } catch (error) {
       setStatusText(error);

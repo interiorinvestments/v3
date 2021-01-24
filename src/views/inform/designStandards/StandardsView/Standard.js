@@ -76,7 +76,7 @@ const Standard = ({ standard, setStandard }) => {
                 {' '}
               </Typography>
               <Typography variant="body2" color="textSecondary" display="inline">
-                {standard.collection}
+                {standard.series}
               </Typography>
             </Grid>
             <Grid item>

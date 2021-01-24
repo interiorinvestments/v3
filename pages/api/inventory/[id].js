@@ -1,22 +1,15 @@
-import low from 'lowdb';
-import FileAsync from 'lowdb/adapters/FileAsync';
-import path from 'path';
-
-const file = path.resolve('db.json');
-const adapter = new FileAsync(file);
+import { getItem, updateItem } from 'lib/item';
 
 const inventoryHandler = async (req, res) => {
-  const db = await low(adapter);
-
   const {
-    query: { code },
+    query: { id },
     method,
   } = req;
 
   switch (method) {
     case 'GET':
       try {
-        const item = await db.get('items').find({ code }).value();
+        const item = await getItem(id);
         return res.status(200).send(item);
       } catch (err) {
         console.error(err);
@@ -25,10 +18,10 @@ const inventoryHandler = async (req, res) => {
     case 'PUT':
       try {
         const { quantity } = req.body;
-        const foundItem = await db.get('items').find({ code }).value();
+        const foundItem = await getItem(id);
         const quantityDiff = quantity - foundItem.quantity;
         const remaining = foundItem.remaining - quantityDiff;
-        const updatedItem = await db.get('items').find({ code }).assign({ remaining, quantity }).write();
+        const updatedItem = await updateItem(id, { remaining, quantity });
         return res.status(202).json(updatedItem);
       } catch (err) {
         console.error(err);

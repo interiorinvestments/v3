@@ -38,7 +38,7 @@ const InventoryItems = ({
               <ListItemAvatar>
                 <Avatar src={product.image} variant="rounded" />
               </ListItemAvatar>
-              <ListItemText primary={`${product.code} | ${product.name}`} secondary={`${product.manufacturer} - ${product.collection}`} />
+              <ListItemText primary={`${product.code} | ${product.name}`} secondary={`${product.manufacturer} - ${product.series}`} />
               <ListItemSecondaryAction>
                 {product.remaining}
               </ListItemSecondaryAction>

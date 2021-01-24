@@ -23,7 +23,7 @@ const InventoryCart = ({ open, setOpen, cartItem }) => {
   const handleAdd = async () => {
     setOpen(false);
     try {
-      const res = await fetch(`/api/inventory/${cartItem.code}`, {
+      const res = await fetch(`/api/inventory/${cartItem._id}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
@@ -31,7 +31,8 @@ const InventoryCart = ({ open, setOpen, cartItem }) => {
         body: JSON.stringify({ quantity }),
       });
       const item = await res.json();
-      const updateCart = await fetch(`/api/inventory/cart/${cartItem.code}`, {
+      console.log({ item });
+      const updateCart = await fetch(`/api/inventory/cart/${cartItem._id}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
@@ -68,7 +69,7 @@ const InventoryCart = ({ open, setOpen, cartItem }) => {
             {' '}
             -
             {' '}
-            {cartItem.collection}
+            {cartItem.series}
           </DialogContentText>
           <Image src={cartItem.image} height={200} width={300} />
         </DialogContent>

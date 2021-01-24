@@ -1,6 +1,5 @@
 {
   "compilerOptions": {
-    "baseUrl": "./src",
-    "resolveJsonModule": true
+    "baseUrl": "./src"
   },
 }

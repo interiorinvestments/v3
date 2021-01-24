@@ -49,10 +49,10 @@ const InventoryTable = ({ data }) => {
 
   const deleteItem = async (item) => {
     try {
-      const removeItem = await fetch(`/api/inventory/cart/${item.code}`, {
+      const removeItem = await fetch(`/api/inventory/cart/${item._id}`, {
         method: 'DELETE',
       });
-      const updateItem = await fetch(`/api/inventory/${item.code}`, {
+      const updateItem = await fetch(`/api/inventory/${item._id}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
@@ -68,14 +68,14 @@ const InventoryTable = ({ data }) => {
   };
   const editItem = async (item) => {
     try {
-      const res = await fetch(`/api/inventory/${item.code}`, {
+      const res = await fetch(`/api/inventory/${item._id}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({ quantity: item.quantity }),
       });
-      const updateCart = await fetch(`/api/inventory/cart/${item.code}`, {
+      const updateCart = await fetch(`/api/inventory/cart/${item._id}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
@@ -90,8 +90,6 @@ const InventoryTable = ({ data }) => {
     }
   };
 
-  console.log({ data });
-
   return (
     <div style={{ maxWidth: '100%' }} className={classes.root}>
       <MaterialTable
@@ -99,7 +97,7 @@ const InventoryTable = ({ data }) => {
         columns={[
           { title: 'Image', render: (rowData) => <Avatar src={rowData.image} variant="rounded" /> },
           { title: 'Name', render: (rowData) => <Typography>{`${rowData.code} | ${rowData.name}`}</Typography> },
-          { title: 'Manufacturer', render: (rowData) => <Typography>{`${rowData.manufacturer} - ${rowData.collection}`}</Typography> },
+          { title: 'Manufacturer', render: (rowData) => <Typography>{`${rowData.manufacturer} - ${rowData.series}`}</Typography> },
           {
             title: 'Quantity', field: 'quantity', type: 'numeric', validate: (rowData) => (rowData.quantity < 1 ? { isValid: false, helperText: 'Value must be greater than 0' } : rowData.quantity > rowData.remaining ? { isValid: false, helperText: 'Not enough remaining' } : true),
           },

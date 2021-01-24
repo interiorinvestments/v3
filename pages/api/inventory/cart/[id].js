@@ -1,15 +1,10 @@
-import low from 'lowdb';
-import FileAsync from 'lowdb/adapters/FileAsync';
-import path from 'path';
-
-const file = path.resolve('db.json');
-const adapter = new FileAsync(file);
+import {
+  addCartItem, deleteCartItem, getCartItem, updateCartItem,
+} from 'lib/cart';
 
 const cartHandler = async (req, res) => {
-  const db = await low(adapter);
-
   const {
-    query: { code },
+    query: { id },
     method,
   } = req;
 
@@ -18,14 +13,14 @@ const cartHandler = async (req, res) => {
       try {
         const { body } = req;
         const { quantity } = body;
-        const foundItem = await db.get('cart').find({ code }).value();
+        const foundItem = await getCartItem(id);
         if (foundItem) {
           const quantityDiff = quantity - foundItem.quantity;
           const remaining = foundItem.remaining - quantityDiff;
-          await db.get('cart').find({ code }).assign({ remaining, quantity }).write();
-          return res.status(202).send(foundItem);
+          const updatedItem = await updateCartItem(id, { remaining, quantity });
+          return res.status(202).send(updatedItem);
         }
-        const newItem = await db.get('cart').push(body).write();
+        const newItem = await addCartItem(body);
         return res.status(202).send(newItem);
       } catch (err) {
         console.error(err);
@@ -33,8 +28,8 @@ const cartHandler = async (req, res) => {
       }
     case 'DELETE':
       try {
-        const item = await db.get('cart').remove({ code }).write();
-        return res.status(202).send(item);
+        const deletedItem = await deleteCartItem(id);
+        return res.status(202).send(deletedItem);
       } catch (err) {
         console.error(err);
         return res.status(400).send(err);
