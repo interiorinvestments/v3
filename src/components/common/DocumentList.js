@@ -30,6 +30,8 @@ const DocumentList = ({ documents, title }) => {
             key={document.name}
             button
             component="a"
+            href={document.url}
+            target="_blank"
           >
             <ListItemText primary={document.name} />
             <ExternalLinkIcon className={classes.icon} />
