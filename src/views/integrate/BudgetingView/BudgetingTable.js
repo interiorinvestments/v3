@@ -17,6 +17,7 @@ import MaterialTable from 'material-table';
 import { useRouter } from 'next/router';
 import PropTypes from 'prop-types';
 import { forwardRef } from 'react';
+import formatCurrency from 'utils/formatCurrency';
 
 const tableIcons = {
   Check: forwardRef((props, ref) => (<Check {...props} ref={ref} />)),
@@ -40,24 +41,26 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const InventoryTable = ({ data }) => {
+const BudgetingTable = ({ data }) => {
   const router = useRouter();
   const classes = useStyles();
   const refreshData = () => {
     router.replace(router.asPath);
   };
 
+  const getTotal = (items) => items.reduce((sum, product) => sum + product.budgetTotal, 0);
+
   const deleteItem = async (item) => {
     try {
-      const removeItem = await fetch(`/api/inventory/cart/${item._id}`, {
+      const removeItem = await fetch(`/api/budget/budgetCart/${item._id}`, {
         method: 'DELETE',
       });
-      const updateItem = await fetch(`/api/inventory/${item._id}`, {
+      const updateItem = await fetch(`/api/budget/${item._id}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ quantity: 0 }),
+        body: JSON.stringify({ budgetQuantity: 0, price: item.price }),
       });
       if (updateItem.status < 300 && removeItem.status < 300) {
         refreshData();
@@ -68,14 +71,14 @@ const InventoryTable = ({ data }) => {
   };
   const editItem = async (item) => {
     try {
-      const res = await fetch(`/api/inventory/${item._id}`, {
+      const res = await fetch(`/api/budget/${item._id}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ quantity: item.quantity }),
+        body: JSON.stringify({ budgetQuantity: item.budgetQuantity, price: item.price }),
       });
-      const updateCart = await fetch(`/api/inventory/cart/${item._id}`, {
+      const updateCart = await fetch(`/api/budget/budgetCart/${item._id}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
@@ -99,11 +102,17 @@ const InventoryTable = ({ data }) => {
           { title: 'Name', render: (rowData) => <Typography>{`${rowData.code} | ${rowData.name}`}</Typography> },
           { title: 'Manufacturer', render: (rowData) => <Typography>{`${rowData.manufacturer} - ${rowData.series}`}</Typography> },
           {
-            title: 'Quantity', field: 'quantity', type: 'numeric', validate: (rowData) => (rowData.quantity < 1 ? { isValid: false, helperText: 'Value must be greater than 0' } : rowData.quantity > rowData.remaining ? { isValid: false, helperText: 'Not enough remaining' } : true),
+            title: 'Quantity', field: 'budgetQuantity', type: 'numeric', validate: (rowData) => (rowData.budgetQuantity < 1 ? { isValid: false, helperText: 'Value must be greater than 0' } : true), editable: 'always',
+          },
+          {
+            title: 'Price', field: 'price', type: 'currency', render: (rowData) => (formatCurrency(rowData.price)), editable: 'never',
+          },
+          {
+            title: 'SubTotal', field: 'budgetTotal', type: 'currency', render: (rowData) => (formatCurrency(rowData.budgetTotal)), editable: 'never',
           },
         ]}
         data={data}
-        title="Inventory"
+        title={`Total: ${formatCurrency(getTotal(data))}`}
         editable={{
           onRowDelete: (oldData) => new Promise((resolve) => {
             deleteItem(oldData);
@@ -125,8 +134,8 @@ const InventoryTable = ({ data }) => {
   );
 };
 
-InventoryTable.propTypes = {
+BudgetingTable.propTypes = {
   data: PropTypes.array.isRequired,
 };
 
-export default InventoryTable;
+export default BudgetingTable;

@@ -9,29 +9,29 @@ import { forwardRef, useEffect, useState } from 'react';
 
 const Transition = forwardRef((props, ref) => <Slide direction="up" ref={ref} {...props} />);
 
-const InventoryCart = ({ open, setOpen, cartItem }) => {
-  const [quantity, setQuantity] = useState(0);
+const BudgetingCart = ({ open, setOpen, cartItem }) => {
+  const [budgetQuantity, setBudgetQuantity] = useState(0);
   const router = useRouter();
 
   const refreshData = () => {
     router.replace(router.asPath);
   };
   useEffect(() => {
-    setQuantity(cartItem.quantity);
+    setBudgetQuantity(cartItem.budgetQuantity);
   }, [cartItem.quantity]);
 
   const handleAdd = async () => {
     setOpen(false);
     try {
-      const res = await fetch(`/api/inventory/${cartItem._id}`, {
+      const res = await fetch(`/api/budget/${cartItem._id}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ quantity }),
+        body: JSON.stringify({ budgetQuantity, price: cartItem.price }),
       });
       const item = await res.json();
-      const updateCart = await fetch(`/api/inventory/cart/${cartItem._id}`, {
+      const updateCart = await fetch(`/api/budget/budgetCart/${cartItem._id}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
@@ -53,7 +53,7 @@ const InventoryCart = ({ open, setOpen, cartItem }) => {
         onClose={() => setOpen(false)}
         TransitionComponent={Transition}
         aria-labelledby="responsive-dialog-title"
-        onExit={() => setQuantity(cartItem.quantity)}
+        onExit={() => setBudgetQuantity(cartItem.budgetQuantity)}
       >
         <DialogTitle id="responsive-dialog-title">
           {cartItem.code}
@@ -73,11 +73,11 @@ const InventoryCart = ({ open, setOpen, cartItem }) => {
           <Image src={cartItem.image} height={200} width={300} />
         </DialogContent>
         <DialogActions>
-          <TextField label="Quantity" type="number" variant="filled" value={quantity} onChange={(e) => setQuantity(+e.target.value)} inputProps={{ max: cartItem.remaining, min: 1 }} fullWidth />
+          <TextField label="Quantity" type="number" variant="filled" value={budgetQuantity} onChange={(e) => setBudgetQuantity(+e.target.value)} inputProps={{ min: 1 }} fullWidth />
           <Button onClick={() => setOpen(false)}>
             Cancel
           </Button>
-          <Button onClick={handleAdd} color="primary" variant="contained" disabled={quantity < 1}>
+          <Button onClick={handleAdd} color="primary" variant="contained" disabled={budgetQuantity < 1}>
             Add
           </Button>
         </DialogActions>
@@ -86,10 +86,10 @@ const InventoryCart = ({ open, setOpen, cartItem }) => {
   );
 };
 
-InventoryCart.propTypes = {
+BudgetingCart.propTypes = {
   open: PropTypes.bool.isRequired,
   setOpen: PropTypes.func.isRequired,
   cartItem: PropTypes.object.isRequired,
 };
 
-export default InventoryCart;
+export default BudgetingCart;

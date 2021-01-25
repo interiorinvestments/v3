@@ -1,6 +1,6 @@
 import mongoose from 'mongoose';
 
-const itemSchema = new mongoose.Schema({
+const budgetSchema = new mongoose.Schema({
   code: {
     type: String,
     required: true,
@@ -44,4 +44,4 @@ const itemSchema = new mongoose.Schema({
   },
 });
 
-export default mongoose.models.Item || mongoose.model('Item', itemSchema);
+export default mongoose.models.Budget || mongoose.model('Budget', budgetSchema);

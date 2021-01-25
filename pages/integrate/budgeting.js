@@ -2,10 +2,10 @@ import { makeStyles } from '@material-ui/core';
 import AuthGuard from 'components/common/AuthGuard';
 import Page from 'components/common/Page';
 import DashboardLayout from 'layouts/DashboardLayout';
-import { getCart } from 'lib/cart';
+import { getBudget } from 'lib/budget';
 import { getItems } from 'lib/item';
 import PropTypes from 'prop-types';
-import InventoryControlView from 'views/integrate/InventoryControlView';
+import BudgetingView from 'views/integrate/BudgetingView';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -15,32 +15,32 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const InventoryControlPage = ({ items, cart }) => {
+const BudgetingPage = ({ items, budget }) => {
   const classes = useStyles();
   return (
     <DashboardLayout>
-      <Page className={classes.root} title="Inventory Control">
+      <Page className={classes.root} title="Budgeting">
         <AuthGuard>
-          <InventoryControlView items={items} cart={cart} />
+          <BudgetingView items={items} cart={budget} />
         </AuthGuard>
       </Page>
     </DashboardLayout>
   );
 };
 
-InventoryControlPage.propTypes = {
+BudgetingPage.propTypes = {
   items: PropTypes.array.isRequired,
-  cart: PropTypes.array.isRequired,
+  budget: PropTypes.array.isRequired,
 };
 
 export const getServerSideProps = async () => {
   try {
     const data = await getItems();
-    const cartData = await getCart();
+    const budgetData = await getBudget();
     // convert mongoose objectID to string
-    const cart = cartData.map((cartItem) => {
-      const _id = cartItem._id.toString();
-      return { ...cartItem.toObject(), _id };
+    const budget = budgetData.map((budgetItem) => {
+      const _id = budgetItem._id.toString();
+      return { ...budgetItem.toObject(), _id };
     });
     // convert mongoose objectID to string
     const items = data.map((item) => {
@@ -48,11 +48,11 @@ export const getServerSideProps = async () => {
       return { ...item.toObject(), _id };
     });
 
-    return { props: { items, cart } };
+    return { props: { items, budget } };
   } catch (err) {
     console.error(err);
     return { props: {} };
   }
 };
 
-export default InventoryControlPage;
+export default BudgetingPage;
