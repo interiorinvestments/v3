@@ -19,11 +19,13 @@ const CustomizeView = ({ area }) => {
   const classes = useStyles();
   const [option, setOption] = useState(area.options[0]);
   const [value, setValue] = useState(0);
+  const [detail, setDetail] = useState(option.floor);
   const router = useRouter();
 
   const handleRadioChange = (e) => {
     setValue(+e.target.value);
     setOption(area.options[+e.target.value]);
+    setDetail(area.options[+e.target.value].floor);
   };
 
   useEffect(() => {
@@ -49,19 +51,19 @@ const CustomizeView = ({ area }) => {
 
         </Grid>
         <Grid item xs={12} md={6}>
-          <Image src={option.floor} width={600} height={300} />
           <Image src={option.image} width={600} height={300} />
         </Grid>
         <Grid item xs={12} md={4}>
           <Typography variant="subtitle1" color="textSecondary">{option.name}</Typography>
           <ul>
-            {option.details?.map((detail) => <li key={detail}><Typography variant="body1">{detail}</Typography></li>)}
+            {option.details?.map((spec) => <li key={spec}><Typography variant="body1">{spec}</Typography></li>)}
           </ul>
+          <Image src={detail} width={600} height={300} />
         </Grid>
         <Grid container spacing={2}>
           {area.finishes?.map((finish, index) => (
             <Grid item xs={6} sm={4} md={2} key={index}>
-              <Card>
+              <Card onMouseEnter={() => setDetail(finish.image)} onMouseLeave={() => setDetail(option.floor)}>
                 <CardMedia>
                   <Image src={finish.image} height={300} width={500} alt={finish.description} />
                 </CardMedia>
