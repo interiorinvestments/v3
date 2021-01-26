@@ -156,12 +156,12 @@ const navConfig = [
             href: '/integrate/locations/vernonhills',
           },
           {
-            title: 'Chicago, IL 1',
+            title: 'Chicago, IL',
             href: '/integrate/locations/chicago1',
           },
           {
-            title: 'Chicago, IL 2',
-            href: '/integrate/locations/chicago2',
+            title: 'New York, NY',
+            href: '/integrate/locations/newyork',
           },
         ],
       },

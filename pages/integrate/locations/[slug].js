@@ -33,7 +33,7 @@ export async function getStaticPaths() {
       { params: { slug: 'dallas' } },
       { params: { slug: 'vernonhills' } },
       { params: { slug: 'chicago1' } },
-      { params: { slug: 'chicago2' } },
+      { params: { slug: 'newyork' } },
     ],
     fallback: false,
   };

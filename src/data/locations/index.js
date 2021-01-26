@@ -1,13 +1,13 @@
 import chicago1 from './chicago1';
-import chicago2 from './chicago2';
 import dallas from './dallas';
+import newyork from './newyork';
 import vernonhills from './vernonhills';
 
 const DATA = {
   dallas,
   vernonhills,
   chicago1,
-  chicago2,
+  newyork,
 };
 
 const getData = (data) => DATA[data];
