@@ -35,7 +35,7 @@ const location = {
   ],
   lookbooks: [
     {
-      src: `${docPath}esdFurnitureMenu.pdf`,
+      src: `${docPath}furnitureMenu.pdf`,
     },
   ],
   typicals: [

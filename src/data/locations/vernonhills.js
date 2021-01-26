@@ -74,7 +74,7 @@ const location = {
   ],
   lookbooks: [
     {
-      src: `${docPath}ScotsmanRFP.pdf`,
+      src: `${docPath}vernonHillsLookbook.pdf`,
     },
   ],
   typicals: [

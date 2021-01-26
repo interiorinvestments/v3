@@ -102,8 +102,8 @@ const location = {
   {
     src: `${imgPath}hanaFloorPlan16.jpg`,
   }],
-  lookbooks: [{ src: `${docPath}HanaDallasLookBook.pdf` }, {
-    src: `${docPath}HanaDallasLookBookManufacture.pdf`,
+  lookbooks: [{ src: `${docPath}dallasLookbook.pdf` }, {
+    src: `${docPath}dallasLookbookManufacturer.pdf`,
   }],
   typicals: [
     {

@@ -71,7 +71,7 @@ const location = {
   ],
   lookbooks: [
     {
-      src: `${docPath}intersportLookbook.pdf`,
+      src: `${docPath}chicagoLookbook.pdf`,
     },
   ],
 };
