@@ -18,7 +18,7 @@ const ManagementPage = () => {
   return (
 
     <DashboardLayout>
-      <Page className={classes.root} title="Management Customization">
+      <Page className={classes.root} title="Customization">
         <AuthGuard>
           <ManagementView />
         </AuthGuard>

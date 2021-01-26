@@ -140,7 +140,7 @@ const ManagementView = () => {
           variant="h3"
           color="textPrimary"
         >
-          Management Customization
+          Customization
         </Typography>
       </Box>
       <Paper>

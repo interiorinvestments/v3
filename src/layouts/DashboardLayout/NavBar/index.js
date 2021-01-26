@@ -81,20 +81,20 @@ const navConfig = [
         ],
       },
       {
-        title: 'Care & Maintenance',
+        title: 'Warranty & Maintenance',
         icon: BookIcon,
-        href: '/inform/care-maintenance',
+        href: '/inform/warranty-maintenance',
       },
       // {
       //   title: 'Covid Response',
       //   icon: HeartIcon,
       //   href: '/inform/covid',
       // },
-      {
-        title: 'FAQs',
-        icon: HelpCircleIcon,
-        href: '/inform/faqs',
-      },
+      // {
+      //   title: 'FAQs',
+      //   icon: HelpCircleIcon,
+      //   href: '/inform/faqs',
+      // },
       {
         title: 'Contact Us',
         icon: MailIcon,
@@ -106,14 +106,10 @@ const navConfig = [
     subheader: 'Inspire',
     items: [
       {
-        title: 'Customization',
+        title: 'Solutions',
         icon: PackageIcon,
         href: '/inspire/customization',
         items: [
-          {
-            title: 'Management',
-            href: '/inspire/customization/management',
-          },
           {
             title: 'Benching',
             href: '/inspire/customization/customize/benching',
@@ -129,6 +125,10 @@ const navConfig = [
           {
             title: 'Executive Office',
             href: '/inspire/customization/customize/executive-office',
+          },
+          {
+            title: 'Customization',
+            href: '/inspire/customization',
           },
         ],
       },

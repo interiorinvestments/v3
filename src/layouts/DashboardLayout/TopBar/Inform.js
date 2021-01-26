@@ -41,9 +41,9 @@ export const Inform = () => {
           <MenuItem component={Link} naked href="/inform/design-standards/collaboration-lounge">Collaboration/Lounge</MenuItem>
           <MenuItem component={Link} naked href="/inform/design-standards/accessories">Accessories</MenuItem>
         </NestedMenuItem>
-        <MenuItem component={Link} naked href="/inform/care-maintenance">Care & Maintenance</MenuItem>
+        <MenuItem component={Link} naked href="/inform/warranty-maintenance">Warranty & Maintenance</MenuItem>
         {/* <MenuItem component={Link} naked href="/inform/covid">Covid Response</MenuItem> */}
-        <MenuItem component={Link} naked href="/inform/faqs">FAQs</MenuItem>
+        {/* <MenuItem component={Link} naked href="/inform/faqs">FAQs</MenuItem> */}
         <MenuItem component={Link} naked href="/inform/contact-us">Contact Us</MenuItem>
       </Menu>
     </>

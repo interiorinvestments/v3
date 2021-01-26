@@ -29,14 +29,14 @@ export const Inspire = () => {
         anchorPosition={menuPosition}
       >
         <NestedMenuItem
-          label="Customization"
+          label="Solutions"
           parentMenuOpen={!!menuPosition}
         >
-          <MenuItem component={Link} naked href="/inspire/customization/management">Management</MenuItem>
           <MenuItem component={Link} naked href="/inspire/customization/customize/benching">Benching</MenuItem>
           <MenuItem component={Link} naked href="/inspire/customization/customize/workstation">Workstation</MenuItem>
           <MenuItem component={Link} naked href="/inspire/customization/customize/private-office">Private Office</MenuItem>
           <MenuItem component={Link} naked href="/inspire/customization/customize/executive-office">Executive Office</MenuItem>
+          <MenuItem component={Link} naked href="/inspire/customization">Customization</MenuItem>
         </NestedMenuItem>
       </Menu>
     </>
