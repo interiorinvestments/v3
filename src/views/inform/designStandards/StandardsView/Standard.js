@@ -8,12 +8,14 @@ import {
 import useScroll from 'hooks/useScroll';
 import Image from 'next/image';
 import PropTypes from 'prop-types';
+import { useState } from 'react';
 import { ArrowLeft as ArrowLeftIcon } from 'react-feather';
 
 import Options from './Options';
 
 const Standard = ({ standard, setStandard }) => {
   useScroll(0);
+  const [detail, setDetail] = useState(standard.floor);
   return (
     <Container>
       <Grid container justify="space-between" spacing={3}>
@@ -47,7 +49,7 @@ const Standard = ({ standard, setStandard }) => {
         </Grid>
         {standard.floor && (
         <Grid item xs={12} md={6}>
-          <Image src={standard.floor} height={600} width={900} />
+          <Image src={detail} height={600} width={900} />
         </Grid>
         )}
         <Grid item xs={12} md={6}>
@@ -130,7 +132,7 @@ const Standard = ({ standard, setStandard }) => {
         </Grid>
         {standard.options && (
         <Grid item xs={12} md={6}>
-          <Options options={standard.options} />
+          <Options options={standard.options} setDetail={setDetail} floorplan={standard.floor} />
         </Grid>
         ) }
 
