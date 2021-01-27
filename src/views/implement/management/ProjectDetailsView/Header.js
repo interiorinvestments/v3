@@ -18,7 +18,7 @@ const Header = ({ className, ...rest }) => {
         variant="body1"
         color="textPrimary"
       >
-        Warranty & Maintenance
+        Project Details
       </Typography>
     </div>
   );
