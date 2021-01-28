@@ -13,9 +13,6 @@ const location = {
       imgPath: `${imgPath}ScotsmanConferenceRoom.jpg`,
     },
     {
-      imgPath: `${imgPath}ScotsmanEditFlat.jpg`,
-    },
-    {
       imgPath: `${imgPath}ScotsmanLounge.jpg`,
     },
     {
@@ -43,9 +40,6 @@ const location = {
     },
     {
       src: `${imgPath}scotsmanFloorplan2.jpg`,
-    },
-    {
-      src: `${imgPath}ScotsmanEditFlat.jpg`,
     },
     {
       src: `${imgPath}ScotsmanLounge.jpg`,
