@@ -9,8 +9,9 @@ import {
 import SwipeableViews from 'components/common/SwipeableViews';
 import dynamic from 'next/dynamic';
 import Image from 'next/image';
+import { useRouter } from 'next/router';
 import PropTypes from 'prop-types';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 const PdfViewer = dynamic(() => import('components/common/PdfViewer'), {
   ssr: false,
@@ -29,6 +30,11 @@ const LocationsView = ({ location }) => {
   const classes = useStyles();
   const [value, setValue] = useState(0);
   const [activeStep, setActiveStep] = useState(0);
+  const router = useRouter();
+
+  useEffect(() => {
+    setActiveStep(0);
+  }, [router]);
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
@@ -60,7 +66,7 @@ const LocationsView = ({ location }) => {
           <Grid item>
             {
             value === 0 && (
-              location.floorplans && (
+              location.floorplans[activeStep] && (
                 <Image src={location.floorplans[activeStep].src} width={600} height={500} alt="floorplan" key={location.floorplans[activeStep].src} />
               )
             )

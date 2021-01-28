@@ -8,7 +8,6 @@ import KeyboardArrowLeft from '@material-ui/icons/KeyboardArrowLeft';
 import KeyboardArrowRight from '@material-ui/icons/KeyboardArrowRight';
 import Image from 'next/image';
 import PropTypes from 'prop-types';
-import { useState } from 'react';
 import SwipeableViews from 'react-swipeable-views';
 
 const useStyles = makeStyles((theme) => ({
@@ -19,7 +18,7 @@ const useStyles = makeStyles((theme) => ({
   img: {
     height: 400,
     display: 'block',
-    maxWidth: 500,
+    maxWidth: 600,
     overflow: 'hidden',
     width: '100%',
   },
@@ -54,7 +53,7 @@ function SwipeableTextMobileStepper({ images, activeStep, setActiveStep }) {
         {images.map((step, index) => (
           <div key={step.imgPath}>
             {Math.abs(activeStep - index) <= 2 ? (
-              <Image className={classes.img} src={step.imgPath} alt={step.label} loading="eager" height={400} width={500} />
+              <Image className={classes.img} src={step.imgPath} alt={step.label} loading="eager" height={400} width={600} />
             ) : null}
           </div>
         ))}

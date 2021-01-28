@@ -27,10 +27,10 @@ const location = {
       src: `${imgPath}esdFloorplan2.jpg`,
     },
     {
-      src: `${imgPath}esdExpansion.jpg`,
+      src: `${imgPath}esdFloorplan1.jpg`,
     },
     {
-      imgPath: `${imgPath}esd4.png`,
+      src: `${imgPath}esdFloorplan2.jpg`,
     },
   ],
   lookbooks: [

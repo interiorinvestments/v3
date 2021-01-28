@@ -48,9 +48,6 @@ const location = {
       src: `${imgPath}ScotsmanEditFlat.jpg`,
     },
     {
-      src: `${imgPath}ScotsmanEditFlatLighter.jpg`,
-    },
-    {
       src: `${imgPath}ScotsmanLounge.jpg`,
     },
     {
