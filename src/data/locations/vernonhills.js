@@ -42,25 +42,25 @@ const location = {
       src: `${imgPath}scotsmanFloorplan2.jpg`,
     },
     {
-      src: `${imgPath}ScotsmanLounge.jpg`,
+      src: `${imgPath}scotsmanFloorplan1.jpg`,
     },
     {
-      src: `${imgPath}ScotsmanMeetingSpace.jpg`,
+      src: `${imgPath}scotsmanFloorplan2.jpg`,
     },
     {
-      src: `${imgPath}ScotsmanOutside.jpg`,
+      src: `${imgPath}scotsmanFloorplan1.jpg`,
     },
     {
-      src: `${imgPath}ScotsmanTestingRoom.jpg`,
+      src: `${imgPath}scotsmanFloorplan2.jpg`,
     },
     {
-      src: `${imgPath}ScotsmanTrainingRoom.jpg`,
+      src: `${imgPath}scotsmanFloorplan1.jpg`,
     },
     {
-      src: `${imgPath}ScotsmanWorkstationLounge.jpg`,
+      src: `${imgPath}scotsmanFloorplan2.jpg`,
     },
     {
-      src: `${imgPath}ScotsmanWorkstations.jpg`,
+      src: `${imgPath}scotsmanFloorplan1.jpg`,
     },
   ],
   lookbooks: [

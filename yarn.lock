@@ -3660,10 +3660,10 @@ mongoose-legacy-pluralize@1.0.2:
   resolved "https://registry.yarnpkg.com/mongoose-legacy-pluralize/-/mongoose-legacy-pluralize-1.0.2.tgz#3ba9f91fa507b5186d399fb40854bff18fb563e4"
   integrity sha512-Yo/7qQU4/EyIS8YDFSeenIvXxZN+ld7YdV9LqFVQJzTLye8unujAWPZ4NWKfFA+RNjh+wvTWKY9Z3E5XM6ZZiQ==
 
-mongoose@^5.11.13:
-  version "5.11.13"
-  resolved "https://registry.yarnpkg.com/mongoose/-/mongoose-5.11.13.tgz#1a8af3c83152d5e0427509966926ea7f5ead4d66"
-  integrity sha512-rXbaxSJfLnKKO2RTm8MKt65glrtfKDc4ATEb6vEbbzsVGCiLut753K5axdpyvE7KeTH7GOh4LzmuQLOvaaWOmA==
+mongoose@^5.11.14:
+  version "5.11.14"
+  resolved "https://registry.yarnpkg.com/mongoose/-/mongoose-5.11.14.tgz#9126b377596c5d959dbf5f8ffc0474311ab8f3a0"
+  integrity sha512-sDI5/i1C9JD3ysDbVGqQG4N6vMC3ZOY7sH/bT63/+3vJub2Nys//JegL4y4iS7v8Vgvje3sNA3ladMSsVnv6TQ==
   dependencies:
     "@types/mongodb" "^3.5.27"
     bson "^1.1.4"
@@ -5676,18 +5676,18 @@ svg-pathdata@^5.0.5:
   resolved "https://registry.yarnpkg.com/svg-pathdata/-/svg-pathdata-5.0.5.tgz#65e8d765642ba15fe15434444087d082bc526b29"
   integrity sha512-TAAvLNSE3fEhyl/Da19JWfMAdhSXTYeviXsLSoDT1UM76ADj5ndwAPX1FKQEgB/gFMPavOy6tOqfalXKUiXrow==
 
-swiper@^6.4.9:
-  version "6.4.9"
-  resolved "https://registry.yarnpkg.com/swiper/-/swiper-6.4.9.tgz#a20896df24cc3669845fcf145fb50edca3a6a5c5"
-  integrity sha512-0+omdc7oiU1guakr6PIrQokre1dW5HKLn8YQB88/hcjn7XSD+3YGlTukcYuTAjL6Pc4MELiusGHk+an8CRmLJQ==
+swiper@^6.4.10:
+  version "6.4.10"
+  resolved "https://registry.yarnpkg.com/swiper/-/swiper-6.4.10.tgz#d2a8bce471717b770d005fcd5e8af42ac630cac6"
+  integrity sha512-uNTdbkcVjNQVOwXhr+e8rTB4Uu8QfWHaZQSSptykWJX/QjSBuAPxAUFnHG8IKGQfTljGol9eLv6g8KTwvGjYNA==
   dependencies:
     dom7 "^3.0.0"
     ssr-window "^3.0.0"
 
-swr@^0.4.0:
-  version "0.4.0"
-  resolved "https://registry.yarnpkg.com/swr/-/swr-0.4.0.tgz#e76da9f981fe6dee0e133289e9b582fc80d9c41d"
-  integrity sha512-70qd1FHYHwIdYXW0jTpm5ktitzvPBCtyKz8ZzynWlY/rMqe4drYPgcl/H9Ipuh+Xv6ZW5viNx13ro8EKIWZcoQ==
+swr@^0.4.1:
+  version "0.4.1"
+  resolved "https://registry.yarnpkg.com/swr/-/swr-0.4.1.tgz#4bb1f9e994a8f8d7a2e9220dbc7aef296bc4a673"
+  integrity sha512-/jQWPjCwy7rNbEJKpuObfbtJHtneTKhlzjy8VkuAEGg/kkYhZoKWVdGtIXrz9vuTGdy/grLVWpA6DfiNk9ECWg==
   dependencies:
     dequal "2.0.2"
 
