@@ -11,17 +11,6 @@ export const team = [
     soapbox: 'https://soapbox.wistia.com/videos/IC8i8RRwe3',
   },
   {
-    title: 'Account Manager',
-    photo: {
-      src: '/img/people/SVukovljak.png',
-      srcSet: '/img/people/SVukovljak.png',
-    },
-    name: 'Shannon Vukovljak',
-    phone: '(312)-212-5112',
-    email: 'svukovljak@interiorinvestments.com',
-    soapbox: 'https://soapbox.wistia.com/videos/yYo1Yww34z',
-  },
-  {
     title: 'Senior Designer',
     photo: {
       src: '/img/people/Megan_Klock-300x300.jpg',
@@ -31,17 +20,6 @@ export const team = [
     phone: '(312)-212-5138',
     email: 'mklock@interiorinvestments.com',
     soapbox: 'https://soapbox.wistia.com/videos/LJ3AzzQdUv',
-  },
-  {
-    title: 'Project Coordinator',
-    photo: {
-      src: '/img/people/Colin_Corr-300x300.jpg',
-      srcSet: '/img/people/Colin_Corr-300x300.jpg',
-    },
-    name: 'Colin Corr',
-    phone: '(847)-325-1071',
-    email: 'ccorr@interiorinvestments.com',
-    soapbox: 'https://soapbox.wistia.com/videos/VI1SFIf6rY?preview=true',
   },
   {
     title: 'Accounting Coordinator',
@@ -54,61 +32,29 @@ export const team = [
     email: 'nramsay@interiorinvestments.com',
     soapbox: 'https://soapbox.wistia.com/videos/nEUvcLaG6X',
   },
-];
-export const team2 = [
   {
-    title: 'UI/UX Designer',
+    title: 'Project Coordinator',
     photo: {
-      src: '/img/logos/HMLogo.jpg',
-      srcSet: '/img/logos/HMLogo.jpg',
+      src: '/img/people/Colin_Corr-300x300.jpg',
+      srcSet: '/img/people/Colin_Corr-300x300.jpg',
     },
-    name: 'Kate Segelson',
-  },
-  {
-    title: 'Web Backend Developer',
-    photo: {
-      src: '/img/logos/HMLogo.jpg',
-      srcSet: '/img/logos/HMLogo.jpg',
-    },
-    name: 'Alex Johnson',
-  },
-  {
-    title: 'UI/UX Designer',
-    photo: {
-      src: '/img/logos/HMLogo.jpg',
-      srcSet: '/img/logos/HMLogo.jpg',
-    },
-    name: 'Kate Segelson',
-  },
-  {
-    title: 'Web Backend Developer',
-    photo: {
-      src: '/img/logos/HMLogo.jpg',
-      srcSet: '/img/logos/HMLogo.jpg',
-    },
-    name: 'Alex Johnson',
+    name: 'Colin Corr',
+    phone: '(847)-325-1071',
+    email: 'ccorr@interiorinvestments.com',
+    soapbox: 'https://soapbox.wistia.com/videos/VI1SFIf6rY?preview=true',
   },
 ];
 
-export const partners = [
+export const team2 = [
   {
-    name: 'Herman Miller',
-    logo: '/img/logos/HMVector.svg',
-  },
-  // {
-  //   name: 'Geiger',
-  //   logo: '/img/logos/Geiger.svg',
-  // },
-  {
-    name: 'Nemschoff',
-    logo: '/img/logos/nemschoff.svg',
-  },
-  {
-    name: 'Design Within Reach',
-    logo: '/img/logos/logo-naughtone.svg',
-  },
-  {
-    name: 'HAY',
-    logo: '/img/logos/HAY.svg',
+    title: 'Account Manager',
+    photo: {
+      src: '/img/people/SVukovljak.png',
+      srcSet: '/img/people/SVukovljak.png',
+    },
+    name: 'Shannon Vukovljak',
+    phone: '(312)-212-5112',
+    email: 'svukovljak@interiorinvestments.com',
+    soapbox: 'https://soapbox.wistia.com/videos/yYo1Yww34z',
   },
 ];

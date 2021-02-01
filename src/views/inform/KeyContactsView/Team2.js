@@ -61,7 +61,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const Team = (props) => {
+const Team2 = (props) => {
   const { data, className, ...rest } = props;
   const classes = useStyles();
 
@@ -72,9 +72,9 @@ const Team = (props) => {
 
   return (
     <div className={clsx(classes.root, className)} {...rest}>
-      <Grid container spacing={isMd ? 2 : 1} direction="row">
+      <Grid container spacing={isMd ? 2 : 1}>
         {data.map((item, index) => (
-          <Grid item xs={12} sm={6} md={6} key={index} data-aos="fade-up">
+          <Grid item xs={12} key={index} data-aos="fade-up">
             <CardBase className={classes.cardBase} liftUp>
               <ListItem disableGutters className={classes.listItem}>
                 <ListItemAvatar className={classes.listItemAvatar}>
@@ -120,7 +120,7 @@ const Team = (props) => {
   );
 };
 
-Team.propTypes = {
+Team2.propTypes = {
   /**
    * External classes
    */
@@ -131,4 +131,4 @@ Team.propTypes = {
   data: PropTypes.array.isRequired,
 };
 
-export default Team;
+export default Team2;
