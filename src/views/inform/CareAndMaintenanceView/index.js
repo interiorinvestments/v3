@@ -72,6 +72,9 @@ const warrantyInformation = [
     name: 'Hickory Business Furniture',
     url: `${documentPath}hbf.pdf`,
   },
+];
+
+const warrantyInformation2 = [
   {
     name: 'Herman Miller',
     url: `${documentPath}hermanmiller.pdf`,
@@ -109,6 +112,7 @@ const warrantyInformation = [
     url: `${documentPath}summary.pdf`,
   },
 ];
+
 const CareAndMaintenanceView = () => (
   <Container>
     <Header />
@@ -121,6 +125,9 @@ const CareAndMaintenanceView = () => (
       </Grid>
       <Grid item xs={12} sm={4} md={3}>
         <DocumentList documents={warrantyInformation} title="Warranty Information" />
+      </Grid>
+      <Grid item xs={12} sm={4} md={3}>
+        <DocumentList documents={warrantyInformation2} title="Warranty Information" />
       </Grid>
     </Grid>
 
