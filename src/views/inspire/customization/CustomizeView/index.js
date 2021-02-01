@@ -31,6 +31,7 @@ const CustomizeView = ({ area }) => {
   useEffect(() => {
     setValue(0);
     setOption(area.options[0]);
+    setDetail(area.options[0].floor);
   }, [router]);
 
   return (
@@ -51,21 +52,28 @@ const CustomizeView = ({ area }) => {
 
         </Grid>
         <Grid item xs={12} md={6}>
-          <Image src={option.image} width={600} height={300} />
+          <Grid container direction="row" spacing={1}>
+            <Grid item xs={12} sm={10}>
+
+              <Image src={option.image} width={700} height={400} />
+            </Grid>
+            <Grid item xs={12} sm={2}>
+              <Image src={detail} width={300} height={150} />
+            </Grid>
+          </Grid>
         </Grid>
         <Grid item xs={12} md={4}>
           <Typography variant="subtitle1" color="textSecondary">{option.name}</Typography>
           <ul>
             {option.details?.map((spec) => <li key={spec}><Typography variant="body1">{spec}</Typography></li>)}
           </ul>
-          <Image src={detail} width={600} height={300} />
         </Grid>
         <Grid container spacing={2}>
           {area.finishes?.map((finish, index) => (
-            <Grid item xs={6} sm={4} md={2} key={index}>
-              <Card onMouseEnter={() => setDetail(finish.image)} onMouseLeave={() => setDetail(option.floor)}>
+            <Grid item xs={6} sm={4} md={2} lg={1} key={index}>
+              <Card>
                 <CardMedia>
-                  <Image src={finish.image} height={300} width={500} alt={finish.description} />
+                  <Image src={finish.image} height={150} width={300} alt={finish.description} />
                 </CardMedia>
                 <CardContent>
                   <Typography gutterBottom variant="h6" component="h2">
