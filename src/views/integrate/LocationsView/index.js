@@ -33,6 +33,7 @@ const LocationsView = ({ location }) => {
   const router = useRouter();
 
   useEffect(() => {
+    setValue(0);
     setActiveStep(0);
   }, [router]);
 
