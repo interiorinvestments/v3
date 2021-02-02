@@ -96,9 +96,11 @@ const LocationsView = ({ location }) => {
           }
           </Grid>
         </Grid>
-        <Grid item xs={12} md={5} lg={4}>
-          <SwipeableViews images={location.images} activeStep={activeStep} setActiveStep={setActiveStep} />
-        </Grid>
+        {value === 0 && (
+          <Grid item xs={12} md={5} lg={4}>
+            <SwipeableViews images={location.images} activeStep={activeStep} setActiveStep={setActiveStep} />
+          </Grid>
+        )}
       </Grid>
     </Container>
   );
