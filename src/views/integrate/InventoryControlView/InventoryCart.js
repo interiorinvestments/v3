@@ -21,7 +21,6 @@ const InventoryCart = ({ open, setOpen, cartItem }) => {
   }, [cartItem.quantity]);
 
   const handleAdd = async () => {
-    setOpen(false);
     try {
       const res = await fetch(`/api/inventory/${cartItem._id}`, {
         method: 'PUT',
@@ -44,6 +43,7 @@ const InventoryCart = ({ open, setOpen, cartItem }) => {
     } catch (err) {
       console.error(err);
     }
+    setOpen(false);
   };
 
   return (

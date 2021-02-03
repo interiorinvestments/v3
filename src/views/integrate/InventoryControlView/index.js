@@ -1,8 +1,7 @@
 import {
   Container, Grid, makeStyles, Typography,
 } from '@material-ui/core';
-import PropTypes from 'prop-types';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 import InventoryCart from './InventoryCart';
 import InventoryItems from './InventoryItems';
@@ -18,19 +17,45 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const InventoryControlView = ({ items, cart }) => {
+const InventoryControlView = () => {
   const classes = useStyles();
   const areas = [];
-  items.forEach((item) => { item.area.forEach((area) => areas.push(area)); });
-  const headers = [...new Set(areas)];
   const [cartItem, setCartItem] = useState(null);
   const [open, setOpen] = useState(false);
+  const [items, setItems] = useState(null);
+  const [data, setData] = useState([]);
+  items?.forEach((item) => { item.area.forEach((area) => areas.push(area)); });
+  const headers = [...new Set(areas)];
+
+  const fetchItems = async () => {
+    try {
+      const inventory = await fetch('/api/inventory');
+      const fetchedItems = await inventory.json();
+      setItems(fetchedItems);
+    } catch (err) {
+      console.error(err);
+    }
+  };
+
+  const fetchCart = async () => {
+    try {
+      const cart = await fetch('/api/inventory/cart');
+      const fetchedCart = await cart.json();
+      setData(fetchedCart);
+    } catch (err) {
+      console.error(err);
+    }
+  };
+
+  useEffect(() => {
+    fetchItems();
+    fetchCart();
+  }, [open]);
+
   return (
     <Container className={classes.root} maxWidth="lg">
       <Typography variant="h1" className={classes.heading}>Inventory</Typography>
-      {cart.length > 0 && (
-      <InventoryTable data={cart} />
-      )}
+      <InventoryTable fetchCart={fetchCart} data={data} fetchItems={fetchItems} />
       <Grid container spacing={3}>
         {headers.map((head) => {
           const products = items.filter((filtered) => filtered.area.includes(head));
@@ -46,11 +71,6 @@ const InventoryControlView = ({ items, cart }) => {
       )}
     </Container>
   );
-};
-
-InventoryControlView.propTypes = {
-  items: PropTypes.array.isRequired,
-  cart: PropTypes.array.isRequired,
 };
 
 export default InventoryControlView;

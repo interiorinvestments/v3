@@ -14,7 +14,6 @@ import {
   Search,
 } from '@material-ui/icons';
 import MaterialTable from 'material-table';
-import { useRouter } from 'next/router';
 import PropTypes from 'prop-types';
 import { forwardRef } from 'react';
 
@@ -40,12 +39,8 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const InventoryTable = ({ data }) => {
-  const router = useRouter();
+const InventoryTable = ({ data, fetchCart, fetchItems }) => {
   const classes = useStyles();
-  const refreshData = () => {
-    router.replace(router.asPath);
-  };
 
   const deleteItem = async (item) => {
     try {
@@ -60,7 +55,8 @@ const InventoryTable = ({ data }) => {
         body: JSON.stringify({ quantity: 0 }),
       });
       if (updateItem.status < 300 && removeItem.status < 300) {
-        refreshData();
+        fetchCart();
+        fetchItems();
       }
     } catch (err) {
       console.error(err);
@@ -83,7 +79,8 @@ const InventoryTable = ({ data }) => {
         body: JSON.stringify(item),
       });
       if (res.status < 300 && updateCart.status < 300) {
-        refreshData();
+        fetchCart();
+        fetchItems();
       }
     } catch (err) {
       console.error(err);
@@ -91,42 +88,51 @@ const InventoryTable = ({ data }) => {
   };
 
   return (
-    <div style={{ maxWidth: '100%' }} className={classes.root}>
-      <MaterialTable
-        icons={tableIcons}
-        columns={[
-          { title: '', render: (rowData) => <Avatar src={rowData.image} variant="rounded" /> },
-          { title: 'Name', render: (rowData) => <Typography>{`${rowData.code} | ${rowData.name}`}</Typography> },
-          { title: 'Manufacturer', render: (rowData) => <Typography>{`${rowData.manufacturer} - ${rowData.series}`}</Typography> },
-          {
-            title: 'Quantity', field: 'quantity', type: 'numeric', validate: (rowData) => (rowData.quantity < 1 ? { isValid: false, helperText: 'Value must be greater than 0' } : rowData.quantity > rowData.remaining ? { isValid: false, helperText: 'Not enough remaining' } : true),
-          },
-        ]}
-        data={data}
-        title="Inventory"
-        editable={{
-          onRowDelete: (oldData) => new Promise((resolve) => {
-            deleteItem(oldData);
-            refreshData();
-            resolve();
-          }),
-          onRowUpdate: (newData, oldData) => new Promise((resolve) => {
-            editItem(newData, oldData);
-            refreshData();
-            resolve();
-          }),
-        }}
-        isLoading={data.length === 0}
-        options={{
-          actionsColumnIndex: -1,
-        }}
-      />
-    </div>
+    <>
+      {data.length > 0 && (
+
+      <div style={{ maxWidth: '100%' }} className={classes.root}>
+        <MaterialTable
+          icons={tableIcons}
+          columns={[
+            { title: '', render: (rowData) => <Avatar src={rowData.image} variant="rounded" /> },
+            { title: 'Name', render: (rowData) => <Typography>{`${rowData.code} | ${rowData.name}`}</Typography> },
+            { title: 'Manufacturer', render: (rowData) => <Typography>{`${rowData.manufacturer} - ${rowData.series}`}</Typography> },
+            {
+              title: 'Quantity', field: 'quantity', type: 'numeric', validate: (rowData) => (rowData.quantity < 1 ? { isValid: false, helperText: 'Value must be greater than 0' } : rowData.quantity > rowData.remaining ? { isValid: false, helperText: 'Not enough remaining' } : true),
+            },
+          ]}
+          data={data}
+          title="Inventory"
+          editable={{
+            onRowDelete: (oldData) => new Promise((resolve) => {
+              deleteItem(oldData);
+              fetchCart();
+              fetchItems();
+              resolve();
+            }),
+            onRowUpdate: (newData, oldData) => new Promise((resolve) => {
+              editItem(newData, oldData);
+              fetchCart();
+              fetchItems();
+              resolve();
+            }),
+          }}
+          isLoading={data.length === 0}
+          options={{
+            actionsColumnIndex: -1,
+          }}
+        />
+      </div>
+      )}
+    </>
   );
 };
 
 InventoryTable.propTypes = {
-  data: PropTypes.array.isRequired,
+  data: PropTypes.array,
+  fetchCart: PropTypes.func.isRequired,
+  fetchItems: PropTypes.func.isRequired,
 };
 
 export default InventoryTable;
