@@ -14,9 +14,8 @@ import {
   Search,
 } from '@material-ui/icons';
 import MaterialTable from 'material-table';
-import { useRouter } from 'next/router';
 import PropTypes from 'prop-types';
-import { forwardRef } from 'react';
+import { forwardRef, useEffect, useState } from 'react';
 import formatCurrency from 'utils/formatCurrency';
 
 const tableIcons = {
@@ -41,12 +40,23 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const BudgetingTable = ({ data }) => {
-  const router = useRouter();
+const BudgetingTable = ({ flag }) => {
   const classes = useStyles();
-  const refreshData = () => {
-    router.replace(router.asPath);
+  const [data, setData] = useState([]);
+
+  const fetchCart = async () => {
+    try {
+      const cart = await fetch('/api/budget/budgetCart');
+      const fetchedCart = await cart.json();
+      setData(fetchedCart);
+    } catch (err) {
+      console.error(err);
+    }
   };
+
+  useEffect(() => {
+    fetchCart();
+  }, [flag]);
 
   const getTotal = (items) => items.reduce((sum, product) => sum + product.budgetTotal, 0);
 
@@ -63,7 +73,7 @@ const BudgetingTable = ({ data }) => {
         body: JSON.stringify({ budgetQuantity: 0, price: item.price }),
       });
       if (updateItem.status < 300 && removeItem.status < 300) {
-        refreshData();
+        fetchCart();
       }
     } catch (err) {
       console.error(err);
@@ -86,7 +96,7 @@ const BudgetingTable = ({ data }) => {
         body: JSON.stringify(item),
       });
       if (res.status < 300 && updateCart.status < 300) {
-        refreshData();
+        fetchCart();
       }
     } catch (err) {
       console.error(err);
@@ -94,48 +104,51 @@ const BudgetingTable = ({ data }) => {
   };
 
   return (
-    <div style={{ maxWidth: '100%' }} className={classes.root}>
-      <MaterialTable
-        icons={tableIcons}
-        columns={[
-          { title: '', render: (rowData) => <Avatar src={rowData.image} variant="rounded" /> },
-          { title: 'Name', render: (rowData) => <Typography>{`${rowData.code} | ${rowData.name}`}</Typography> },
-          { title: 'Manufacturer', render: (rowData) => <Typography>{`${rowData.manufacturer} - ${rowData.series}`}</Typography> },
-          {
-            title: 'Quantity', field: 'budgetQuantity', type: 'numeric', validate: (rowData) => (rowData.budgetQuantity < 1 ? { isValid: false, helperText: 'Value must be greater than 0' } : true), editable: 'always',
-          },
-          {
-            title: 'Price', field: 'price', type: 'currency', render: (rowData) => (formatCurrency(rowData.price)), editable: 'never',
-          },
-          {
-            title: 'SubTotal', field: 'budgetTotal', type: 'currency', render: (rowData) => (formatCurrency(rowData.budgetTotal)), editable: 'never',
-          },
-        ]}
-        data={data}
-        title={`Total: ${formatCurrency(getTotal(data))}`}
-        editable={{
-          onRowDelete: (oldData) => new Promise((resolve) => {
-            deleteItem(oldData);
-            refreshData();
-            resolve();
-          }),
-          onRowUpdate: (newData, oldData) => new Promise((resolve) => {
-            editItem(newData, oldData);
-            refreshData();
-            resolve();
-          }),
-        }}
-        isLoading={data.length === 0}
-        options={{
-          actionsColumnIndex: -1,
-        }}
-      />
-    </div>
+    <>
+      {data.length > 0 && (
+      <div style={{ maxWidth: '100%' }} className={classes.root}>
+        <MaterialTable
+          icons={tableIcons}
+          columns={[
+            { title: '', render: (rowData) => <Avatar src={rowData.image} variant="rounded" /> },
+            { title: 'Name', render: (rowData) => <Typography>{`${rowData.code} | ${rowData.name}`}</Typography> },
+            { title: 'Manufacturer', render: (rowData) => <Typography>{`${rowData.manufacturer} - ${rowData.series}`}</Typography> },
+            {
+              title: 'Quantity', field: 'budgetQuantity', type: 'numeric', validate: (rowData) => (rowData.budgetQuantity < 1 ? { isValid: false, helperText: 'Value must be greater than 0' } : true), editable: 'always',
+            },
+            {
+              title: 'Price', field: 'price', type: 'currency', render: (rowData) => (formatCurrency(rowData.price)), editable: 'never',
+            },
+            {
+              title: 'SubTotal', field: 'budgetTotal', type: 'currency', render: (rowData) => (formatCurrency(rowData.budgetTotal)), editable: 'never',
+            },
+          ]}
+          data={data}
+          title={`Total: ${formatCurrency(getTotal(data))}`}
+          editable={{
+            onRowDelete: (oldData) => new Promise((resolve) => {
+              deleteItem(oldData);
+              fetchCart();
+              resolve();
+            }),
+            onRowUpdate: (newData, oldData) => new Promise((resolve) => {
+              editItem(newData, oldData);
+              fetchCart();
+              resolve();
+            }),
+          }}
+          isLoading={data.length === 0}
+          options={{
+            actionsColumnIndex: -1,
+          }}
+        />
+      </div>
+      )}
+    </>
   );
 };
 
 BudgetingTable.propTypes = {
-  data: PropTypes.array.isRequired,
+  flag: PropTypes.bool.isRequired,
 };
-
 export default BudgetingTable;
