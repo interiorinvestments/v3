@@ -19,7 +19,7 @@
     "image-map": "^2.0.1",
     "material-table": "^1.69.2",
     "material-ui-nested-menu-item": "^1.0.2",
-    "mongoose": "^5.11.14",
+    "mongoose": "^5.11.15",
     "next": "^10.0.6",
     "next-connect": "^0.9.1",
     "nprogress": "^0.2.0",

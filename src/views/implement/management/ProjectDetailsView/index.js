@@ -1,6 +1,7 @@
 import { Container, Grid } from '@material-ui/core';
 import DocumentList from 'components/common/DocumentList';
 
+import DetailsList from './DetailsList';
 import Header from './Header';
 
 const documentPath = '/docs/warranty/';
@@ -54,14 +55,103 @@ const installDocuments = [
   },
 ];
 
+const PROJECT_DETAILS = [
+  {
+    location: 'Chicago',
+    documents: [
+      {
+        name: 'Installs 41st Floor',
+        url: `${documentPath}install41.pdf`,
+      },
+      {
+
+        name: 'Installs 42nd Floor',
+        url: `${documentPath}install42.pdf`,
+      },
+      {
+
+        name: 'Installs 43rd Floor',
+        url: `${documentPath}install43.pdf`,
+      },
+      {
+
+        name: 'Secretary',
+        url: `${documentPath}secretary.pdf`,
+      },
+      {
+
+        name: 'Aeron Chair List',
+        url: `${documentPath}aeronchairlist.pdf`,
+      },
+    ],
+  },
+  {
+    location: 'Dallas',
+    documents: [
+      {
+        name: 'Installs 41st Floor',
+        url: `${documentPath}install41.pdf`,
+      },
+      {
+
+        name: 'Installs 42nd Floor',
+        url: `${documentPath}install42.pdf`,
+      },
+      {
+
+        name: 'Installs 43rd Floor',
+        url: `${documentPath}install43.pdf`,
+      },
+      {
+
+        name: 'Secretary',
+        url: `${documentPath}secretary.pdf`,
+      },
+      {
+
+        name: 'Aeron Chair List',
+        url: `${documentPath}aeronchairlist.pdf`,
+      },
+    ],
+  },
+  {
+    location: 'Vernon HIlls',
+    documents: [
+      {
+        name: 'Installs 41st Floor',
+        url: `${documentPath}install41.pdf`,
+      },
+      {
+
+        name: 'Installs 42nd Floor',
+        url: `${documentPath}install42.pdf`,
+      },
+      {
+
+        name: 'Installs 43rd Floor',
+        url: `${documentPath}install43.pdf`,
+      },
+      {
+
+        name: 'Secretary',
+        url: `${documentPath}secretary.pdf`,
+      },
+      {
+
+        name: 'Aeron Chair List',
+        url: `${documentPath}aeronchairlist.pdf`,
+      },
+    ],
+  },
+];
+
 const CareAndMaintenanceView = () => (
   <Container>
     <Header />
     <Grid container spacing={2}>
       <Grid item xs={12} sm={4} md={3}>
-        <DocumentList documents={installDocuments} title="Install Documents" />
+        <DetailsList details={PROJECT_DETAILS} />
       </Grid>
-
     </Grid>
 
   </Container>
