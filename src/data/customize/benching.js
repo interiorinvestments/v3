@@ -6,9 +6,9 @@ const items = {
   description: "Benching Stations | 6-Pack 6' x 2.5'",
   options: [
     {
-      name: 'Original Layout',
-      floor: `${imgPath}benchingfloor0.jpg`,
-      image: `${imgPath}benching0.jpg`,
+      name: 'Value',
+      floor: `${imgPath}benchingvaluefloor.jpg`,
+      image: `${imgPath}benchingvalue.jpg`,
       details: [
         'Fixed height Layout Studio with performance rail',
         'Flat Edge divider screen, overall system height: 42"H',
@@ -17,7 +17,7 @@ const items = {
       ],
     },
     {
-      name: 'Reconfiguration 1',
+      name: 'Better',
       floor: `${imgPath}benchingfloor1.jpg`,
       image: `${imgPath}benching1.jpg`,
       details: [
@@ -29,7 +29,7 @@ const items = {
       ],
     },
     {
-      name: 'Reconfiguration 2',
+      name: 'Best',
       floor: `${imgPath}benchingfloor2.jpg`,
       image: `${imgPath}benching2.jpg`,
       details: [

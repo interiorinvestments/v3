@@ -17,7 +17,7 @@ const items = {
       ],
     },
     {
-      name: 'Reconfiguration 1',
+      name: 'Better',
       floor: `${imgPath}privateofficefloor1.jpg`,
       image: `${imgPath}privateoffice1.jpg`,
       details: [
@@ -30,7 +30,7 @@ const items = {
       ],
     },
     {
-      name: 'Reconfiguration 2',
+      name: 'Best',
       floor: `${imgPath}privateofficefloor2.jpg`,
       image: `${imgPath}privateoffice2.jpg`,
       details: [

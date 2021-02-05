@@ -45,9 +45,9 @@ const CustomizeView = ({ area }) => {
           <FormControl component="fieldset">
             <FormLabel component="legend">Select your option</FormLabel>
             <RadioGroup aria-label="Customize" name="Customize" value={value} onChange={handleRadioChange}>
-              <FormControlLabel value={0} control={<Radio />} label="Original Layout" />
-              <FormControlLabel value={1} control={<Radio />} label="Reconfiguration 1" />
-              <FormControlLabel value={2} control={<Radio />} label="Reconfiguration 2" />
+              <FormControlLabel value={0} control={<Radio />} label="Value" />
+              <FormControlLabel value={1} control={<Radio />} label="Better" />
+              <FormControlLabel value={2} control={<Radio />} label="Best" />
             </RadioGroup>
           </FormControl>
 
@@ -71,7 +71,7 @@ const CustomizeView = ({ area }) => {
         </Grid>
         <Grid container spacing={2}>
           {area.finishes?.map((finish, index) => (
-            <Grid item xs={6} sm={4} md={2} lg={1} key={index}>
+            <Grid item xs={6} sm={4} md={2} key={index}>
               <Card>
                 <CardMedia>
                   <Image src={finish.image} height={150} width={300} alt={finish.description} />
