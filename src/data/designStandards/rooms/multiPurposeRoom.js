@@ -1,39 +1,10 @@
 const tablePath = '/img/designStandards/tables/';
 const chairPath = '/img/designStandards/seating/';
 const optionsPath = '/img/designStandards/options/';
-
+const imgPath = '/img/designStandards/accessories/';
 const items = {
   title: 'Multi Purpose Room',
   products: [
-    {
-      code: 'CH.03',
-      name: 'Typical Huddle Room Chair',
-      manufacturer: 'OFS',
-      series: 'Pret',
-      image: `${chairPath}ch03.jpg`,
-      floor: `${chairPath}ch03f.jpg`,
-      description: 'Meeting chair with one piece mesh back and seat with fixed ribbon arms, body balance control mechanism, seat height adjustment and 5-star base on casters. Weight capacity: 250 lbs.',
-      finishes: 'Frame and arms finished in Chalk White (FCH), seat and back in Dove (MDV) mesh and Polished Aluminum base on Black casters.',
-      location: 'Huddle rooms',
-      quantity: '(29)',
-      options: [
-        {
-          name: 'Frame/Arms',
-          description: 'Chalk FCH',
-          image: `${optionsPath}chalkfch.jpg`,
-        },
-        {
-          name: 'Mesh Seat/Back',
-          description: 'Dove MDV',
-          image: `${optionsPath}dovemdv.jpg`,
-        },
-        {
-          name: 'Base',
-          description: 'Polished Aluminum B27',
-          image: `${optionsPath}polishedaluminum.jpg`,
-        },
-      ],
-    },
     {
       code: 'CH.08',
       name: 'Multi-purpose Chair',
@@ -131,6 +102,53 @@ const items = {
       finishes: 'Oak',
       location: 'Multi-purpose',
       quantity: '(8)',
+    },
+    {
+      code: 'AC.01',
+      name: 'Mobile Tackboard/Markerboard',
+      manufacturer: 'OFS',
+      series: 'Heya',
+      image: `${imgPath}ac01.jpg`,
+      floor: `${imgPath}ac01f.jpg`,
+      description: '48"W x 69.5"H x 28.5"D Mobile media screen, double-sided; one side is dry erase marker board and the other side is fabric tackable board. Includes leather pull and Marker holder.',
+      finishes: 'Fabric tackable board in Camira Synergy color Alike LDS62, standard dry eraser White board, Luster Grey base on casters, Black leather pull and cup holder finished per image.',
+      location: 'Open Office - Collaboration Areas and Mult-purpose rooms',
+      quantity: '(4)',
+      options: [
+        {
+          name: 'Fabric',
+          description: 'Synergy Alike LDS62',
+          image: `${optionsPath}synergyalike.jpg`,
+        },
+        {
+          name: 'Maker board',
+          description: 'Standard White',
+          image: `${optionsPath}standardwhite.jpg`,
+        },
+        {
+          name: 'Base',
+          description: 'Luster Grey',
+          image: `${optionsPath}lustergrey.jpg`,
+        },
+        {
+          name: 'Leather Pull',
+          description: 'Black',
+          image: `${optionsPath}black.jpg`,
+        },
+        {
+          name: 'Marker Holder',
+          description: 'Onyx (Black)',
+          image: `${optionsPath}black.jpg`,
+        },
+        {
+          name: 'Leather Pull',
+          image: `${optionsPath}leatherpull.jpg`,
+        },
+        {
+          name: 'Marker Holder',
+          image: `${optionsPath}markerholder.jpg`,
+        },
+      ],
     },
   ],
 };

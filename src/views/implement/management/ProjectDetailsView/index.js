@@ -1,5 +1,4 @@
 import { Container, Grid } from '@material-ui/core';
-import DocumentList from 'components/common/DocumentList';
 
 import DetailsList from './DetailsList';
 import Header from './Header';
@@ -150,6 +149,8 @@ const CareAndMaintenanceView = () => (
     <Header />
     <Grid container spacing={2}>
       <Grid item xs={12} sm={4} md={3}>
+        <DetailsList details={PROJECT_DETAILS} />
+        <DetailsList details={PROJECT_DETAILS} />
         <DetailsList details={PROJECT_DETAILS} />
       </Grid>
     </Grid>

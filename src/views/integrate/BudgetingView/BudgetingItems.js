@@ -39,7 +39,7 @@ const BudgetingItems = ({
               <ListItemAvatar>
                 <Avatar src={product.image} variant="rounded" />
               </ListItemAvatar>
-              <ListItemText primary={`${product.code} | ${product.name}`} secondary={`${product.manufacturer} - ${product.series}`} />
+              <ListItemText primary={`${product.code} | ${product.name}`} secondary={product.manufacturer ? `${product.manufacturer} - ${product.series}` : ''} />
               <ListItemSecondaryAction>
                 {formatCurrency(product.price)}
               </ListItemSecondaryAction>

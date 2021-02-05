@@ -35,35 +35,6 @@ const items = {
       ],
     },
     {
-      code: 'CH.12',
-      name: 'Counter Stool',
-      manufacturer: 'National',
-      series: 'Grin Counter Stool',
-      image: `${chairPath}ch12.jpg`,
-      floor: `${chairPath}ch12f.jpg`,
-      description: 'Armless, low back counter height stool, fully upholstery seat and back on sled metal base with footrest. Interior seat and back will have 2.5" stitching details.',
-      finishes: 'Special base powder-coated in Satin Nickel Metallic. Graded-in (grade E) Designtex Everywhere Texture Maroon 4147-306',
-      location: 'Phone rooms *to be used with counter height millwork*',
-      quantity: '(8)',
-      options: [
-        {
-          name: 'Fabric Upholstery',
-          description: 'Everywhere Texture Maroon 4147-306',
-          image: `${optionsPath}maroon4147.jpg`,
-        },
-        {
-          name: 'Base',
-          description: 'Satin Nickel Metallic',
-          image: `${optionsPath}satinnickelmetallic.jpg`,
-        },
-        {
-          name: 'Stitching Detail',
-          description: '2.5" Horizontal Stitch',
-          image: `${optionsPath}horizontalstitch.jpg`,
-        },
-      ],
-    },
-    {
       code: 'TB.02',
       name: 'Typical Height Adjustable',
       manufacturer: 'Herman Miller',
