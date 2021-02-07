@@ -35,7 +35,7 @@
     "react-perfect-scrollbar": "^1.5.8",
     "react-swipeable-views": "^0.13.9",
     "react-window": "^1.8.6",
-    "swiper": "^6.4.10",
+    "swiper": "^6.4.11",
     "swr": "^0.4.1",
     "validate.js": "^0.13.1",
     "yup": "^0.32.8"
