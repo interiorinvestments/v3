@@ -29,15 +29,6 @@ export const Integrate = () => {
         anchorPosition={menuPosition}
       >
         <MenuItem component={Link} naked href="/integrate/budgeting">Budgeting</MenuItem>
-        <NestedMenuItem
-          label="Locations"
-          parentMenuOpen={!!menuPosition}
-        >
-          <MenuItem component={Link} naked href="/integrate/locations/dallas">Dallas, TX</MenuItem>
-          <MenuItem component={Link} naked href="/integrate/locations/vernonhills">Vernon Hills, IL</MenuItem>
-          <MenuItem component={Link} naked href="/integrate/locations/chicago1">Chicago, IL</MenuItem>
-          <MenuItem component={Link} naked href="/integrate/locations/newyork">New York, NY</MenuItem>
-        </NestedMenuItem>
         <MenuItem component={Link} naked href="/integrate/inventory-control/">Inventory Control</MenuItem>
       </Menu>
     </>

@@ -41,6 +41,15 @@ export const Inform = () => {
           <MenuItem component={Link} naked href="/inform/design-standards/collaboration-lounge">Collaboration/Lounge</MenuItem>
           <MenuItem component={Link} naked href="/inform/design-standards/accessories">Accessories</MenuItem>
         </NestedMenuItem>
+        <NestedMenuItem
+          label="Locations"
+          parentMenuOpen={!!menuPosition}
+        >
+          <MenuItem component={Link} naked href="/inform/locations/dallas">Dallas, TX</MenuItem>
+          <MenuItem component={Link} naked href="/inform/locations/vernonhills">Vernon Hills, IL</MenuItem>
+          <MenuItem component={Link} naked href="/inform/locations/chicago1">Chicago, IL</MenuItem>
+          <MenuItem component={Link} naked href="/inform/locations/newyork">New York, NY</MenuItem>
+        </NestedMenuItem>
         <MenuItem component={Link} naked href="/inform/warranty-maintenance">Warranty & Maintenance</MenuItem>
         {/* <MenuItem component={Link} naked href="/inform/covid">Covid Response</MenuItem> */}
         {/* <MenuItem component={Link} naked href="/inform/faqs">FAQs</MenuItem> */}

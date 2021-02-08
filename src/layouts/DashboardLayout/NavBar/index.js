@@ -81,6 +81,29 @@ const navConfig = [
         ],
       },
       {
+        title: 'Locations',
+        icon: MapPinIcon,
+        href: '/inform/locations',
+        items: [
+          {
+            title: 'Dallas, TX',
+            href: '/inform/locations/dallas',
+          },
+          {
+            title: 'Vernon Hills, IL',
+            href: '/inform/locations/vernonhills',
+          },
+          {
+            title: 'Chicago, IL',
+            href: '/inform/locations/chicago1',
+          },
+          {
+            title: 'New York, NY',
+            href: '/inform/locations/newyork',
+          },
+        ],
+      },
+      {
         title: 'Warranty & Maintenance',
         icon: BookIcon,
         href: '/inform/warranty-maintenance',
@@ -141,29 +164,6 @@ const navConfig = [
         title: 'Budgeting',
         icon: DollarSignIcon,
         href: '/integrate/budgeting',
-      },
-      {
-        title: 'Locations',
-        icon: MapPinIcon,
-        href: '/integrate/locations',
-        items: [
-          {
-            title: 'Dallas, TX',
-            href: '/integrate/locations/dallas',
-          },
-          {
-            title: 'Vernon Hills, IL',
-            href: '/integrate/locations/vernonhills',
-          },
-          {
-            title: 'Chicago, IL',
-            href: '/integrate/locations/chicago1',
-          },
-          {
-            title: 'New York, NY',
-            href: '/integrate/locations/newyork',
-          },
-        ],
       },
       {
         title: 'Inventory Control',
