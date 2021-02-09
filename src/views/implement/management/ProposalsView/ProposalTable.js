@@ -1,3 +1,4 @@
+import { Button } from '@material-ui/core';
 import {
   ArrowDownward,
   ChevronLeft,
@@ -10,6 +11,7 @@ import {
 import MaterialTable from 'material-table';
 import PropTypes from 'prop-types';
 import { forwardRef } from 'react';
+import { File as FileIcon } from 'react-feather';
 
 const tableIcons = {
   FirstPage: forwardRef((props, ref) => <FirstPage {...props} ref={ref} />),
@@ -36,6 +38,15 @@ const ProposalTable = ({ data, setProposal }) => (
         { title: 'Status', field: 'status' },
       ]}
       data={data}
+      // detailPanel={(rowData) => (
+      //   <Button
+      //     href={`https://custom.interiorinvestments.com/content/onlinemanagement/td-proposal.asp?Proposal=${rowData.PL_FILE.trim()}&Company=II&Location=ILLincolnshire`}
+      //     target="_blank"
+      //   >
+      //     <FileIcon />
+      //     Proposal
+      //   </Button>
+      // )}
       title="Proposals"
       onRowClick={(e, rowData) => setProposal(rowData)}
       isLoading={data.length === 0}

@@ -16,7 +16,6 @@ const useStyles = makeStyles((theme) => ({
 
 const ProposalsPage = ({ proposals }) => {
   const classes = useStyles();
-
   return (
     <DashboardLayout>
       <Page className={classes.root} title="Proposals">
@@ -32,19 +31,27 @@ ProposalsPage.propTypes = {
   proposals: PropTypes.array.isRequired,
 };
 
-export async function getServerSideProps() {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_SERVER}/api/proposals`, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({
-      odbcString: 'DSN=illi',
-      customerNumber: '11762',
-    }),
-  });
-  const proposals = await res.json();
-  return {
-    props: { proposals },
-  };
-}
+// export async function getServerSideProps() {
+//   const res = await fetch(`${process.env.NEXT_PUBLIC_SERVER}/api/proposals`, {
+//     method: 'POST',
+//     headers: { 'Content-Type': 'application/json' },
+//     body: JSON.stringify({
+//       odbcString: 'DSN=illi',
+//       customerNumber: '11762',
+//     }),
+//   });
+//   if (res.status !== 200) {
+//     return {
+//       props: {
+//         proposals: null,
+//       },
+//     };
+//   }
+//   const proposals = await res.json();
+
+//   return {
+//     props: { proposals },
+//   };
+// }
 
 export default ProposalsPage;

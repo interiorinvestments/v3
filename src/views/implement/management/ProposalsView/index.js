@@ -53,7 +53,9 @@ const ProposalsView = ({ proposals }) => {
                 <Tab key={tab} value={tab} label={tab} />
               ))}
             </Tabs>
+            {filteredProposals && (
             <ProposalTable data={filteredProposals} setProposal={setProposal} />
+            )}
           </Card>
         )}
       </Container>
